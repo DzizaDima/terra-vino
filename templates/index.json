@@ -26,7 +26,7 @@
             "box_align": "middle-center",
             "text_alignment": "center",
             "text_alignment_mobile": "center",
-            "color_scheme": ""
+            "color_scheme": "scheme-2"
           }
         },
         "slide_zKLpYw": {
@@ -63,45 +63,6 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "button"
-      ],
-      "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "image_behavior": "none",
-        "desktop_content_position": "bottom-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "scheme-3",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
-      }
-    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -129,11 +90,335 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "rich_text_CR9eqN": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_wKRyG9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Great Value, Award-winning  Wines",
+            "heading_size": "h1"
+          }
+        },
+        "text_84GBBC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Terra Vino, we pride ourselves on being the South African Wine Specialists with the largest selection of top quality SA wines in Singapore. Curated to showcase the best of what the region has to offer, we love introducing you to artisan winemakers and bringing you great value finds.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wKRyG9",
+        "text_84GBBC"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collection_list_LQdYV8": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_kfKMk4": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "whitewine"
+          }
+        },
+        "featured_collection_MD6Ye8": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "redwine"
+          }
+        },
+        "featured_collection_brKprB": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rosewine"
+          }
+        },
+        "featured_collection_thUHma": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "sparklingwine"
+          }
+        },
+        "featured_collection_PrqWH7": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "collector-swine"
+          }
+        },
+        "featured_collection_t7DHM4": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "last-fewbottles"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_kfKMk4",
+        "featured_collection_MD6Ye8",
+        "featured_collection_brKprB",
+        "featured_collection_thUHma",
+        "featured_collection_PrqWH7",
+        "featured_collection_t7DHM4"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "From Our Cellar To Yours",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "newsletter_FchgmJ": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_b6ibDP": {
+          "type": "heading",
+          "settings": {
+            "heading": "BeThe First  To Know!",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_xf7Fij": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Subscribe to our Mailing List and be the first to know about our special offers and events.</p>"
+          }
+        },
+        "email_form_ABtwc9": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_b6ibDP",
+        "paragraph_xf7Fij",
+        "email_form_ABtwc9"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "text_BJxiTg": {
+          "type": "text",
+          "settings": {
+            "text": "SPECIAL REQUESTS",
+            "text_style": "body"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Source My  Wine!",
+            "heading_size": "h0"
+          }
+        },
+        "text_RFUNUz": {
+          "type": "text",
+          "settings": {
+            "text": "Didn't find your favourite SA Wine? Learn more about our concierge service. Get in touch and our friendly team will source it for you.",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Get In Touch",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_BJxiTg",
+        "heading",
+        "text_RFUNUz",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/d35b86326e367c1bd793629d5da1c64bd3c5d100.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": true,
+        "color_scheme": "scheme-3",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "image_with_text_zWQ3Xx": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_kzVqGX": {
+          "type": "caption",
+          "settings": {
+            "caption": "WE'RE PASSIONATE ABOUT SA WINES!",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_MdNNdU": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Us",
+            "heading_size": "h1"
+          }
+        },
+        "text_EgdJAM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>South Africa's time has come in the world of wine! We are proud to be a specialist Singapore wine importer doing the hard work of tasting hundreds of South African wines, so that we can bring the best selection of what the region has to offer to savvy wine buyers in Singapore. Representing boutique South African winemakers, we offer wines of all styles, varietals and price points, so that you will find the perfect bottle for every occasion.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_JfNJ4U": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "shopify://collections",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_kzVqGX",
+        "heading_MdNNdU",
+        "text_EgdJAM",
+        "button_JfNJ4U"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Meet_the_Makers_Image.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-3",
+        "color_scheme": "scheme-3",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_QWY4xc": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_9WFVd7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Exceptional Wines, Affordable Prices",
+            "heading_size": "h1"
+          }
+        },
+        "text_B4pVwG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our Terra Vino Sommeliers have carefully curated an award-winning collection of affordable, excellent value South African wines. Explore this fascinating wine region and discover world-class artisan winemakers who bring the finest wines to Singapore. Over 300 labels can be delivered straight to your door the next day. We look forward to introducing you to the new world of fine South African wines.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9WFVd7",
+        "text_B4pVwG"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Meet_the_Makers_Image_2.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-3",
+        "color_scheme": "scheme-3",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_TqDM6Y": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_b3LPPF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Top Online  WineDelivery Service",
+            "heading_size": "h1"
+          }
+        },
+        "text_ALRNxN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Free delivery for orders over $250. Our wines are carefully handled and stored in optimal storage conditions.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_b3LPPF",
+        "text_ALRNxN"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Meet_the_Makers_Image_2.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-3",
+        "color_scheme": "scheme-3",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "slideshow_c9MyHQ",
+    "featured_collection",
+    "rich_text_CR9eqN",
+    "collection_list_LQdYV8",
+    "newsletter_FchgmJ",
     "image_banner",
-    "featured_collection"
+    "image_with_text_zWQ3Xx",
+    "image_with_text_QWY4xc",
+    "image_with_text_TqDM6Y"
   ]
 }

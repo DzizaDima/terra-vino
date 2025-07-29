@@ -13,6 +13,19 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "image_PEtA4C": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Layer_1.svg",
+            "image_width": 100,
+            "alignment": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_PEtA4C"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
