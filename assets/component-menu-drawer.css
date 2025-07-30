@@ -31,10 +31,10 @@ menu-drawer > details[open] > summary::before {
   visibility: hidden;
   z-index: 3;
   left: 0;
-  top: 100%;
+  top: 0;
   width: 100%;
   padding: 0;
-  background-color: rgb(var(--color-background));
+  background-color: #fff;
   overflow-x: hidden;
   filter: drop-shadow(
     var(--drawer-shadow-horizontal-offset) var(--drawer-shadow-vertical-offset) var(--drawer-shadow-blur-radius)
@@ -43,8 +43,7 @@ menu-drawer > details[open] > summary::before {
 }
 
 .js .menu-drawer {
-  height: calc(100vh - 100%);
-  height: calc(var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%)));
+  height: 100vh;
 }
 
 .js details[open] > .menu-drawer,
@@ -76,6 +75,22 @@ details[open].menu-opening > .menu-drawer__submenu {
   height: 100%;
 }
 
+.close-drawer{
+  position: absolute;
+  top: 36px;
+  right: 36px;
+  z-index: 10;
+  background-color: none;
+  background: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  padding: 5px;
+  margin: 0;
+  color: rgb(var(--color-foreground));
+}
+
 .menu-drawer__navigation-container {
   display: grid;
   grid-template-rows: 1fr auto;
@@ -86,6 +101,18 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__navigation {
   padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.menu-drawer__menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
 }
 
 .menu-drawer__inner-submenu {
@@ -191,7 +218,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   }
 }
 
-.menu-drawer__account {
+.menu-drawer__account:not(.button) {
   display: inline-flex;
   align-items: center;
   text-decoration: none;

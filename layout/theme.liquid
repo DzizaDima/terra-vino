@@ -255,6 +255,21 @@
           font-size: 1.6rem;
         }
       }
+
+      .image-border{
+        position: relative;
+        padding: 6px;
+      }
+
+      .image-border::before{
+        content: url({{ 'image-background.png' | asset_url }});
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}

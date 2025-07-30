@@ -17,7 +17,13 @@
       </span>
     </summary>
     <div id="menu-drawer" class="gradient menu-drawer motion-reduce color-{{ section.settings.menu_color_scheme }}">
+      <img src="{{ 'image-background.png' | asset_url }}" alt="" class="menu-drawer__background" loading="lazy" fetchpriority="low">
       <div class="menu-drawer__inner-container">
+        <button class="close-drawer" id="close-navigation-drawer"  aria-label="{{ 'sections.header.menu' | t }}">
+          <span>
+            {{- 'icon-close.svg' | inline_asset_content -}}
+          </span>
+        </button>
         <div class="menu-drawer__navigation-container">
           <nav class="menu-drawer__navigation">
             <ul class="menu-drawer__menu has-submenu list-menu" role="list">
@@ -134,29 +140,12 @@
                 </li>
               {%- endfor -%}
             </ul>
-          </nav>
-          <div class="menu-drawer__utility-links">
             {%- if shop.customer_accounts_enabled -%}
               <a
                 href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-                class="menu-drawer__account link focus-inset h5 medium-hide large-up-hide"
+                class="menu-drawer__account link focus-inset h5 medium-hide large-up-hide button button--primary"
                 rel="nofollow"
               >
-                {%- if section.settings.enable_customer_avatar -%}
-                  <account-icon>
-                    {%- if customer and customer.has_avatar? -%}
-                      {{ customer | avatar }}
-                    {%- else -%}
-                      <span class="svg-wrapper">
-                        {{- 'icon-account.svg' | inline_asset_content -}}
-                      </span>
-                    {%- endif -%}
-                  </account-icon>
-                {%- else -%}
-                  <span class="svg-wrapper">
-                    {{- 'icon-account.svg' | inline_asset_content -}}
-                  </span>
-                {%- endif -%}
                 {%- liquid
                   if customer
                     echo 'customer.account_fallback' | t
@@ -166,6 +155,8 @@
                 -%}
               </a>
             {%- endif -%}
+          </nav>
+          <div class="menu-drawer__utility-links">
             {%- if localization.available_countries or localization.available_languages -%}
               <div class="menu-drawer__localization header-localization">
                 {%- if localization.available_countries and localization.available_countries.size > 1 -%}

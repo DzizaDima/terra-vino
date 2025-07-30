@@ -558,6 +558,10 @@ customElements.define('menu-drawer', MenuDrawer);
 class HeaderDrawer extends MenuDrawer {
   constructor() {
     super();
+    this.fakeClose = this.querySelector('#close-navigation-drawer');
+    this.fakeClose.addEventListener('click', () => {
+      this.closeMenuDrawer();
+    });
   }
 
   openMenuDrawer(summaryElement) {

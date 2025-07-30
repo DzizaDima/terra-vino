@@ -40,6 +40,21 @@
     display: flex;
   }
 
+  .menu-drawer{
+    background-image: url({{ 'layout-background.png' | asset_url }});
+    background-position: center;
+  }
+
+  .menu-drawer__background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   .list-menu {
     list-style: none;
     padding: 0;
@@ -59,6 +74,7 @@
     display: flex;
     align-items: center;
     line-height: calc(1 + 0.3 / var(--font-body-scale));
+    text-transform: uppercase;
   }
 
   .list-menu__item--link {
@@ -72,6 +88,7 @@
   .search-modal__content{
     background-image: url({{ 'header-background.png' | asset_url }});
     background-position: center;
+    background-color: #fff;
   }
 
   @media screen and (min-width: 750px) {
