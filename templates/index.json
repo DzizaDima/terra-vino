@@ -69,8 +69,9 @@
         "heading_wKRyG9": {
           "type": "heading",
           "settings": {
-            "heading": "Great Value, Award-winning  Wines",
-            "heading_size": "h1"
+            "heading": "Great Value, <em>Award-winning</em>  Wines",
+            "heading_size": "hxl",
+            "heading_image": "shopify://shop_images/Value_Wines_Icon_0ce0977e-11db-47ac-b24b-ea5a02ff75f0.png"
           }
         },
         "text_84GBBC": {
@@ -88,7 +89,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-3",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
@@ -144,11 +145,11 @@
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
-        "title": "From Our Cellar To Yours",
-        "heading_size": "h1",
-        "image_ratio": "square",
+        "heading_image": "shopify://shop_images/Cellar_Icon_db837ab9-a106-4def-8007-6803c29c953b.png",
+        "title": "From Our Cellar <em>To Yours</em>",
+        "heading_size": "hxl",
         "columns_desktop": 3,
-        "color_scheme": "",
+        "color_scheme": "scheme-3",
         "show_view_all": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
@@ -203,8 +204,8 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Source My  Wine!",
-            "heading_size": "h0"
+            "heading": "Source <em>My  Wine!</em>",
+            "heading_size": "hxl"
           }
         },
         "text_RFUNUz": {
@@ -235,7 +236,7 @@
       "settings": {
         "image": "shopify://shop_images/d35b86326e367c1bd793629d5da1c64bd3c5d100.png",
         "image_overlay_opacity": 0,
-        "image_height": "adapt",
+        "image_height": "large",
         "image_behavior": "none",
         "desktop_content_position": "middle-left",
         "desktop_content_alignment": "left",
@@ -243,7 +244,7 @@
         "color_scheme": "scheme-3",
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
-        "show_text_below": false
+        "show_text_below": true
       }
     },
     "image_with_text_zWQ3Xx": {
@@ -260,8 +261,8 @@
         "heading_MdNNdU": {
           "type": "heading",
           "settings": {
-            "heading": "About Us",
-            "heading_size": "h1"
+            "heading": "About <em>Us</em>",
+            "heading_size": "hxl"
           }
         },
         "text_EgdJAM": {
@@ -288,7 +289,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Meet_the_Makers_Image.png",
+        "image": "shopify://shop_images/Hero_Image_1.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -309,8 +310,8 @@
         "heading_9WFVd7": {
           "type": "heading",
           "settings": {
-            "heading": "Exceptional Wines, Affordable Prices",
-            "heading_size": "h1"
+            "heading": "Exceptional <em>Wines</em>, Affordable <em>Prices</em>",
+            "heading_size": "hxl"
           }
         },
         "text_B4pVwG": {
@@ -327,7 +328,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Meet_the_Makers_Image_2.png",
+        "image": "shopify://shop_images/Hero_Image_2.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -348,8 +349,8 @@
         "heading_b3LPPF": {
           "type": "heading",
           "settings": {
-            "heading": "Top Online  WineDelivery Service",
-            "heading_size": "h1"
+            "heading": "<em>Top Online</em> Wine Delivery Service",
+            "heading_size": "hxl"
           }
         },
         "text_ALRNxN": {
@@ -366,7 +367,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Meet_the_Makers_Image_2.png",
+        "image": "shopify://shop_images/Hero_Image_3.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -380,6 +381,64 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "reviews_slider_qHqUx7": {
+      "type": "reviews-slider",
+      "blocks": {
+        "review_iKiE8C": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Reviewer_Image.png",
+            "image_width": 100,
+            "review_text": "Fast delivery and beautifully packed. Every bottle feels like a hidden gem from Italy!",
+            "author": "Jaden"
+          }
+        },
+        "review_pTcYzL": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Reviewer_Image_1.png",
+            "image_width": 100,
+            "review_text": "Super friendly team and incredible value wines. My go-to for authentic Italian bottles in SG!",
+            "author": "Sarah"
+          }
+        },
+        "review_NkeTNg": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Reviewer_Image_2.png",
+            "image_width": 100,
+            "review_text": "Finally, boutique wines that don't break the bank. Love the curation and quality!",
+            "author": "Juliya"
+          }
+        },
+        "review_Fh7yPH": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Reviewer_Image.png",
+            "image_width": 72,
+            "review_text": "Finally, boutique wines that don't break the bank. Love the curation and quality!",
+            "author": "Juliya"
+          }
+        }
+      },
+      "block_order": [
+        "review_iKiE8C",
+        "review_pTcYzL",
+        "review_NkeTNg",
+        "review_Fh7yPH"
+      ],
+      "name": "Reviews Slider",
+      "settings": {
+        "heading_image": "shopify://shop_images/Review_Image.png",
+        "title": "<em>Google</em> Reviews",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "color_scheme": "scheme-3",
+        "card_color_scheme": "scheme-5",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -390,6 +449,7 @@
     "image_banner",
     "image_with_text_zWQ3Xx",
     "image_with_text_QWY4xc",
-    "image_with_text_TqDM6Y"
+    "image_with_text_TqDM6Y",
+    "reviews_slider_qHqUx7"
   ]
 }

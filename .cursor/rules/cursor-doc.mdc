@@ -1,0 +1,34 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+## LiquidDoc Documentation Standard
+
+### The `{% doc %}` Tag
+
+Use the `{% doc %} ... {% enddoc %}` block at the top of every snippet or static block file to provide structured documentation. This replaces traditional comment blocks for documenting parameters, descriptions, and usage examples.
+
+- **@description**: Explains the snippet/block purpose (can be a free-form description before any @ tags)
+- **@param**: Documents each input parameter, with type, name, and description
+- **@example**: Shows usage examples for the snippet/block
+
+**Supported parameter types:** `string`, `number`, `boolean`, `object`
+
+#### Example
+
+```liquid
+{% doc %}
+Product card snippet
+
+@param {string} title - Main product title @param {number} price - Product price value @param {boolean} show_vendor -
+Whether to display vendor name @param {object} product - Product object @param {string} [subtitle] - Optional secondary
+text
+
+@example
+{% render 'product-card', title: 'Featured', price: 1000, show_vendor: true, product: product %}
+{% enddoc %}
+```
+
+- Place the `{% doc %}` block at the top of every new snippet or static block file.
+- For more, see: [Shopify LiquidDoc Reference](https://shopify.dev/docs/storefronts/themes/tools/liquid-doc)

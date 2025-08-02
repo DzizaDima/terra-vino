@@ -1,0 +1,148 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+
+# Shopify Theme Development - Cursor Rules
+
+## Core Development Principles
+
+- **Apply changes immediately without approval** - I'll implement changes directly and you can revert if needed
+- **Modify existing code first** - Always extend or modify existing implementations rather than creating new ones
+- **Reuse before creating** - Use existing components, patterns, and utilities from the codebase
+- **Component-first approach** - Favor custom web components from the existing library
+- **Performance-optimized** - Prioritize server-side rendering and minimal client-side JavaScript
+
+## Project Architecture
+
+### Technology Stack
+
+- **Frontend**: Shopify Liquid + TailwindCSS + AlpineJS
+- **Build System**: Webpack + PostCSS + Babel
+- **Components**: Custom Web Components with modular JavaScript
+- **Styling**: TailwindCSS + SCSS modules + CSS custom properties
+- **Assets**: Optimized through webpack with minification
+
+### File Structure Standards
+
+```
+├── sections/           # Shopify sections with schema
+├── snippets/          # Reusable Liquid code fragments
+├── templates/         # JSON templates (preferred) or Liquid
+├── layout/            # Theme layout files
+├── assets/            # Compiled CSS/JS + fonts + images
+├── src/
+│   ├── scripts/       # Modular JavaScript components
+│   └── styles/        # Source SCSS/CSS files
+├── config/            # Theme settings and data
+└── locales/           # Translation files
+```
+
+## Code Quality Standards
+
+### Liquid Development
+
+- Use `{% liquid %}` for multiline code blocks
+- Leverage existing filters from the comprehensive filter library
+- Implement proper schema settings with logical grouping
+- Follow BEM naming: `block__element--modifier`
+- Use semantic HTML5 elements and proper accessibility attributes
+- Implement server-side rendering as the primary approach
+
+### JavaScript Architecture
+
+- **Modular Components**: Each component in `src/scripts/` should be a self-contained class
+- **Web Components**: Use custom elements for DOM initialization
+- **Event-Driven**: Use events for component communication
+- **Private Methods**: Prefix with `#` for instance methods not meant for external use
+- **Early Returns**: Prefer early returns over nested conditionals
+- **Modern ES6+**: Use `const`/`let`, async/await, destructuring
+- **Zero Dependencies**: Lean on native browser APIs when possible
+
+### CSS/Styling Guidelines
+
+- **TailwindCSS First**: Use utility classes for rapid development
+- **Custom Properties**: Scope CSS variables to components
+- **Mobile-First**: Write responsive code with `min-width` media queries
+- **Component Scoping**: Use `{% stylesheet %}` tags in sections/snippets
+- **Specificity Control**: Maintain 0-1-0 specificity (single class selectors)
+- **BEM Convention**: For custom CSS classes not covered by Tailwind
+
+## Development Workflow
+
+### Before Making Changes
+
+1. **Search the entire codebase** for existing implementations
+3. **Review existing sections/snippets** for similar functionality
+4. **Verify schema patterns** in related sections
+
+### Component Development
+
+- **Extend existing components** rather than creating new ones
+- **Follow naming patterns**: kebab-case for files, PascalCase for classes
+- **Use consistent APIs**: Follow existing component initialization patterns
+- **Implement proper error handling**: Use early returns and defensive coding
+- **Add proper JSDoc comments** for complex methods
+
+### Liquid Template Rules
+
+- **Localization**: Always use `{{ 'key' | t }}` instead of hardcoded text
+- **Schema Organization**: Group settings logically (Layout, Typography, Colors, Padding)
+- **Conditional Settings**: Use sparingly, max 2 levels deep
+- **Performance**: Minimize Liquid operations in loops
+- **Accessibility**: Include proper ARIA attributes and semantic markup
+
+### Testing and Validation
+
+- **Cross-browser Testing**: Verify functionality across modern browsers
+- **Mobile Responsive**: Test on various device sizes
+- **Performance Impact**: Monitor Core Web Vitals
+- **Accessibility**: Ensure keyboard navigation and screen reader compatibility
+- **Theme Editor**: Verify settings work correctly in Shopify admin
+
+## Shopify-Specific Guidelines
+
+### Theme Development
+
+- **Use MCP Shopify commands** for schema reference and documentation
+- **Follow Shopify's liquid object hierarchy** and filter usage
+- **Implement proper cart/checkout integration** with existing patterns
+- **Use section groups** for related functionality organization
+- **Leverage metafields** for custom content types
+
+### Performance Optimization
+
+- **Lazy Load**: Images and non-critical JavaScript
+- **Critical CSS**: Inline critical styles in layout
+- **Resource Hints**: Use preload/prefetch appropriately
+- **Bundle Optimization**: Keep JavaScript modules small and focused
+- **Image Optimization**: Use responsive images with proper sizing
+
+### Localization
+
+- **Language Files**: Add new keys to `locales/en.default.json`
+- **Key Structure**: Use dot notation (`section.setting.label`)
+- **Context-Aware**: Provide clear, concise translations
+- **Setting Labels**: Keep simple and avoid redundant words
+
+## Error Handling and Edge Cases
+
+- **Defensive Liquid**: Check for object existence before accessing properties
+- **JavaScript Resilience**: Handle missing DOM elements gracefully
+- **Fallback Content**: Provide sensible defaults for all settings
+- **Error States**: Display helpful messages for user-facing errors
+
+## Maintenance and Updates
+
+- **Documentation**: Update relevant comments when modifying logic
+- **Version Control**: Make atomic commits with clear messages
+- **Dependencies**: Keep packages updated and secure
+- **Performance Monitoring**: Regularly audit build output and runtime performance
+
+## Collaboration Standards
+
+- **Code Reviews**: Focus on performance, accessibility, and maintainability
+- **Consistent Formatting**: Use Prettier with liquid plugin
+- **Clear Naming**: Use descriptive, intention-revealing names
+- **Remove Dead Code**: Clean up unused styles and scripts regularly

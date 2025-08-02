@@ -1,0 +1,276 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'reviews-slider.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    {% if section.settings.columns_desktop == 3 %}
+      .reviews-swiper .swiper-slide-next .review-card{
+        transform: translateY(-16px);
+      }
+    {% endif %}
+  }
+  
+{%- endstyle -%}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="reviews-slider section-{{ section.id }}-padding">
+    <div class="page-width">
+      {%- if section.settings.title != blank -%}
+        <div class="reviews-slider__header center">
+          {% if section.settings.heading_image != blank %}
+            <div class="reviews-slider__heading-image">
+             {{ section.settings.heading_image | image_url: width: section.settings.heading_image.width | image_tag: class: 'heading-image', loading: 'lazy', fetchpriority: 'low' }}
+            </div>
+          {% endif %}
+          <h2 class="reviews-slider__title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            {{ section.settings.title }}
+          </h2>
+        </div>
+      {%- endif -%}
+
+      {%- if section.blocks.size > 0 -%}
+        <div class="swiper reviews-swiper" id="reviewsSwiper-{{ section.id }}">
+          <div class="swiper-wrapper">
+            {%- for block in section.blocks -%}
+              <div class="swiper-slide"{{ block.shopify_attributes }}>
+                <div class="review-card color-{{ section.settings.card_color_scheme }} gradient">
+                  {%- if block.settings.image != blank -%}
+                    <div class="review-card__image">
+                      {{ block.settings.image | image_url: width: block.settings.image_width | image_tag: class: 'review-card__photo', loading: 'lazy', fetchpriority: 'low', width: block.settings.image_width }}
+                    </div>
+                  {%- endif -%}
+                  
+                  <div class="review-card__content">
+                    {%- if block.settings.review_text != blank -%}
+                      <p class="review-card__text">
+                        {{ block.settings.review_text }}
+                      </p>
+                    {%- endif -%}
+                    
+                    {%- if block.settings.author != blank -%}
+                      <cite class="review-card__author">
+                        <span class="review-card__author-name">{{ block.settings.author | escape }}</span>
+                      </cite>
+                    {%- endif -%}
+                  </div>
+                </div>
+              </div>
+            {%- endfor -%}
+          </div>
+          
+          <!-- Swiper Navigation -->
+          {%- if section.blocks.size > section.settings.columns_desktop -%}
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          {%- endif -%}
+          
+          <!-- Swiper Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const reviewsSwiper = new Swiper('#reviewsSwiper-{{ section.id }}', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: {{ section.settings.columns_desktop | default: 3 }},
+          spaceBetween: 40,
+        },
+      },
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.reviews-slider.name",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "heading_image",
+      "label": "Heading image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Google Reviews",
+      "label": "t:sections.reviews-slider.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 3,
+      "label": "t:sections.reviews-slider.settings.columns_desktop.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.reviews-slider.settings.colors_header"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.reviews-slider.settings.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color_scheme",
+      "id": "card_color_scheme",
+      "label": "t:sections.reviews-slider.settings.card_color_scheme.label",
+      "default": "scheme-2"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.reviews-slider.settings.padding_header"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.reviews-slider.settings.padding_top.label",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.reviews-slider.settings.padding_bottom.label",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "t:sections.reviews-slider.blocks.review.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.reviews-slider.blocks.review.settings.image.label"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "min": 50,
+          "max": 250,
+          "step": 2,
+          "unit": "px",
+          "label": "Image width",
+          "default": 100
+        },
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "t:sections.reviews-slider.blocks.review.settings.review_text.label",
+          "placeholder": "Enter review text..."
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "t:sections.reviews-slider.blocks.review.settings.author.label",
+          "placeholder": "Author name"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.reviews-slider.presets.name",
+      "blocks": [
+        {
+          "type": "review",
+          "settings": {
+            "review_text": "Fast delivery and beautifully packed. Every bottle feels like a hidden gem from Italy!",
+            "author": "Jaden"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "review_text": "Super friendly team and incredible value wines. My go-to for authentic Italian bottles in SG!",
+            "author": "Sarah"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "review_text": "Finally, boutique wines that don't break the bank. Love the curation and quality!",
+            "author": "Juliya"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

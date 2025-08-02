@@ -59,3 +59,10 @@
 .collection-list-view-all {
   margin-top: 2rem;
 }
+
+.section-collection-list .title-wrapper-with-link{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

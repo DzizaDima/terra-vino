@@ -1,0 +1,465 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Shopify Liquid Development Rules
+
+## Liquid Syntax and Structure
+
+### Valid Filters Reference
+Use only these validated Shopify filters in your liquid code:
+
+#### Cart Filters
+- `cart | item_count_for_variant: {variant_id}`
+- `cart | line_items_for: object`
+
+#### HTML Filters  
+- `settings.layout | class_list`
+- `string | time_tag: string`
+- `asset_name | inline_asset_content`
+- `string | highlight: string`
+- `string | link_to: string`
+- `string | placeholder_svg_tag`
+- `string | preload_tag: as: string`
+- `string | script_tag`
+- `string | stylesheet_tag`
+
+#### Collection Filters
+- `string | link_to_type`
+- `string | link_to_vendor` 
+- `string | sort_by: string`
+- `string | url_for_type`
+- `string | url_for_vendor`
+- `string | within: collection`
+- `string | highlight_active_tag`
+
+#### Color Filters
+- `string | brightness_difference: string`
+- `string | color_brightness`
+- `string | color_contrast: string`
+- `string | color_darken: number`
+- `string | color_desaturate: number`
+- `string | color_difference: string`
+- `string | color_extract: string`
+- `string | color_lighten: number`
+- `string | color_mix: string, number`
+- `string | color_modify: string, number`
+- `string | color_saturate: number`
+- `string | color_to_hex`
+- `string | color_to_hsl`
+- `string | color_to_rgb`
+- `string | hex_to_rgba`
+
+#### String Manipulation
+- `string | append: string`
+- `string | prepend: string`
+- `string | remove: string`
+- `string | replace: string, string`
+- `string | capitalize`
+- `string | downcase`
+- `string | upcase`
+- `string | strip`
+- `string | truncate: number`
+- `string | handleize`
+- `string | camelize`
+- `string | pluralize: string, string`
+
+#### Array Operations
+- `array | first`
+- `array | last`
+- `array | size`
+- `array | join`
+- `array | map: string`
+- `array | where: string, string`
+- `array | sort`
+- `array | reverse`
+- `array | uniq`
+- `array | compact`
+
+#### Money Formatting
+- `number | money`
+- `number | money_with_currency`
+- `number | money_without_currency`
+- `number | money_without_trailing_zeros`
+
+#### Media and Images
+- `variable | image_url: width: number, height: number`
+- `string | image_tag`
+- `media | media_tag`
+- `media | video_tag`
+- `variable | img_url`
+
+### Valid Tags
+Only use these approved Liquid tags:
+
+#### Theme Tags
+- `{% content_for %}`
+- `{% layout %}`
+- `{% include %}`
+- `{% render %}`
+- `{% section %}`
+- `{% sections %}`
+
+#### Control Flow
+- `{% if %}...{% endif %}`
+- `{% unless %}...{% endunless %}`
+- `{% case %}...{% when %}...{% endcase %}`
+- `{% for %}...{% endfor %}`
+- `{% break %}`
+- `{% continue %}`
+
+#### Variables
+- `{% assign %}`
+- `{% capture %}...{% endcapture %}`
+- `{% increment %}`
+- `{% decrement %}`
+
+#### Syntax
+- `{% liquid %}`
+- `{% comment %}...{% endcomment %}`
+- `{% raw %}...{% endraw %}`
+
+### Valid Objects
+Access only these validated Shopify objects:
+
+#### Global Objects
+- `collections`
+- `all_products`
+- `pages`
+- `articles`
+- `blogs`
+- `cart`
+- `customer`
+- `shop`
+- `request`
+- `template`
+- `settings`
+
+#### Template-Specific Objects
+- `product` (on product pages)
+- `collection` (on collection pages)
+- `article` (on article pages)
+- `blog` (on blog pages)
+- `page` (on page templates)
+
+## Theme Architecture Rules
+
+### Section Development
+```liquid
+{%- # Use liquid tag for multiline logic -%}
+{% liquid
+  assign section_id = section.id
+  assign block_count = section.blocks.size
+  
+  if section.settings.show_section
+    assign css_class = 'section-visible'
+  else
+    assign css_class = 'section-hidden'
+  endif
+%}
+
+<section 
+  id="Section-{{ section_id }}" 
+  class="{{ css_class }}"
+  {{ section.shopify_attributes }}
+>
+  {%- for block in section.blocks -%}
+    <div class="block" {{ block.shopify_attributes }}>
+      <!-- Block content -->
+    </div>
+  {%- endfor -%}
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.section_name.name",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_section",
+      "label": "t:sections.section_name.settings.show_section.label",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "t:sections.section_name.blocks.text.name",
+      "settings": []
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.section_name.presets.default.name"
+    }
+  ]
+}
+{% endschema %}
+```
+
+### Schema Best Practices
+
+#### Setting Organization
+```json
+{
+  "name": "t:sections.example.name",
+  "settings": [
+    // Ungrouped settings first (resource pickers, main controls)
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:sections.example.settings.collection.label"
+    },
+    
+    // Layout group
+    {
+      "type": "header",
+      "content": "t:sections.all.layout.header"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 3,
+      "label": "t:sections.all.layout.columns.label"
+    },
+    
+    // Typography group
+    {
+      "type": "header", 
+      "content": "t:sections.all.typography.header"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {"value": "h1", "label": "t:sections.all.typography.heading_size.options.large.label"},
+        {"value": "h2", "label": "t:sections.all.typography.heading_size.options.medium.label"}
+      ],
+      "default": "h2",
+      "label": "t:sections.all.typography.heading_size.label"
+    },
+    
+    // Colors group
+    {
+      "type": "header",
+      "content": "t:sections.all.colors.header"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.scheme.label",
+      "default": "scheme-1"
+    }
+  ]
+}
+```
+
+#### Conditional Settings
+```json
+{
+  "type": "checkbox",
+  "id": "show_vendor",
+  "label": "t:sections.product_card.settings.show_vendor.label",
+  "default": false
+},
+{
+  "type": "select",
+  "id": "vendor_display",
+  "label": "t:sections.product_card.settings.vendor_display.label",
+  "options": [
+    {"value": "text", "label": "t:sections.product_card.settings.vendor_display.options.text.label"},
+    {"value": "logo", "label": "t:sections.product_card.settings.vendor_display.options.logo.label"}
+  ],
+  "default": "text",
+  "info": "t:sections.product_card.settings.vendor_display.info"
+}
+```
+
+### Snippet Development
+```liquid
+{%- # snippets/product-card.liquid -%}
+{% liquid
+  comment
+    Parameters:
+    - product: product object (required)
+  - card_style: string (optional, default: 'standard')
+    - show_vendor: boolean (optional, default: false)
+  endcomment
+  
+  assign product = product | default: empty
+  assign card_style = card_style | default: 'standard'
+  assign show_vendor = show_vendor | default: false
+  
+  if product == empty
+    assign placeholder_image = true
+  else
+    assign placeholder_image = false
+  endif
+%}
+
+<div class="product-card product-card--{{ card_style }}">
+  {%- if placeholder_image -%}
+    {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+  {%- else -%}
+    {{ product.featured_image | image_url: width: 300 | image_tag: loading: 'lazy' }}
+  {%- endif -%}
+  
+  <h3 class="product-card__title">
+    {%- if product != empty -%}
+      <a href="{{ product.url }}">{{ product.title }}</a>
+    {%- else -%}
+      {{ 'products.product.title' | t }}
+    {%- endif -%}
+  </h3>
+  
+  {%- if show_vendor and product.vendor != blank -%}
+    <p class="product-card__vendor">{{ product.vendor }}</p>
+  {%- endif -%}
+</div>
+```
+
+## Performance Guidelines
+
+### Liquid Optimization
+- **Minimize database calls**: Cache liquid operations outside of loops
+- **Use `{% liquid %}` blocks**: More efficient than multiple liquid tags
+- **Avoid nested loops**: Flatten data structures when possible
+- **Smart conditionals**: Use `unless` and `case` appropriately
+
+```liquid
+{%- # Good: Cache operations outside loop -%}
+{% liquid
+  assign products_to_show = collection.products
+  assign show_vendor = section.settings.show_vendor
+%}
+
+{%- for product in products_to_show limit: 12 -%}
+  {% render 'product-card', product: product, show_vendor: show_vendor %}
+{%- endfor -%}
+
+{%- # Avoid: Repeated operations in loop -%}
+{%- for product in collection.products limit: 12 -%}
+  {% render 'product-card', product: product, show_vendor: section.settings.show_vendor %}
+{%- endfor -%}
+```
+
+### Asset Management
+```liquid
+{%- # Preload critical resources -%}
+{{ 'section-header.css' | asset_url | preload_tag: as: 'style' }}
+{{ 'component-product-card.css' | asset_url | preload_tag: as: 'style' }}
+
+{%- # Load styles efficiently -%}
+{{ 'section-header.css' | asset_url | stylesheet_tag }}
+
+{%- # Lazy load non-critical JavaScript -%}
+<script src="{{ 'product-form.js' | asset_url }}" defer></script>
+```
+
+## Accessibility Requirements
+
+### Semantic HTML
+```liquid
+<section aria-labelledby="section-heading">
+  <h2 id="section-heading">{{ section.settings.heading | escape }}</h2>
+  
+  <ul role="list">
+    {%- for product in collection.products -%}
+      <li>
+        <article>
+          <h3>
+            <a href="{{ product.url }}" aria-describedby="product-{{ product.id }}-price">
+              {{ product.title | escape }}
+            </a>
+          </h3>
+          <p id="product-{{ product.id }}-price">{{ product.price | money }}</p>
+        </article>
+      </li>
+    {%- endfor -%}
+  </ul>
+</section>
+```
+
+### Form Accessibility
+```liquid
+<form action="{{ routes.cart_add_url }}" method="post">
+  <fieldset>
+    <legend>{{ 'products.product.variants' | t }}</legend>
+    
+    {%- for option in product.options_with_values -%}
+      <div class="product-form__option">
+        <label for="Option{{ forloop.index }}">{{ option.name | escape }}</label>
+        <select 
+          id="Option{{ forloop.index }}" 
+          name="options[{{ option.name | escape }}]"
+          aria-describedby="Option{{ forloop.index }}-error"
+        >
+          {%- for value in option.values -%}
+            <option value="{{ value | escape }}">{{ value | escape }}</option>
+          {%- endfor -%}
+        </select>
+        <div id="Option{{ forloop.index }}-error" class="error-message" role="alert"></div>
+      </div>
+    {%- endfor -%}
+  </fieldset>
+</form>
+```
+
+## Localization Standards
+
+### Translation Key Structure
+```liquid
+{%- # Use hierarchical keys -%}
+{{ 'sections.product_card.heading' | t }}
+{{ 'sections.product_card.buttons.add_to_cart' | t }}
+{{ 'general.search.placeholder' | t }}
+{{ 'customer.order.title' | t }}
+
+{%- # Avoid hardcoded text -%}
+<!-- Bad -->
+<button>Add to Cart</button>
+
+<!-- Good -->
+<button>{{ 'products.product.add_to_cart' | t }}</button>
+```
+
+### Pluralization
+```liquid
+{%- assign item_count = cart.item_count -%}
+{{ item_count }} {{ item_count | pluralize: 'products.general.item', 'products.general.items' | t }}
+```
+
+## Error Handling
+
+### Defensive Coding
+```liquid
+{%- # Always check object existence -%}
+{%- if product and product != empty -%}
+  {%- if product.featured_media -%}
+    {{ product.featured_media | media_tag }}
+  {%- else -%}
+    {{ 'product-1' | placeholder_svg_tag }}
+  {%- endif -%}
+{%- endif -%}
+
+{%- # Provide sensible defaults -%}
+{%- assign heading = section.settings.heading | default: shop.name -%}
+{%- assign button_text = section.settings.button_text | default: 'general.continue_shopping' | t -%}
+```
+
+### Graceful Degradation
+```liquid
+{%- # Handle missing collections -%}
+{%- assign featured_collection = collections[section.settings.collection] -%}
+{%- if featured_collection and featured_collection.products.size > 0 -%}
+  {%- render 'product-grid', collection: featured_collection -%}
+{%- else -%}
+  <div class="placeholder-content">
+    <p>{{ 'sections.featured_collection.empty' | t }}</p>
+  </div>
+{%- endif -%}
+```

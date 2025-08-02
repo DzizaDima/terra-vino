@@ -122,13 +122,13 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .js .menu-drawer__menu li {
-  margin-bottom: 0.2rem;
+  margin-bottom: 1.4rem;
 }
 
 .menu-drawer__menu-item {
   padding: 1.1rem 3rem;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
 }
 
 .menu-drawer summary.menu-drawer__menu-item {
@@ -216,6 +216,11 @@ details[open].menu-opening > .menu-drawer__submenu {
   .header--has-localizations:where(:not(.header--has-social)) .menu-drawer__utility-links {
     padding: 2rem 3rem;
   }
+}
+
+.menu-drawer__account{
+  margin-top: 30px;
+  min-width: 216px;
 }
 
 .menu-drawer__account:not(.button) {

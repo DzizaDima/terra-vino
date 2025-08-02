@@ -105,9 +105,13 @@
         --font-body-weight: {{ settings.type_body_font.weight }};
         --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
 
-        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+        /*--font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
         --font-heading-style: {{ settings.type_header_font.style }};
-        --font-heading-weight: {{ settings.type_header_font.weight }};
+        --font-heading-weight: {{ settings.type_header_font.weight }};*/
+
+        --font-heading-family: 'Awesome Serif';
+        --font-heading-style: normal;
+        --font-heading-weight: 100;
 
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
@@ -180,8 +184,8 @@
 
         --grid-desktop-vertical-spacing: {{ settings.spacing_grid_vertical }}px;
         --grid-desktop-horizontal-spacing: {{ settings.spacing_grid_horizontal }}px;
-        --grid-mobile-vertical-spacing: {{ settings.spacing_grid_vertical | divided_by: 2 }}px;
-        --grid-mobile-horizontal-spacing: {{ settings.spacing_grid_horizontal | divided_by: 2 }}px;
+        --grid-mobile-vertical-spacing: {{ settings.spacing_grid_vertical | divided_by: 2.5 }}px;
+        --grid-mobile-horizontal-spacing: {{ settings.spacing_grid_horizontal | divided_by: 2.5 }}px;
 
         --text-boxes-border-opacity: {{ settings.text_boxes_border_opacity | divided_by: 100.0 }};
         --text-boxes-border-width: {{ settings.text_boxes_border_thickness }}px;
@@ -220,6 +224,20 @@
         --variant-pills-shadow-horizontal-offset: {{ settings.variant_pills_shadow_horizontal_offset }}px;
         --variant-pills-shadow-vertical-offset: {{ settings.variant_pills_shadow_vertical_offset }}px;
         --variant-pills-shadow-blur-radius: {{ settings.variant_pills_shadow_blur }}px;
+      }
+
+      @font-face {
+        font-family: 'Awesome Serif';
+        font-style: normal;
+        font-weight: 100;
+        src: url({{ 'Awesome Serif VAR-VF.ttf' | asset_url }}) format('truetype');
+      }
+
+      @font-face {
+        font-family: 'Awesome Serif Italic';
+        font-style: italic;
+        font-weight: 100;
+        src: url({{ 'Awesome Serif Italic VAR-VF.ttf' | asset_url }}) format('truetype');
       }
 
       *,
