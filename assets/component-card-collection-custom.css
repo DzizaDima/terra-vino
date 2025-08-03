@@ -22,13 +22,13 @@
 }
 
 .collection-custom-card__image-img{
-  width: calc(100% - 12px);
-  height: calc(100% - 12px);
+  width: calc(100% - 3%);
+  height: calc(100% - 3%);
   position: absolute;
-  top: 6px;
-  left: 6px;
-  right: 6px;
-  bottom: 6px;
+  top: 1.5%;
+  left: 1.5%;
+  right: 1.5%;
+  bottom: 1.5%;
   z-index: 2;
   transition: transform 0.3s ease-in-out;
 }

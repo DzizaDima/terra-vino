@@ -11,7 +11,7 @@
   .newsletter-form {
     align-items: flex-start;
     margin: 0 auto;
-    max-width: 36rem;
+    max-width: 53rem;
   }
 }
 
@@ -21,6 +21,46 @@
 
 .newsletter-form__field-wrapper .field__input {
   padding-right: 5rem;
+  background-color: #FEFBF2;
+  border-radius: 30px;
+  border: none;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #4E524F;
+  height: auto;
+  padding: 18px 250px 18px 32px;
+}
+
+.newsletter-form__field-wrapper .field__input::placeholder,
+.newsletter-form__field-wrapper .field__label {
+  color: #4E524F;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.newsletter-form__field-wrapper .field__label{
+  top: 18px;
+  left: 32px;
+}
+
+.newsletter-form__field-wrapper .field:before,
+.newsletter-form__field-wrapper .field:after {
+  display: none;
+}
+
+.newsletter__wrapper .newsletter-form__field-wrapper .newsletter-form__button.button,
+.footer-block__newsletter .newsletter-form__field-wrapper .newsletter-form__button.button{
+  width: auto;
+  padding: 12px 62px;
+  min-height: 0;
+  height: auto;
+  top: 8px;
+  right: 8px;
+  border: none;
+  background-color: rgba(var(--color-button),var(--alpha-button-background));
+  color: rgb(var(--color-button-text));
 }
 
 .newsletter-form__field-wrapper .field {
@@ -68,4 +108,36 @@
 
 .newsletter-form__button .icon {
   width: 1.5rem;
+}
+
+.newsletter-form__button .svg-wrapper,
+.footer-block__newsletter .newsletter-form__button .svg-wrapper{
+  display: none;
+}
+
+.newsletter-form__button .button__text,
+.footer-block__newsletter .newsletter-form__button .button__text{
+  display: block;
+}
+
+@media screen and (max-width: 750px) {
+  .newsletter-form__button .svg-wrapper,
+  .footer-block__newsletter .newsletter-form__button .svg-wrapper{
+    display: block;
+  }
+  
+  .newsletter-form__button .button__text,
+  .footer-block__newsletter .newsletter-form__button .button__text{
+    display: none;
+  }
+
+  .newsletter__wrapper .newsletter-form__field-wrapper .newsletter-form__button.button,
+  .footer-block__newsletter .newsletter-form__field-wrapper .newsletter-form__button.button{
+    padding: 12px;
+    min-width: 0;
+  }
+
+  .newsletter-form__field-wrapper .field__input {
+    padding-right: 60px;
+  }
 }

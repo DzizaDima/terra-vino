@@ -15,12 +15,15 @@
         "slide_cBUbTb": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/Hero_Image_4.png",
             "image_overlay_opacity": 0,
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
+            "announcement": "free delivery on orders above $250",
+            "caption": "Award-winning wineries",
+            "heading": "Online <em>Wine Delivery</em> Singapore",
+            "heading_size": "hxxl",
+            "subheading": "Top Rated South African Wines",
+            "button_label": "Shop Now",
+            "link": "shopify://collections",
             "button_style_secondary": false,
             "show_text_box": false,
             "box_align": "middle-center",
@@ -32,34 +35,58 @@
         "slide_zKLpYw": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/Hero_Image_5.png",
             "image_overlay_opacity": 0,
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
+            "announcement": "LAST ORDERS BY 12PM THURSDAY FOR DELIVERY BEFORE THE WEEKEND.",
+            "caption": "What Time is it...",
+            "heading": "It’s  Rosé  <em>O’clock</em>",
+            "heading_size": "hxxl",
+            "subheading": "Your Summer In a Glass",
+            "button_label": "Shop Now",
+            "link": "shopify://collections",
             "button_style_secondary": false,
             "show_text_box": true,
             "box_align": "middle-center",
             "text_alignment": "center",
             "text_alignment_mobile": "center",
-            "color_scheme": ""
+            "color_scheme": "scheme-2"
+          }
+        },
+        "slide_V6wLhQ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Hero_Image_6.png",
+            "image_overlay_opacity": 0,
+            "announcement": "free delivery on orders above $250",
+            "caption": "New Winery Alert!",
+            "heading": "Orpheus & The Raven",
+            "heading_size": "hxxl",
+            "subheading": "",
+            "button_label": "Shop Now",
+            "link": "shopify://collections",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-2"
           }
         }
       },
       "block_order": [
         "slide_cBUbTb",
-        "slide_zKLpYw"
+        "slide_zKLpYw",
+        "slide_V6wLhQ"
       ],
       "name": "t:sections.slideshow.presets.name",
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "medium",
+        "slide_height": "large",
         "slider_visual": "counter",
         "auto_rotate": false,
         "change_slides_speed": 5,
         "image_behavior": "none",
-        "show_text_below": true,
+        "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
       }
     },
@@ -71,7 +98,9 @@
           "settings": {
             "heading": "Great Value, <em>Award-winning</em>  Wines",
             "heading_size": "hxl",
-            "heading_image": "shopify://shop_images/Value_Wines_Icon_0ce0977e-11db-47ac-b24b-ea5a02ff75f0.png"
+            "heading_image": "shopify://shop_images/Value_Wines_Icon_0ce0977e-11db-47ac-b24b-ea5a02ff75f0.png",
+            "heading_image_width": 70,
+            "heading_image_width_mobile": 48
           }
         },
         "text_84GBBC": {
@@ -146,6 +175,8 @@
       "name": "t:sections.collection-list.presets.name",
       "settings": {
         "heading_image": "shopify://shop_images/Cellar_Icon_db837ab9-a106-4def-8007-6803c29c953b.png",
+        "heading_image_width": 70,
+        "heading_image_width_mobile": 50,
         "title": "From Our Cellar <em>To Yours</em>",
         "heading_size": "hxl",
         "columns_desktop": 3,
@@ -163,8 +194,11 @@
         "heading_b6ibDP": {
           "type": "heading",
           "settings": {
-            "heading": "BeThe First  To Know!",
-            "heading_size": "h1"
+            "heading_image": "shopify://shop_images/Mailing_List_Icon_fa307499-46a5-4229-8f87-d9903c8bcd24.png",
+            "heading_image_width": 108,
+            "heading_image_width_mobile": 72,
+            "heading": "Be <em>The First</em>  To Know!",
+            "heading_size": "hxl"
           }
         },
         "paragraph_xf7Fij": {
@@ -185,7 +219,7 @@
       ],
       "name": "t:sections.newsletter.presets.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-3",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52

@@ -3125,6 +3125,14 @@
             "image": {
               "label": "Image"
             },
+            "caption": {
+              "label": "Caption",
+              "default": "Caption"
+            },
+            "announcement": {
+              "label": "Announcement",
+              "default": "Announcement"
+            },
             "heading": {
               "label": "Heading",
               "default": "Image slide"

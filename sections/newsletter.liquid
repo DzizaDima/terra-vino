@@ -15,13 +15,29 @@
   }
 {%- endstyle -%}
 
-<div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
+<div class="newsletter page-width center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
   <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
         {%- when '@app' -%}
           {% render block %}
         {%- when 'heading' -%}
+          <style>
+            .newsletter__heading-image .heading-image{
+              max-width: {{ block.settings.heading_image_width_mobile }}px;
+            }
+
+            @media screen and (min-width: 750px) {
+              .newsletter__heading-image .heading-image{
+                max-width: {{ block.settings.heading_image_width }}px;
+              }
+            }
+          </style>
+          {% if block.settings.heading_image != blank %}
+            <div class="newsletter__heading-image">
+             {{ block.settings.heading_image | image_url: width: block.settings.heading_image.width | image_tag: class: 'heading-image', loading: 'lazy', fetchpriority: 'low' }}
+            </div>
+          {% endif %}
           <h2
             class="inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {{ block.shopify_attributes }}
@@ -80,7 +96,7 @@
                   </label>
                   <button
                     type="submit"
-                    class="newsletter-form__button field__button"
+                    class="newsletter-form__button field__button button button--primary"
                     name="commit"
                     id="Subscribe"
                     aria-label="{{ 'newsletter.button_label' | t }}"
@@ -88,6 +104,7 @@
                     <span class="svg-wrapper">
                       {{- 'icon-arrow.svg' | inline_asset_content -}}
                     </span>
+                    <span class="button__text">{{ 'newsletter.button_label' | t }}</span>
                   </button>
                 </div>
                 {%- if form.errors -%}
@@ -176,6 +193,31 @@
       "name": "t:sections.newsletter.blocks.heading.name",
       "limit": 1,
       "settings": [
+        {
+          "type": "image_picker",
+          "id": "heading_image",
+          "label": "Heading Image"
+        },
+        {
+          "type": "range",
+          "id": "heading_image_width",
+          "min": 20,
+          "max": 150,
+          "step": 2,
+          "unit": "px",
+          "label": "Heading Image Width",
+          "default": 70
+        },
+        {
+          "type": "range",
+          "id": "heading_image_width_mobile",
+          "min": 20,
+          "max": 150,
+          "step": 2,
+          "unit": "px",
+          "label": "Heading Image Width (Mobile)",
+          "default": 50
+        },
         {
           "type": "inline_richtext",
           "id": "heading",

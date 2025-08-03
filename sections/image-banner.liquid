@@ -28,7 +28,7 @@
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
 
-  .banner:not(.banner--desktop-transparent) .banner__box{
+  .banner:not(.slideshow) .banner__box{
     background-image: url({{ 'header-background.png' | asset_url }});
     background-position: center;
     background-color: #FEFBF2;
