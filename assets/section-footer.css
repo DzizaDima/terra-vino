@@ -1,5 +1,6 @@
 .footer {
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  position: relative;
 }
 
 .footer:not(.color-scheme-1) {
@@ -28,8 +29,12 @@
     margin-top: 0;
   }
 
+  .footer-block.footer-block--link_list{
+    margin: 0;
+  }
+
   .footer__content-top {
-    padding-bottom: 3rem;
+    padding-bottom: 1.6rem;
     padding-left: calc(1.6rem / var(--font-body-scale));
     padding-right: calc(1.6rem / var(--font-body-scale));
   }
@@ -43,8 +48,8 @@
 }
 
 .footer__content-bottom {
-  border-top: solid 0.1rem rgba(var(--color-foreground), 0.08);
-  padding-top: 3rem;
+  border-top: solid 0.1rem #FEFBF2;
+  padding-top: .5rem;
 }
 
 .footer__content-bottom:only-child {
@@ -53,6 +58,7 @@
 
 .footer__content-bottom-wrapper {
   display: flex;
+  justify-content: center;
   width: 100%;
 }
 
@@ -130,7 +136,8 @@
 .footer-block--newsletter {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 1.6rem;
   max-width: 425px;
 }
 
@@ -147,7 +154,6 @@
 @media screen and (min-width: 750px) {
   .footer-block--newsletter {
     flex-wrap: nowrap;
-    justify-content: center;
   }
 }
 
@@ -157,12 +163,19 @@
   font-size: calc(var(--font-heading-scale) * 1.6rem);
   font-family: var(--font-body-family);
   line-height: 1.4;
+  color: #4E524F;
 }
 
 @media screen and (min-width: 990px) {
   .footer-block__heading {
     text-align: left;
   }
+}
+
+.footer-block--link_list .footer-block__heading {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .footer__list-social:empty,
@@ -181,7 +194,6 @@
 
 .footer-block__newsletter {
   text-align: center;
-  flex-grow: 1;
 }
 
 @media screen and (min-width: 750px) {
@@ -231,6 +243,7 @@
     flex: 1 1 100%;
     align-items: center;
     gap: 3rem;
+    margin-top: 24px;
   }
 
   .footer__list-social.list-social,
@@ -443,7 +456,9 @@
 }
 
 .copyright__content {
-  font-size: 1.1rem;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #8A7162;
 }
 
 .copyright__content a {
@@ -533,4 +548,17 @@
   .footer-block__newsletter .newsletter-form__field-wrapper .field__input{
     padding-right: 60px;
   }
+}
+
+.footer-line{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+}
+
+.footer-block--newsletter .list-social__link{
+  color: #993602;
 }

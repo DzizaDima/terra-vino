@@ -28,6 +28,9 @@
 {%- endstyle -%}
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="footer-line">
+    {{ 'footer_line.svg' | inline_asset_content }}
+  </div>
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -76,7 +79,7 @@
                 {% endif %}
               >
                 {%- if block.settings.heading != blank -%}
-                  <h2 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h2>
+                  <h2 class="footer-block__heading inline-richtext hide-mobile">{{- block.settings.heading -}}</h2>
                 {%- endif -%}
 
                 {%- case block.type -%}
@@ -100,6 +103,40 @@
                           </li>
                         {%- endfor -%}
                       </ul>
+                      <div class="mobile-menu">
+                        {%- if block.settings.menu != blank and block.settings.heading != blank -%}
+                          <details
+                            id="Details-{{ block.id }}-{{ section.id }}"
+                            class="mobile-menu__accordion"
+                          >
+                            <summary id="Summary-{{ block.id }}-{{ section.id }}" class="mobile-menu__summary">
+                              <span class="mobile-menu__title inline-richtext">
+                                {{ block.settings.heading }}
+                              </span>
+                              {{- 'icon-caret.svg' | inline_asset_content -}}
+                            </summary>
+                            <div
+                              class="mobile-menu__content"
+                              id="MobileMenu-{{ block.id }}-{{ section.id }}"
+                              role="region"
+                              aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
+                            >
+                              <ul class="mobile-menu__list list-unstyled">
+                                {%- for link in block.settings.menu.links -%}
+                                  <li class="mobile-menu__item">
+                                    <a
+                                      href="{{ link.url }}"
+                                      class="mobile-menu__link link link--text{% if link.active %} mobile-menu__link--active{% endif %}"
+                                    >
+                                      {{ link.title | escape }}
+                                    </a>
+                                  </li>
+                                {%- endfor -%}
+                              </ul>
+                            </div>
+                          </details>
+                        {%- endif -%}
+                      </div>
                     {%- endif -%}
                   {%- when 'brand_information' -%}
                     <div class="footer-block__brand-info">
@@ -246,6 +283,19 @@
               {%- if section.settings.show_social and has_social_icons -%}
                 {%- render 'social-icons', class: 'footer__list-social' -%}
               {%- endif -%}
+
+              {%- if section.settings.payment_enable and shop.enabled_payment_types.size > 0 -%}
+                <div class="footer__payment">
+                  <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
+                  <ul class="list list-payment" role="list">
+                    {%- for type in shop.enabled_payment_types -%}
+                      <li class="list-payment__item">
+                        {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              {%- endif -%}
             </div>
           </div>
         {%- endif -%}
@@ -254,10 +304,7 @@
   {%- endif -%}
 
   <div
-    class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-    {% if settings.animations_reveal_on_scroll %}
-      data-cascade
-    {% endif %}
+    class="footer__content-bottom"
   >
     <div class="footer__content-bottom-wrapper page-width">
       <div class="footer__column footer__localization isolate">
@@ -283,20 +330,6 @@
               </div>
             {%- endform -%}
           </localization-form>
-        {%- endif -%}
-      </div>
-      <div class="footer__column footer__column--info">
-        {%- if section.settings.payment_enable -%}
-          <div class="footer__payment">
-            <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
-            <ul class="list list-payment" role="list">
-              {%- for type in shop.enabled_payment_types -%}
-                <li class="list-payment__item">
-                  {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
-                </li>
-              {%- endfor -%}
-            </ul>
-          </div>
         {%- endif -%}
       </div>
     </div>
