@@ -9,6 +9,10 @@
  */
 {
   "general": {
+    "region": {
+      "wineries_title": "Wineries we represent from {{ region }}",
+      "description_title": "About the Region"
+    },
     "password_page": {
       "login_form_heading": "Enter store using password:",
       "login_password_button": "Enter using password",

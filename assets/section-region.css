@@ -1,0 +1,93 @@
+.region{
+    display: flex;
+    flex-direction: column;
+}
+
+.region__image{
+    display: flex;
+}
+
+.region__image-img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+.region__wineries-title,
+.region__description-title{
+    color: rgba(217, 141, 48, 1);
+    font-size: 18px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.region__wineries{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 24px;
+}
+
+.region__wineries-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.region__winery{
+    display: flex;
+    position: relative;
+    height: 58px;
+}
+
+.region__winery:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(25, 38, 34, 0.6);
+}
+
+.region__winery-image{
+    display: flex;
+    width: 100%;
+}
+
+.region__winery-image-img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.region__winery-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-heading-family);
+    font-size: 24px;
+    line-height: 1.1;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0;
+}
+
+.region__description-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.region__description{
+    font-size: 20px;
+    line-height: 1.4;
+    color: #4E524F;
+}
+
+.region__description p{
+    margin: 0;
+}

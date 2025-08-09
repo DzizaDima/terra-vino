@@ -1,4 +1,5 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-card-collection-custom.css' | asset_url | stylesheet_tag }}
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
 
 <div class="page-width">
@@ -28,7 +29,24 @@
       class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
       role="list"
     >
-      {%- for collection in collections -%}
+      {%- if section.settings.source == 'default' -%}
+        {%- for collection in collections -%}
+          <li
+            class="collection-list__item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            {% render 'card-collection-custom',
+              card_collection: collection,
+              media_aspect_ratio: section.settings.image_ratio,
+              columns: 3
+            %}
+          </li>
+        {%- endfor -%}
+      {%- else -%}
+      {%- for block in section.blocks -%}
         <li
           class="collection-list__item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {% if settings.animations_reveal_on_scroll %}
@@ -36,13 +54,14 @@
             style="--animation-order: {{ forloop.index }};"
           {% endif %}
         >
-          {% render 'card-collection',
-            card_collection: collection,
+          {% render 'card-collection-custom',
+            card_collection: block.settings.collection,
             media_aspect_ratio: section.settings.image_ratio,
             columns: 3
           %}
         </li>
       {%- endfor -%}
+      {%- endif -%}
     </ul>
     {% render 'pagination', paginate: paginate %}
   {%- endpaginate -%}
@@ -52,6 +71,22 @@
   "name": "t:sections.main-list-collections.name",
   "class": "section",
   "settings": [
+    {
+      "type": "select",
+      "id": "source",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default(all collections)"
+        },
+        {
+          "value": "custom",
+          "label": "Custom(collections from blocks)"
+        }
+      ],
+      "default": "default",
+      "label": "Source"
+    },
     {
       "type": "inline_richtext",
       "id": "title",
@@ -88,7 +123,8 @@
         }
       ],
       "default": "alphabetical",
-      "label": "t:sections.main-list-collections.settings.sort.label"
+      "label": "t:sections.main-list-collections.settings.sort.label",
+      "info": "Only works if source is default"
     },
     {
       "type": "select",
@@ -134,6 +170,19 @@
       ],
       "default": "2",
       "label": "t:sections.main-list-collections.settings.columns_mobile.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        }
+      ]
     }
   ]
 }

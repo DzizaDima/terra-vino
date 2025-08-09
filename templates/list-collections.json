@@ -11,12 +11,80 @@
   "sections": {
     "main": {
       "type": "main-list-collections",
+      "blocks": {
+        "collection_CbaDHK": {
+          "type": "collection",
+          "settings": {
+            "collection": "castagnini"
+          }
+        },
+        "collection_9Phcmp": {
+          "type": "collection",
+          "settings": {
+            "collection": "crifo"
+          }
+        },
+        "collection_ATCXHN": {
+          "type": "collection",
+          "settings": {
+            "collection": "cantine-dei"
+          }
+        },
+        "collection_cK8XQr": {
+          "type": "collection",
+          "settings": {
+            "collection": "firriato"
+          }
+        },
+        "collection_HC4cfQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "cantina-di-monteforte"
+          }
+        },
+        "collection_UTK7qg": {
+          "type": "collection",
+          "settings": {
+            "collection": "poderesette"
+          }
+        },
+        "collection_LxhBJt": {
+          "type": "collection",
+          "settings": {
+            "collection": "sandre"
+          }
+        },
+        "collection_jnwP3g": {
+          "type": "collection",
+          "settings": {
+            "collection": "teo-costa"
+          }
+        },
+        "collection_4BBnx7": {
+          "type": "collection",
+          "settings": {
+            "collection": "chianti-trambusti"
+          }
+        }
+      },
+      "block_order": [
+        "collection_CbaDHK",
+        "collection_9Phcmp",
+        "collection_ATCXHN",
+        "collection_cK8XQr",
+        "collection_HC4cfQ",
+        "collection_UTK7qg",
+        "collection_LxhBJt",
+        "collection_jnwP3g",
+        "collection_4BBnx7"
+      ],
       "settings": {
-        "title": "Collections",
+        "source": "custom",
+        "title": "",
         "sort": "alphabetical",
         "image_ratio": "square",
         "columns_desktop": 3,
-        "columns_mobile": "2"
+        "columns_mobile": "1"
       }
     }
   },

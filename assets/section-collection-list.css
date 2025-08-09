@@ -1,6 +1,6 @@
 .collection-list {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 72px;
 }
 
 .collection-list-title {
@@ -8,6 +8,10 @@
 }
 
 @media screen and (max-width: 749px) {
+  .collection-list {
+    margin-bottom: 56px;
+  }
+
   .collection-list:not(.slider) {
     padding-left: 0;
     padding-right: 0;

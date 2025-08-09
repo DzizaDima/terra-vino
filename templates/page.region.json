@@ -1,0 +1,46 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "region",
+      "blocks": {
+        "region_4MjeXd": {
+          "type": "region",
+          "source": "{{ metaobjects.region[\"region-x7nn5qsw\"] }}",
+          "settings": {
+            "title": "{{ metaobjects.region[\"region-x7nn5qsw\"].title.value }}",
+            "image": "{{ metaobjects.region[\"region-x7nn5qsw\"].image.value }}",
+            "wineries": "{{ metaobjects.region[\"region-x7nn5qsw\"].winneries.value }}",
+            "description": "{{ metaobjects.region[\"region-x7nn5qsw\"].text | metafield_tag }}"
+          }
+        },
+        "region_aiQzpe": {
+          "type": "region",
+          "source": "{{ metaobjects.region[\"region-x7nn5qsw\"] }}",
+          "settings": {
+            "title": "{{ metaobjects.region[\"region-x7nn5qsw\"].title.value }}",
+            "image": "{{ metaobjects.region[\"region-x7nn5qsw\"].image.value }}",
+            "wineries": "{{ metaobjects.region[\"region-x7nn5qsw\"].winneries.value }}",
+            "description": "{{ metaobjects.region[\"region-x7nn5qsw\"].text | metafield_tag }}"
+          }
+        }
+      },
+      "block_order": [
+        "region_4MjeXd",
+        "region_aiQzpe"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

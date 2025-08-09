@@ -1,0 +1,85 @@
+{{ 'section-region.css' | asset_url | stylesheet_tag }}
+
+{% if section.blocks.size > 0 %}
+  <div class="regions page-width page-width--narrow">
+    {% for block in section.blocks %}
+        <script>
+            console.log('block', {{ block.settings.wineries | json }});
+        </script>
+      <div class="region">
+        {% if block.settings.title != blank %}
+            <h3 class="region__title">{{ block.settings.title }}</h3>
+        {% endif %}
+        {% if block.settings.image != blank %}
+          <div class="region__image">
+            {{ block.settings.image | image_url: width: 1000 | image_tag: alt: block.settings.title, class: 'region__image-img', loading: 'lazy', fetchpriority: 'low' }}
+          </div>
+        {% endif %}
+        {% if block.settings.wineries != blank %}
+            <div class="region__wineries">
+                <p class="region__wineries-title">{{ 'general.region.wineries_title' | t: region: block.settings.title }}</p>
+                <div class="region__wineries-list">
+                {% for winery in block.settings.wineries %}
+                    <div class="region__winery">
+                        <div class="region__winery-image">
+                            {{ winery.image | image_url: width: 400 | image_tag: alt: winery.title, class: 'region__winery-image-img', loading: 'lazy', fetchpriority: 'low' }}
+                        </div>
+                        <p class="region__winery-title">{{ winery.title }}</p>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+        {% if block.settings.description != blank %}
+            <div class="region__description-wrapper">
+                <p class="region__description-title">{{ 'general.region.description_title' | t }}</p>
+                <div class="region__description">
+                    {{ block.settings.description }}
+                </div>
+            </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Region",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "region",
+        "name": "Region",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          }, {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "metaobject_list",
+            "id": "wineries",
+            "label": "Wineries",
+            "metaobject_type": "winery"
+          },
+          {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
