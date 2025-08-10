@@ -1,5 +1,24 @@
 .search__input.field__input {
-  padding-right: 9.8rem;
+  background-color: #fefbf2;
+  border-radius: 30px;
+  border: none;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #4e524f;
+  height: auto;
+  padding: 18px 100px 18px 32px;
+}
+
+.search-modal__form .field:before,
+.search-modal__form .field:after{
+    display: none;
+}
+
+.search__button.field__button,
+.reset__button.field__button{
+  width: 6.4rem;
+  height: 6.4rem;
 }
 
 .search__button {

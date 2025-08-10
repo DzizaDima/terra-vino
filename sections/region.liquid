@@ -1,11 +1,15 @@
 {{ 'section-region.css' | asset_url | stylesheet_tag }}
-
+{% if section.settings.image != blank %}
+  <div class="region-page__image">
+    <picture>
+      <source srcset="{{ section.settings.image_mobile | image_url: width: 800 }}" media="(max-width: 767px)">
+      {{ section.settings.image | image_url: width: 1200 | image_tag: alt: section.settings.title, class: 'region-page__image-img', loading: 'lazy', fetchpriority: 'low' }}
+    </picture>
+  </div>
+{% endif %}
 {% if section.blocks.size > 0 %}
   <div class="regions page-width page-width--narrow">
     {% for block in section.blocks %}
-        <script>
-            console.log('block', {{ block.settings.wineries | json }});
-        </script>
       <div class="region">
         {% if block.settings.title != blank %}
             <h3 class="region__title">{{ block.settings.title }}</h3>
@@ -51,6 +55,11 @@
         "type": "image_picker",
         "id": "image",
         "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Image Mobile"
       }
     ],
     "blocks": [

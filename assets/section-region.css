@@ -1,6 +1,37 @@
+.region-page__image{
+    display: flex;
+    max-width: 1052px;
+    margin: 28px auto 0;
+}
+
+.region-page__image picture{
+    width: 100%;
+}
+
+.region-page__image-img{
+    width: 100%;
+    height: auto;
+}
+
+.regions{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    margin-bottom: 72px;
+}
+
 .region{
     display: flex;
     flex-direction: column;
+}
+
+.region__title{
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-size: 64px;
+    line-height: 1.1;
+    color: #192622;
 }
 
 .region__image{
@@ -74,6 +105,7 @@
     color: #fff;
     text-align: center;
     letter-spacing: 0;
+    width: 100%;
 }
 
 .region__description-wrapper{
@@ -90,4 +122,38 @@
 
 .region__description p{
     margin: 0;
+}
+
+@media (max-width: 767px) {
+    .region-page__image{
+        margin-bottom: 0;
+    }
+
+    .regions{
+        margin-top: 0;
+        gap: 56px;
+    }
+
+    .region__title{
+        font-size: 40px;
+        margin-bottom: 32px;
+    }
+
+    .region__wineries-title, 
+    .region__description-title{
+        font-size: 14px;
+    }
+
+    .region__wineries-list{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .region__winery-title{
+        font-size: 20px;
+    }
+
+    .region__description{
+        font-size: 16px;
+    }
 }

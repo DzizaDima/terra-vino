@@ -110,6 +110,7 @@
         --font-heading-weight: {{ settings.type_header_font.weight }};*/
 
         --font-heading-family: 'Awesome Serif';
+        --font-heading-family-light: 'Awesome Serif LightTall';
         --font-heading-style: normal;
         --font-heading-weight: 100;
 
@@ -238,6 +239,13 @@
         font-style: italic;
         font-weight: 100;
         src: url({{ 'Awesome Serif Italic VAR-VF.ttf' | asset_url }}) format('truetype');
+      }
+
+      @font-face {
+        font-family: 'Awesome Serif LightTall';
+        font-style: normal;
+        font-weight: 100;
+        src: url({{ 'AwesomeSerif-LightTall.otf' | asset_url }}) format('opentype');
       }
 
       *,
