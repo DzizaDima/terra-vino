@@ -48,7 +48,7 @@
                 <div class="review-card color-{{ section.settings.card_color_scheme }} gradient">
                   {%- if block.settings.image != blank -%}
                     <div class="review-card__image">
-                      {{ block.settings.image | image_url: width: block.settings.image_width | image_tag: class: 'review-card__photo', loading: 'lazy', fetchpriority: 'low', width: block.settings.image_width }}
+                      {{ block.settings.image | image_url: width: 300 | image_tag: class: 'review-card__photo', loading: 'lazy', fetchpriority: 'low', width: block.settings.image_width }}
                     </div>
                   {%- endif -%}
                   

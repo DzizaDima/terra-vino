@@ -12,6 +12,17 @@
   overflow: hidden;
 }
 
+.collection-custom-card__image::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000029;
+  z-index: 3;
+}
+
 .collection-custom-card__image-background{
   position: absolute;
   top: 0;
@@ -30,6 +41,7 @@
   right: 1.5%;
   bottom: 1.5%;
   z-index: 2;
+  object-fit: cover;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -46,7 +58,7 @@
   line-height: 1.1;
   font-weight: 300;
   text-align: center;
-  z-index: 2;
+  z-index: 4;
   padding: 10px;
   width: 100%;
   color: #fff;

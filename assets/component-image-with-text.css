@@ -367,6 +367,10 @@
   margin-bottom: 0;
 }
 
+.image-with-text__heading em{
+  margin-right: 6px;
+}
+
 .image-with-text__text p {
   margin-top: 0;
   margin-bottom: 1rem;

@@ -162,3 +162,14 @@
   background-color: #D98D30;
   opacity: 1;
 }
+
+.reviews-slider__heading-image{
+  max-width: 64px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.reviews-slider__heading-image img{
+  width: 100%;
+  height: auto;
+}

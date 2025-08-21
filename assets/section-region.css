@@ -124,6 +124,10 @@
     margin: 0;
 }
 
+.region__description p:not(:last-child){
+    margin-bottom: 8px;
+}
+
 @media (max-width: 767px) {
     .region-page__image{
         margin-bottom: 0;

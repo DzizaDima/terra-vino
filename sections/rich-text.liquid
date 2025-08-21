@@ -36,7 +36,7 @@
               </style>
               {% if block.settings.heading_image != blank %}
                 <div class="rich-text__heading-image">
-                 {{ block.settings.heading_image | image_url: width: block.settings.heading_image.width | image_tag: class: 'heading-image', loading: 'lazy', fetchpriority: 'low' }}
+                 {{ block.settings.heading_image | image_url: width: 300 | image_tag: class: 'heading-image', loading: 'lazy', fetchpriority: 'low' }}
                 </div>
               {% endif %}
               <h2
