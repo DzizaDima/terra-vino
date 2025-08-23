@@ -42,7 +42,7 @@
     {{ content_for_header }}
 
     {%- liquid
-      assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+      assign body_font_bold = settings.type_body_font 
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
     %}
@@ -109,7 +109,7 @@
         --font-heading-style: {{ settings.type_header_font.style }};
         --font-heading-weight: {{ settings.type_header_font.weight }};*/
 
-        --font-heading-family: 'Awesome Serif';
+        --font-heading-family:'Awesome Serif Light Tall';
         --font-heading-family-light: 'Awesome Serif LightTall';
         --font-heading-style: normal;
         --font-heading-weight: 100;
@@ -228,24 +228,135 @@
       }
 
       @font-face {
-        font-family: 'Awesome Serif';
+        font-family: 'Awesome Serif Light Regular';
         font-style: normal;
-        font-weight: 100;
-        src: url({{ 'Awesome Serif VAR-VF.ttf' | asset_url }}) format('truetype');
+        font-weight: 300;
+        src: url('{{ 'AwesomeSerif-LightRegular.otf' | asset_url }}') format('opentype');
+        font-display: swap;
       }
 
       @font-face {
-        font-family: 'Awesome Serif Italic';
-        font-style: italic;
-        font-weight: 100;
-        src: url({{ 'Awesome Serif Italic VAR-VF.ttf' | asset_url }}) format('truetype');
+        font-family: 'Awesome Serif Regular';
+        font-style: normal;
+        font-weight: 400;
+        src: url('{{ 'AwesomeSerif-Regular.otf' | asset_url }}') format('opentype');
+        font-display: swap;
       }
 
       @font-face {
-        font-family: 'Awesome Serif LightTall';
+        font-family: 'Awesome Serif Medium Regular';
         font-style: normal;
-        font-weight: 100;
-        src: url({{ 'AwesomeSerif-LightTall.otf' | asset_url }}) format('opentype');
+        font-weight: 500;
+        src: url('{{ 'AwesomeSerif-MediumRegular.otf' | asset_url }}') format('opentype');
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Awesome Serif SemiBold Regular';
+        font-style: normal;
+        font-weight: 600;
+        src: url('{{ 'AwesomeSerif-SemiBoldRegular.otf' | asset_url }}') format('opentype');
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Awesome Serif Bold Regular';
+        font-style: normal;
+        font-weight: 700;
+        src: url('{{ 'AwesomeSerif-BoldRegular.otf' | asset_url }}') format('opentype');
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Awesome Serif Light Tall';
+        font-style: normal;
+        font-weight: 300;
+        src: url('{{ 'AwesomeSerif-LightTall.otf' | asset_url }}') format('opentype');
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Awesome Serif Tall';
+        font-style: normal;
+        font-weight: 400;
+        src: url('{{ 'AwesomeSerif-Tall.otf' | asset_url }}') format('opentype');
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Awesome Serif Medium Tall';
+        font-style: normal;
+        font-weight: 500;
+        src: url('{{ 'AwesomeSerif-MediumTall.otf' | asset_url }}') format('opentype');
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Awesome Serif SemiBold Tall';
+        font-style: normal;
+        font-weight: 600;
+        src: url('{{ 'AwesomeSerif-SemiBoldTall.otf' | asset_url }}') format('opentype');
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Awesome Serif Bold Tall';
+        font-style: normal;
+        font-weight: 700;
+        src: url('{{ 'AwesomeSerif-BoldTall.otf' | asset_url }}') format('opentype');
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Awesome Serif Light ExtraTall';
+        font-style: normal;
+        font-weight: 300;
+        src: url('{{ 'AwesomeSerif-LightExtraTall.otf' | asset_url }}') format('opentype');
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Awesome Serif ExtraTall';
+        font-style: normal;
+        font-weight: 400;
+        src: url('{{ 'AwesomeSerif-ExtraTall.otf' | asset_url }}') format('opentype');
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Awesome Serif Medium ExtraTall';
+        font-style: normal;
+        font-weight: 500;
+        src: url('{{ 'AwesomeSerif-MediumExtraTall.otf' | asset_url }}') format('opentype');
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Awesome Serif SemiBold ExtraTall';
+        font-style: normal;
+        font-weight: 600;
+        src: url('{{ 'AwesomeSerif-SemBdExtraTall.otf' | asset_url }}') format('opentype');
+        font-display: swap;
+      }
+
+      /* CSS Variables for font families */
+      :root {
+        --font-awesome-serif-light-regular: 'Awesome Serif Light Regular', serif;
+        --font-awesome-serif-regular: 'Awesome Serif Regular', serif;
+        --font-awesome-serif-medium-regular: 'Awesome Serif Medium Regular', serif;
+        --font-awesome-serif-semibold-regular: 'Awesome Serif SemiBold Regular', serif;
+        --font-awesome-serif-bold-regular: 'Awesome Serif Bold Regular', serif;
+        
+        --font-awesome-serif-light-tall: 'Awesome Serif Light Tall', serif;
+        --font-awesome-serif-tall: 'Awesome Serif Tall', serif;
+        --font-awesome-serif-medium-tall: 'Awesome Serif Medium Tall', serif;
+        --font-awesome-serif-semibold-tall: 'Awesome Serif SemiBold Tall', serif;
+        --font-awesome-serif-bold-tall: 'Awesome Serif Bold Tall', serif;
+        
+        --font-awesome-serif-light-extratall: 'Awesome Serif Light ExtraTall', serif;
+        --font-awesome-serif-extratall: 'Awesome Serif ExtraTall', serif;
+        --font-awesome-serif-medium-extratall: 'Awesome Serif Medium ExtraTall', serif;
+        --font-awesome-serif-semibold-extratall: 'Awesome Serif SemiBold ExtraTall', serif;
       }
 
       *,
