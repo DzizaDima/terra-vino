@@ -97,3 +97,8 @@
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
 }
+
+#product-grid.grid{
+  --grid-desktop-horizontal-spacing: 20px;
+  --grid-desktop-vertical-spacing: 20px;
+}

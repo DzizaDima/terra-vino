@@ -593,3 +593,7 @@
     clip-path: polygon(var(--shape--blob-5));
   }
 }
+
+.product-card-wrapper{
+  background-color: #FEFBF2;
+}
