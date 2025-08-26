@@ -101,4 +101,11 @@
 #product-grid.grid{
   --grid-desktop-horizontal-spacing: 20px;
   --grid-desktop-vertical-spacing: 20px;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  #product-grid.grid{
+    margin-top: 24px;
+  }
 }

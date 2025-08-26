@@ -199,13 +199,13 @@
     },
     "facets": {
       "filter_and_operator_subtitle": "Match all",
-      "apply": "Apply",
+      "apply": "See results",
       "clear": "Clear",
-      "clear_all": "Remove all",
+      "clear_all": "Clear filters",
       "from": "From",
       "filter_and_sort": "Filter and sort",
       "filter_by_label": "Filter:",
-      "filter_button": "Filter",
+      "filter_button": "Filters",
       "filters_selected": {
         "one": "{{ count }} selected",
         "other": "{{ count }} selected"
@@ -225,6 +225,9 @@
       "reset": "Reset",
       "sort_button": "Sort",
       "sort_by_label": "Sort by:",
+      "new_in": "New in",
+      "price_asc": "Price ascending",
+      "price_desc": "Price descending",
       "to": "To",
       "clear_filter": "Remove filter"
     }

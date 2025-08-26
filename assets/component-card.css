@@ -125,7 +125,7 @@
 .card__content {
   display: grid;
   grid-template-rows: minmax(0, 1fr) max-content minmax(0, 1fr);
-  padding: 1rem;
+  padding: 1.2rem;
   width: 100%;
   flex-grow: 1;
 }
@@ -596,4 +596,80 @@
 
 .product-card-wrapper{
   background-color: #FEFBF2;
+}
+
+.product-card-wrapper .card__heading{
+  font-family: var(--font-body-family);
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+.card__price-button-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  grid-row-start: 3;
+}
+
+.product-card-wrapper .price__container{
+  font-family: var(--font-heading-family);
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: 0;
+  margin-top: 24px;
+}
+
+.product-card-wrapper .card__information{
+  padding: 0;
+}
+
+.card__description{
+  margin: 0;
+  color: #4E524F;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-top: 4px;
+  letter-spacing: 0;
+}
+
+.product-card-wrapper .card--card .quick-add{
+  margin: 0;
+}
+
+.product-card-wrapper .quick-add__submit{
+  background-color: #192622;
+  padding: 14px;
+}
+
+.product-card-wrapper .quick-add__submit svg{
+  color: #FEFCF6;
+  width: 20px;
+  height: 20px;
+}
+
+.product-card-wrapper .quick-add__submit svg path{
+  stroke: #FEFCF6;
+}
+
+.card__tags{
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.card__tag{
+  background-color: #D98D3033;
+  border-radius: 30px;
+  font-size: 14px;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #D98D30;
+  padding: 6px 12px 5px;
+}
+
+.product-card-wrapper .card__content{
+  padding-top: 16px;
 }
