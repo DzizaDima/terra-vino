@@ -16,6 +16,12 @@
         "label": "t:settings_schema.logo.settings.logo_image.label"
       },
       {
+        "type": "html",
+        "id": "logo_html",
+        "label": "t:settings_schema.logo.settings.logo_image.label",
+        "info": "For svg logo"
+      },
+      {
         "type": "range",
         "id": "logo_width",
         "min": 50,

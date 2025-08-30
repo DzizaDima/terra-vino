@@ -101,7 +101,7 @@
 
 {%- style -%}
   .header {
-    padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
+    padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 1.6rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 1.6rem;
   }
 
   .section-header {
@@ -175,7 +175,11 @@
         <h1 class="header__heading">
       {%- endif -%}
       <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-        {%- if settings.logo != blank -%}
+        {% if settings.logo_html != blank %}
+          <div class="header__heading-logo-wrapper">
+            {{ settings.logo_html }}
+          </div>
+        {%- elsif settings.logo != blank and settings.logo_html == blank -%}
           <div class="header__heading-logo-wrapper">
             {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
             {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
@@ -325,6 +329,23 @@
         </a>
       {%- endif -%}
     </div>
+    {% unless request.page_type == 'index' %}
+      <style>
+        .border-line{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        height: 6px;
+        background-image: url({{ 'footer_line.svg' | asset_url }});
+      }
+      </style>
+      
+      <div class="border-line">
+       
+      </div>
+    {% endunless %}
   </header>
 </{{ header_tag }}>
 

@@ -42,6 +42,7 @@
       }
     },
     "continue_shopping": "Continue shopping",
+    "continue_shopping_mobile": "Shopping",
     "pagination": {
       "label": "Pagination",
       "page": "Page {{ number }}",
@@ -304,9 +305,10 @@
       "caption": "Cart items",
       "remove_title": "Remove {{ title }}",
       "estimated_total": "Estimated total",
+      "total": "Total",
       "new_estimated_total": "New estimated total",
       "note": "Order special instructions",
-      "checkout": "Check out",
+      "checkout": "Checkout",
       "empty": "Your cart is empty",
       "cart_error": "There was an error while updating your cart. Please try again.",
       "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",

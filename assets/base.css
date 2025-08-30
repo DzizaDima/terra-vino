@@ -1932,7 +1932,6 @@ input[type='checkbox'] {
   font-weight: var(--font-body-weight);
   font-size: 1.6rem;
   font-weight: 500;
-  opacity: 0.85;
   text-align: center;
   background-color: transparent;
   border: 0;
@@ -2518,7 +2517,6 @@ input[type='checkbox'] {
   display: flex;
   grid-area: icons;
   justify-self: end;
-  padding-right: 0.8rem;
 }
 
 .header__icons .shopify-app-block {
@@ -3604,4 +3602,14 @@ details-disclosure > details {
   .hide-mobile{
     display: none;
   }
+}
+
+h1 em,
+h2 em,
+h3 em,
+h4 em,
+h5 em,
+h6 em,
+.collection-custom-card__title em{
+  font-family: 'Awesome Serif Italic';
 }

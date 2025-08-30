@@ -2,8 +2,8 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
@@ -21,19 +21,6 @@
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'heading' -%}
-              <style>
-                .rich-text__heading-image .heading-image{
-                  max-width: {{ block.settings.heading_image_width_mobile }}px;
-                  width: 100%;
-                  height: auto;
-                }
-    
-                @media screen and (min-width: 750px) {
-                  .rich-text__heading-image .heading-image{
-                    max-width: {{ block.settings.heading_image_width }}px;
-                  }
-                }
-              </style>
               {% if block.settings.heading_image != blank %}
                 <div class="rich-text__heading-image">
                  {{ block.settings.heading_image | image_url: width: 300 | image_tag: class: 'heading-image', loading: 'lazy', fetchpriority: 'low' }}
@@ -49,6 +36,19 @@
               >
                 {{ block.settings.heading }}
               </h2>
+              <style>
+                .rich-text__heading-image .heading-image{
+                  max-width: {{ block.settings.heading_image_width_mobile }}px;
+                  width: 100%;
+                  height: auto;
+                }
+    
+                @media screen and (min-width: 750px) {
+                  .rich-text__heading-image .heading-image{
+                    max-width: {{ block.settings.heading_image_width }}px;
+                  }
+                }
+              </style>
             {%- when 'caption' -%}
               <p
                 class="rich-text__caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -181,7 +181,7 @@
       "type": "range",
       "id": "padding_top",
       "min": 0,
-      "max": 100,
+      "max": 200,
       "step": 4,
       "unit": "px",
       "label": "t:sections.all.padding.padding_top",
@@ -191,7 +191,7 @@
       "type": "range",
       "id": "padding_bottom",
       "min": 0,
-      "max": 100,
+      "max": 200,
       "step": 4,
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",

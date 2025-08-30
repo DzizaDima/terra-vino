@@ -58,7 +58,7 @@ cart-items {
 .cart__items {
   position: relative;
   padding-bottom: 3rem;
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  border-bottom: 0.1rem solid #FEFBF2;
 }
 
 .cart__items--disabled {
@@ -66,7 +66,7 @@ cart-items {
 }
 
 .cart__footer-wrapper:last-child .cart__footer {
-  padding-bottom: 5rem;
+  padding-bottom: 5.6rem;
 }
 
 .cart__footer > div:only-child {
@@ -120,7 +120,7 @@ cart-items {
   .cart__items {
     grid-column-start: 1;
     grid-column-end: 3;
-    padding-bottom: 4rem;
+    padding-bottom: 0;
   }
 
   .cart__contents > * + * {
@@ -142,7 +142,7 @@ cart-items {
   }
 
   .cart__footer > * {
-    width: 35rem;
+    width: 44rem;
   }
 
   .cart__footer > * + * {
@@ -172,6 +172,11 @@ cart-items {
   margin: 0;
 }
 
+.cart__blocks{
+  padding: 24px;
+  background-color: #FEFBF2;
+}
+
 .cart__blocks > * + * {
   margin-top: 1rem;
 }
@@ -186,10 +191,6 @@ cart-items {
   margin: 2.2rem 0 1.6rem auto;
   text-align: center;
   display: block;
-}
-
-.cart__checkout-button {
-  max-width: 36rem;
 }
 
 .cart__ctas {
@@ -218,5 +219,63 @@ cart-items {
   .cart__ctas {
     display: flex;
     gap: 1rem;
+  }
+}
+
+cart-items .title-wrapper-with-link{
+  margin-bottom: 56px;
+}
+
+cart-items .title-wrapper-with-link .title{
+  color: #192622;
+  font-size: 64px;
+  line-height: 110%;
+}
+
+cart-items .title-wrapper-with-link a{
+  text-decoration: none;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #1C2A25;
+  border-radius: 30px;
+  color: #1C2A25;
+  font-size: 18px;
+  line-height: 120%;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: capitalize;
+}
+
+cart-items .title-wrapper-with-link a span:not(.hide-mobile){
+  display: none;
+}
+
+cart-items .title-wrapper-with-link a svg{
+  width: 24px;
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 749px) {
+  cart-items .title-wrapper-with-link .title{
+    font-size: 40px;
+  }
+
+  cart-items .title-wrapper-with-link a span:not(.hide-mobile){
+    display: inline;
+  }
+
+  cart-items .title-wrapper-with-link a{
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  cart-items .title-wrapper-with-link a svg{
+    width: 16px;
+  }
+
+  cart-items .title-wrapper-with-link{
+    margin-bottom: 36px;
   }
 }

@@ -43,7 +43,7 @@
       <div class="title-wrapper-with-link{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
         {% if section.settings.heading_image != blank %}
           <div class="collection-list__heading-image">
-           {{ section.settings.heading_image | image_url: width: section.settings.heading_image.width | image_tag: class: 'heading-image', loading: 'lazy', fetchpriority: 'low' }}
+           {{ section.settings.heading_image | image_url: width: 300 | image_tag: class: 'heading-image', loading: 'lazy', fetchpriority: 'low' }}
           </div>
         {% endif %}
         <h2

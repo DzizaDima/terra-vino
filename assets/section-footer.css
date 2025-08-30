@@ -167,6 +167,7 @@
   font-size: calc(var(--font-heading-scale) * 1.6rem);
   font-family: var(--font-body-family);
   line-height: 1.4;
+  font-weight: 400;
   color: #4E524F;
 }
 
