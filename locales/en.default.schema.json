@@ -904,7 +904,7 @@
           }
         },
         "buy_buttons": {
-          "name": "Buy buttons",
+          "name": "Main area",
           "settings": {
             "show_dynamic_checkout": {
               "label": "Dynamic checkout buttons",
@@ -2013,8 +2013,11 @@
             }
           }
         },
+        "badges": {
+          "name": "Badges"
+        },
         "buy_buttons": {
-          "name": "Buy buttons",
+          "name": "Main area",
           "settings": {
             "show_dynamic_checkout": {
               "label": "Dynamic checkout buttons",
@@ -2031,6 +2034,12 @@
         },
         "description": {
           "name": "Description"
+        },
+        "technical_info": {
+          "name": "Technical information"
+        },
+        "tasting_notes": {
+          "name": "Tasting notes"
         },
         "sku": {
           "name": "SKU",

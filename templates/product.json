@@ -12,63 +12,64 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
+        "badges_K4zBcU": {
+          "type": "badges",
+          "settings": {}
         },
         "title": {
           "type": "title",
           "settings": {}
         },
-        "price": {
-          "type": "price",
-          "settings": {}
+        "text_eWRHdE": {
+          "type": "text",
+          "settings": {
+            "text": "<em>{{ product.metafields.custom.short_description.value }}</em>",
+            "text_style": "body"
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button",
             "swatch_shape": "circle"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
         },
         "description": {
           "type": "description",
+          "settings": {
+            "show_title": true
+          }
+        },
+        "tasting_notes_HD3rHf": {
+          "type": "tasting_notes",
           "settings": {}
         },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
+        "technical_info_rGBLLc": {
+          "type": "technical_info",
+          "settings": {}
         }
       },
       "block_order": [
-        "vendor",
+        "badges_K4zBcU",
         "title",
-        "price",
+        "text_eWRHdE",
         "variant_picker",
-        "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "tasting_notes_HD3rHf",
+        "technical_info_rGBLLc"
       ],
       "settings": {
         "enable_sticky_info": true,
-        "color_scheme": "scheme-1db27278-a84d-423d-83fe-781d8bc673df",
+        "color_scheme": "scheme-1",
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
@@ -79,11 +80,12 @@
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
-        "padding_bottom": 12
+        "padding_bottom": 56
       }
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",

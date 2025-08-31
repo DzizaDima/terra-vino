@@ -1,0 +1,38 @@
+{%  liquid 
+  assign year = product.metafields.custom.wine_year
+  assign alcohol = product.metafields.custom.alcohol
+  assign wine_type = product.metafields.custom.wine_type
+  assign bottle_size = product.metafields.custom.bottle_size
+%}
+
+{% if year != blank or alcohol != blank or wine_type != blank or bottle_size != blank %}
+  <div class="technical-info">
+    <h2 class="technical-info__title product-block__title">{{ 'products.product.technical_info' | t }}</h2>
+    <div class="technical-info__content">
+    {% if wine_type != blank %}
+      <div class="technical-info__item">
+        <span class="technical-info__label">{{ 'products.product.wine_type' | t }}</span>
+        <span class="technical-info__value">{{ wine_type }}</span>
+      </div>
+    {% endif %}
+    {% if year != blank %}
+      <div class="technical-info__item">
+        <span class="technical-info__label">{{ 'products.product.year' | t }}</span>
+        <span class="technical-info__value">{{ year }}</span>
+      </div>
+    {% endif %}
+    {% if bottle_size != blank %}
+      <div class="technical-info__item">
+        <span class="technical-info__label">{{ 'products.product.bottle_size' | t }}</span>
+        <span class="technical-info__value">{{ bottle_size }}</span>
+      </div>
+    {% endif %}
+    {% if alcohol != blank %}
+      <div class="technical-info__item">
+        <span class="technical-info__label">{{ 'products.product.alcohol' | t }}</span>
+        <span class="technical-info__value">{{ alcohol }}</span>
+      </div>
+    {% endif %}
+    </div>
+  </div>
+{% endif %}

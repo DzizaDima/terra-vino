@@ -1,0 +1,15 @@
+{% if product.metafields.custom.tastes != blank %}
+  <div class="tasting-notes">
+    <h2 class="tasting-notes__title product-block__title">{{ 'products.product.tasting_notes' | t }}</h2>
+    <div class="tasting-notes__content">
+    {% for taste in product.metafields.custom.tastes.value %}
+      <div class="tasting-notes__item">
+        <div class="tasting-notes__item-image">
+          {{ taste.image | image_url: width: 300 | image_tag: loading: 'lazy', fetchpriority: 'low' }}
+        </div>
+        <span class="tasting-notes__item-name">{{ taste.name }}</span>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+{% endif %}

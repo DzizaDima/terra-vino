@@ -1,0 +1,10 @@
+{% if product.metafields.custom.wine_year != blank or product.metafields.custom.winnery != blank %}
+  <div class="card__tags">
+    {% if product.metafields.custom.wine_year != blank %}
+      <span class="card__tag">{{ product.metafields.custom.wine_year }}</span>
+    {% endif %}
+    {% if product.metafields.custom.winnery != blank %}
+      <span class="card__tag">{{ product.metafields.custom.winnery }}</span>
+    {% endif %}
+  </div>
+{% endif %}
