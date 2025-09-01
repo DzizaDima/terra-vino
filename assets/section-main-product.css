@@ -1500,6 +1500,7 @@ media-gallery .thumbnail-slider{
 
 .card__tags{
   display: flex;
+  align-items: center;
   gap: 8px;
   margin-bottom: 12px;
 }
@@ -1512,6 +1513,8 @@ media-gallery .thumbnail-slider{
   text-transform: uppercase;
   color: #D98D30;
   padding: 6px 12px 5px;
+  text-align: center;
+  width: fit-content;
 }
 
 .main-area{
