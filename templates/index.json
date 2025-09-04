@@ -174,7 +174,7 @@
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
-        "heading_image": "shopify://shop_images/Cellar_Icon_db837ab9-a106-4def-8007-6803c29c953b.png",
+        "heading_image": "shopify://shop_images/Cellar_Icon_6c479f72-701c-4415-afb4-70a6f218123c.png",
         "heading_image_width": 70,
         "heading_image_width_mobile": 50,
         "title": "From Our Cellar <em>To Yours</em>",
@@ -464,7 +464,7 @@
       ],
       "name": "Reviews Slider",
       "settings": {
-        "heading_image": "shopify://shop_images/Review_Image.png",
+        "heading_image": "shopify://shop_images/Review_Image_f0199277-3ebf-4466-989f-04f12031b921.png",
         "title": "<em>Google</em> Reviews",
         "heading_size": "h1",
         "columns_desktop": 3,
