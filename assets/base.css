@@ -3609,4 +3609,9 @@ h5 em,
 h6 em,
 .collection-custom-card__title em{
   font-family: 'Awesome Serif Italic';
+  font-style: normal;
+}
+
+.relative{
+  position: relative;
 }

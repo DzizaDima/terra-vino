@@ -678,6 +678,10 @@
         "title": {
           "default": "Contact form",
           "label": "Heading"
+        },
+        "subheading": {
+          "default": "Contact form",
+          "label": "Subheading"
         }
       }
     },
