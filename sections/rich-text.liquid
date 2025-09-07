@@ -23,7 +23,7 @@
             {%- when 'heading' -%}
               {% if block.settings.heading_image != blank %}
                 <div class="rich-text__heading-image">
-                 {{ block.settings.heading_image | image_url: width: 300 | image_tag: class: 'heading-image', loading: 'lazy', fetchpriority: 'low' }}
+                 {{ block.settings.heading_image | image_url: width: 600 | image_tag: class: 'heading-image', loading: 'lazy', fetchpriority: 'low' }}
                 </div>
               {% endif %}
               <h2
@@ -37,14 +37,14 @@
                 {{ block.settings.heading }}
               </h2>
               <style>
-                .rich-text__heading-image .heading-image{
+                #shopify-section-{{ section.id }} .rich-text__heading-image .heading-image{
                   max-width: {{ block.settings.heading_image_width_mobile }}px;
                   width: 100%;
                   height: auto;
                 }
     
                 @media screen and (min-width: 750px) {
-                  .rich-text__heading-image .heading-image{
+                  #shopify-section-{{ section.id }} .rich-text__heading-image .heading-image{
                     max-width: {{ block.settings.heading_image_width }}px;
                   }
                 }
@@ -247,8 +247,8 @@
           "type": "range",
           "id": "heading_image_width",
           "min": 20,
-          "max": 150,
-          "step": 2,
+          "max": 450,
+          "step": 5,
           "unit": "px",
           "label": "Heading Image Width",
           "default": 70
@@ -257,8 +257,8 @@
           "type": "range",
           "id": "heading_image_width_mobile",
           "min": 20,
-          "max": 150,
-          "step": 2,
+          "max": 450,
+          "step": 5,
           "unit": "px",
           "label": "Heading Image Width (Mobile)",
           "default": 50

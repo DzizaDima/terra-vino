@@ -143,7 +143,10 @@
             {%- endif -%}
           {%- endif -%}
         </div>
-        <img src="{{ 'image-background-horizontal-big.png' | asset_url }}" alt="Image Background" class="image-background">
+
+        {%- if section.settings.show_image_background -%}
+          <img src="{{ 'image-background-horizontal-big.png' | asset_url }}" alt="Image Background" class="image-background">
+        {%- endif -%}
         {%- if block.settings.announcement != blank -%}
           <div class="banner__announcement">
             <p>{{ block.settings.announcement }}</p>
@@ -357,6 +360,12 @@
       ],
       "default": "none",
       "label": "t:sections.all.animation.image_behavior.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_image_background",
+      "label": "Show image background",
+      "default": true
     },
     {
       "type": "header",

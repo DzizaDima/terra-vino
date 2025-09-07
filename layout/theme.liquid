@@ -476,6 +476,13 @@
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
+
+      {% if template == 'page.about' %}
+        <div class="about-icons">
+         <img src="{{ 'contact-us-left.png' | asset_url }}" alt="Contact Us Left" class="about-icons__left">
+         <img src="{{ 'contact-us-right.png' | asset_url }}" alt="Contact Us Right" class="about-icons__right">
+        </div>
+      {% endif %}
     </main>
 
     {% sections 'footer-group' %}

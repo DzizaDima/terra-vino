@@ -11,13 +11,285 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_m7PjaY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_qJqT9G": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Us",
+            "heading_size": "hxxl",
+            "heading_image": "shopify://shop_images/27484024_4_1.png",
+            "heading_image_width": 70,
+            "heading_image_width_mobile": 50
+          }
+        }
+      },
+      "block_order": [
+        "heading_qJqT9G"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_bottom": 64
+      }
+    },
+    "slideshow_BfcLAq": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_XpmFQt": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Product_Image_63eafeaa-6a8d-49e2-aec7-4dcdbc0e816c.png",
+            "image_overlay_opacity": 0,
+            "announcement": "",
+            "caption": "",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_XpmFQt"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "grid",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_image_background": false,
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "rich_text_7Bfjxh": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_p3irKW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Mission & Vision",
+            "heading_size": "hxl",
+            "heading_image_width": 70,
+            "heading_image_width_mobile": 50
+          }
+        },
+        "text_YLQgfj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Terra Vino, our mission is to be Singapore’s trusted gateway to boutique Italian wines. We are dedicated to sharing the craftsmanship, culture, and stories of small-production wineries, fostering a deeper appreciation for Italy’s winemaking heritage. Our vision is to be the leading source of exclusive boutique wines in Singapore and, over time, across Southeast Asia.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_p3irKW",
+        "text_YLQgfj"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 120,
+        "padding_bottom": 64
+      }
+    },
+    "rich_text_jqd9JA": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_TPwNBi": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1",
+            "heading_image": "shopify://shop_images/Group_2085662852.png",
+            "heading_image_width": 440,
+            "heading_image_width_mobile": 350
+          }
+        }
+      },
+      "block_order": [
+        "heading_TPwNBi"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "about_zzar9g": {
+      "type": "about",
+      "name": "About",
+      "settings": {
+        "image": "shopify://shop_images/Meet_the_Makers_Image_37471ac6-68f3-4dcd-b56b-2d030152c027.png",
+        "title": "What Makes Us Unique",
+        "description": "<p>We work exclusively with family-owned, boutique wineries across Italy. These partnerships allow us to bring in wines that are not found in mainstream portfolios. Each bottle is carefully curated for authenticity, character, and provenance, ensuring our customers enjoy truly distinctive wines.</p>",
+        "left_text": "<p>ES<br/>td</p>",
+        "right_text": "<p>20<br/>07</p>",
+        "padding_top": 120,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_mWDrmd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jJHYW7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Wines",
+            "heading_size": "hxl",
+            "heading_image_width": 70,
+            "heading_image_width_mobile": 50
+          }
+        },
+        "text_V6TThx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our collection spans Italy’s diverse wine regions, from approachable everyday bottles to rare collector’s items. Every wine we import is boutique, small-production, and hand-selected, paired with the winemaker’s story to enrich the drinking experience.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jJHYW7",
+        "text_V6TThx"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 120,
+        "padding_bottom": 64
+      }
+    },
+    "image_MT7mTG": {
+      "type": "image",
+      "name": "Image",
+      "settings": {
+        "image": "shopify://shop_images/Group_2085662853.png",
+        "image_width": "custom",
+        "image_width_custom": 680,
+        "padding_top": 0,
+        "padding_bottom": 120
+      }
+    },
+    "rich_text_eXwjyU": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_wtGWKz": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Commitment to Customers",
+            "heading_size": "hxl",
+            "heading_image_width": 70,
+            "heading_image_width_mobile": 50
+          }
+        },
+        "text_cC6Y66": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We promise transparency, quality, and care. Whether supplying restaurants or serving individual wine lovers, we focus on reliability, proper storage, and expert guidance. Our commitment is to make every interaction with Terra Vino, and every bottle of boutique wine, a rewarding experience.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wtGWKz",
+        "text_cC6Y66"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 64
+      }
+    },
+    "image_QW4BwN": {
+      "type": "image",
+      "name": "Image",
+      "settings": {
+        "image": "shopify://shop_images/417545976_f969dc00-2972-4103-9670-88803a004f01_1.png",
+        "image_width": "custom",
+        "image_width_custom": 320,
+        "padding_top": 0,
+        "padding_bottom": 120
+      }
+    },
+    "rich_text_pyBaaE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xxRRYV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Community & Experiences",
+            "heading_size": "hxl",
+            "heading_image_width": 70,
+            "heading_image_width_mobile": 50
+          }
+        },
+        "text_NcR9qU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wine is about connection. Beyond bottles, we craft bespoke experiences that bring people together. From intimate birthday gatherings to elegant weddings and corporate events, our team can curate tasting journeys tailored to your needs. Every event is designed to showcase the best of Italian wine while creating lasting memories for you and your guests.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xxRRYV",
+        "text_NcR9qU"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 152
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_m7PjaY",
+    "slideshow_BfcLAq",
+    "rich_text_7Bfjxh",
+    "rich_text_jqd9JA",
+    "about_zzar9g",
+    "rich_text_mWDrmd",
+    "image_MT7mTG",
+    "rich_text_eXwjyU",
+    "image_QW4BwN",
+    "rich_text_pyBaaE"
   ]
 }
