@@ -160,6 +160,7 @@ slideshow-component:not(.page-width) .slider-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none!important;
 }
 
 @media screen and (max-width: 749px) {
