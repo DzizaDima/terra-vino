@@ -45,7 +45,17 @@
       <div class="about-section__content">
         {% if image != blank %}
           <div class="about-section__image">
+            {% if left_text != blank %}
+              <div class="about-section__side-text about-section__side-text--mobile">
+                {{ left_text }}
+              </div>
+            {% endif %}
             {{ image | image_url: width: 1000 | image_tag: class: 'about-section__image-img', loading: 'lazy', fetchpriority: 'low' }}
+            {% if right_text != blank %}
+              <div class="about-section__side-text about-section__side-text--mobile">
+                {{ right_text }}
+              </div>
+            {% endif %}
           </div>
         {% endif %}
         <div class="about-section__content-inner">
