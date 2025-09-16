@@ -400,6 +400,12 @@ blockquote {
   color: var(--color-foreground);
 }
 
+@media screen and (max-width: 750px) {
+  .caption-with-letter-spacing--medium {
+    font-size: 1.4rem;
+  }
+}
+
 .caption-with-letter-spacing--large {
   font-size: 1.4rem;
   letter-spacing: 0.18rem;
