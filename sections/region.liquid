@@ -29,6 +29,9 @@
                             {{ winery.image | image_url: width: 400 | image_tag: alt: winery.title, class: 'region__winery-image-img', loading: 'lazy', fetchpriority: 'low' }}
                         </div>
                         <p class="region__winery-title">{{ winery.title }}</p>
+                        {% if winery.link != blank %}
+                            <a href="{{ winery.link }}" class="region__winery-link"></a>
+                        {% endif %}
                     </div>
                 {% endfor %}
                 </div>

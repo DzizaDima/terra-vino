@@ -57,6 +57,10 @@
   margin-bottom: 15rem;
 }
 
+.collection--empty .underlined-link {
+  color: #192622;
+}
+
 @media screen and (max-width: 989px) {
   .collection .slider--tablet.product-grid {
     scroll-padding-left: 1.5rem;

@@ -573,16 +573,17 @@ button.facets__button {
 .active-facets {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: center;
   width: 100%;
   grid-column: 1 / -1;
   grid-row: 2;
+  margin-top: 24px;
 }
 
 .active-facets__button {
   display: block;
   margin-right: 1.5rem;
-  margin-top: 24px;
+  margin-top: 0;
   padding-left: 0.2rem;
   padding-right: 0.2rem;
   text-decoration: none;
@@ -644,7 +645,6 @@ span.active-facets__button-inner:after {
 
   .active-facets__button-wrapper {
     padding-top: 0;
-    margin-left: 1.2rem;
   }
 }
 
