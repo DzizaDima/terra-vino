@@ -1,0 +1,222 @@
+{{ 'winnery-info.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  .page-width--winnery {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .page-width--winnery {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+  }
+
+  #shopify-section-{{ section.id }}
+  .winnery-description__image .description-image {
+    max-width: {{ section.settings.description_image_width_mobile }}px;
+    width: 100%;
+    height: auto;
+  }
+
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .winnery-description__image .description-image {
+      max-width: {{ section.settings.description_image_width }}px;
+    }
+  }
+{% endstyle %}
+
+{% liquid
+  assign data_source = section.settings.data_source
+  assign logo = section.settings.logo
+  assign image = section.settings.image
+  assign image_mobile = section.settings.image_mobile
+  assign description_image = section.settings.description_image
+  assign title = section.settings.title
+  assign description = section.settings.description
+  assign info = section.settings.info
+
+  assign unique_data = page.metafields.custom.winery_page.value
+
+  if data_source == 'unique' and unique_data != blank
+    assign logo = unique_data.logo
+    assign image = unique_data.image
+    assign image_mobile = unique_data.image_mobile
+    assign description_image = unique_data.description_image
+    assign title = unique_data.description_title
+    assign description = unique_data.description | metafield_tag
+    assign info = unique_data.info | metafield_tag
+  endif
+%}
+
+<div class="page-width page-width--winnery">
+  {% if logo != blank %}
+    <div class="winnery__logo">
+      {{ logo | image_url: width: logo.width | image_tag: class: 'logo', loading: 'eager', fetchpriority: 'high' }}
+    </div>
+  {% endif %}
+
+  {% if image != blank %}
+    <div class="winnery__image">
+      <picture>
+        {% if image_mobile != blank %}
+          <source srcset="{{ image_mobile | image_url: width: 800 }}" media="(max-width: 767px)">
+        {% endif %}
+        {{ image | image_url: width: image.width | image_tag: class: 'image', loading: 'eager', fetchpriority: 'high' }}
+      </picture>
+    </div>
+  {% endif %}
+
+  {% if title != blank or description != blank %}
+    <div class="winnery-description">
+      {% if description_image != blank %}
+        <div class="winnery-description__image">
+          {{ description_image | image_url: width: 600 | image_tag: class: 'description-image', loading: 'lazy', fetchpriority: 'low' }}
+        </div>
+      {% endif %}
+  
+      {% if title != blank %}
+        <p class="winnery-description__title">{{ title }}</p>
+      {% endif %}
+  
+      {% if description != blank %}
+        <div class="winnery-description__description">{{ description }}</div>
+      {% endif %}
+    </div>
+  {% endif %}
+  
+  {% if info != blank %}
+    <div class="winnery-info">
+      <div class="winnery-info__content" style="background-image: url('{{ 'paper-bg.png' | asset_url }}');">
+        {{ info }}
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "Winnery Info",
+    "settings": [
+      {
+        "type": "select",
+        "id": "data_source",
+        "label": "Data Source",
+        "options": [
+          {
+            "value": "unique",
+            "label": "Unique"
+          }, {
+            "value": "default",
+            "label": "Default"
+          }
+        ],
+        "default": "unique"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo",
+        "visible_if": "{{ section.settings.data_source == 'default' }}"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "visible_if": "{{ section.settings.data_source == 'default' }}"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Image (Mobile)",
+        "visible_if": "{{ section.settings.data_source == 'default' }}"
+      }, {
+        "type": "image_picker",
+        "id": "description_image",
+        "label": "Description Image",
+        "visible_if": "{{ section.settings.data_source == 'default' }}"
+      }, {
+        "type": "range",
+        "id": "description_image_width",
+        "min": 20,
+        "max": 450,
+        "step": 5,
+        "unit": "px",
+        "label": "Description Image Width",
+        "default": 70
+      }, {
+        "type": "range",
+        "id": "description_image_width_mobile",
+        "min": 20,
+        "max": 450,
+        "step": 5,
+        "unit": "px",
+        "label": "Description Image Width (Mobile)",
+        "default": 50
+      }, {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "visible_if": "{{ section.settings.data_source == 'default' }}"
+      }, {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description",
+        "visible_if": "{{ section.settings.data_source == 'default' }}"
+      }, {
+        "type": "richtext",
+        "id": "info",
+        "label": "Info",
+        "visible_if": "{{ section.settings.data_source == 'default' }}"
+      }, {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      }, {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 200,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 40
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 200,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 52
+      }, {
+        "type": "range",
+        "id": "padding_top_mobile",
+        "min": 0,
+        "max": 200,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top_mobile",
+        "default": 40
+      }, {
+        "type": "range",
+        "id": "padding_bottom_mobile",
+        "min": 0,
+        "max": 200,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom_mobile",
+        "default": 52
+      }
+    ],
+    "presets": [
+      {
+        "name": "Winnery Info"
+      }
+    ],
+    "enabled_on": {
+      "templates": ["page"]
+    }
+  }
+{% endschema %}

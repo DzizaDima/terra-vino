@@ -7,17 +7,57 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_TkUibf": {
+      "type": "image",
+      "name": "Image",
+      "settings": {
+        "image_width": "default",
+        "image_width_custom": 1000,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_zKFByd": {
+      "type": "image",
+      "name": "Image",
+      "settings": {
+        "image_width": "full",
+        "image_width_custom": 1000,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "winnery_info_9yEAKF": {
+      "type": "winnery-info",
+      "name": "Winnery Info",
+      "settings": {
+        "data_source": "unique",
+        "description_image_width": 70,
+        "description_image_width_mobile": 50,
+        "title": "",
+        "description": "",
+        "info": "",
+        "padding_top": 16,
+        "padding_bottom": 152,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_TkUibf",
+    "image_zKFByd",
+    "winnery_info_9yEAKF"
   ]
 }

@@ -3642,7 +3642,7 @@ h6 em,
   max-width: 209px;
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 850px) {
   .about-icons{
     display: none;
   }

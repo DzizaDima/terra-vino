@@ -1,0 +1,144 @@
+.page-width--winnery {
+  max-width: 1206px;
+}
+
+.winnery-info {
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.winnery-info__content {
+  text-align: center;
+  position: relative;
+  padding: 40px 16px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat-x;
+}
+
+.winnery-info__content h1,
+.winnery-info__content h2,
+.winnery-info__content h3,
+.winnery-info__content h4,
+.winnery-info__content h5,
+.winnery-info__content h6 {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 28px;
+  line-height: 1.1;
+  color: #192622;
+}
+
+.winnery-info__content p {
+  margin: 0;
+  color: #4E524F;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-bottom: 32px;
+}
+
+.winnery-info__content p:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .winnery-info__content {
+    background-size: contain;
+    padding: 64px 48px;
+  }
+}
+
+.winnery__logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .winnery__logo {
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .winnery__logo img {
+    max-width: 80px;
+    height: auto;
+  }
+}
+
+.winnery__image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 56px;
+}
+
+.winnery__image img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .winnery__image {
+    margin-bottom: 72px;
+  }
+}
+
+.winnery-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 56px;
+}
+
+.winnery-description__image {
+  margin-bottom: 18px;
+}
+
+.winnery-description__title {
+  color: #D98D30;
+  font-size: 14px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.winnery-description__description {
+  color: #4E524F;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: center;
+  margin: 0;
+}
+
+.winnery-description__description p{
+  margin: 0;
+}
+
+
+@media screen and (min-width: 768px) {
+  .winnery-description {
+    margin-bottom: 72px;
+  }
+
+  .winnery-description__image {
+    margin-bottom: 24px;
+  }
+
+  .winnery-description__title {
+    font-size: 18px;
+  }
+
+  .winnery-description__description {
+    font-size: 20px;
+  }
+}
