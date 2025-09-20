@@ -7,8 +7,8 @@
       {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
     {% endif %}
   </div>
-  <div class="collection-custom-card__title">
+  {% comment %} <div class="collection-custom-card__title">
     {{ card_collection.title | replace: 'Wine', '<em>Wine</em>' | replace: 'Bottles', '<em>Bottles</em>' }}
-  </div>
+  </div> {% endcomment %}
   <a href="{{ card_collection.url }}" class="collection-custom-card__link"></a>
 </div>
