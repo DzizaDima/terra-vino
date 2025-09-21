@@ -15,55 +15,64 @@
         "collection_CbaDHK": {
           "type": "collection",
           "settings": {
-            "collection": "castagnini"
+            "collection": "castagnini",
+            "link": "shopify://pages/castagnini"
           }
         },
         "collection_9Phcmp": {
           "type": "collection",
           "settings": {
-            "collection": "crifo"
+            "collection": "crifo",
+            "link": "shopify://pages/crifo"
           }
         },
         "collection_ATCXHN": {
           "type": "collection",
           "settings": {
-            "collection": "cantine-dei"
+            "collection": "cantine-dei",
+            "link": "shopify://pages/cantine-dei"
           }
         },
         "collection_cK8XQr": {
           "type": "collection",
           "settings": {
-            "collection": "firriato"
+            "collection": "firriato",
+            "link": "shopify://pages/firriato"
           }
         },
         "collection_HC4cfQ": {
           "type": "collection",
           "settings": {
-            "collection": "cantina-di-monteforte"
+            "collection": "cantina-di-monteforte",
+            "link": "shopify://pages/cantina-di-monteforte"
           }
         },
         "collection_UTK7qg": {
           "type": "collection",
           "settings": {
-            "collection": "poderesette"
+            "collection": "poderesette",
+            "link": "shopify://pages/poderesette"
           }
         },
         "collection_LxhBJt": {
           "type": "collection",
           "settings": {
-            "collection": "sandre"
+            "collection": "sandre",
+            "link": "shopify://pages/sandre"
           }
         },
         "collection_jnwP3g": {
           "type": "collection",
           "settings": {
-            "collection": "teo-costa"
+            "collection": "teo-costa",
+            "link": "shopify://pages/teo-costa"
           }
         },
         "collection_4BBnx7": {
           "type": "collection",
           "settings": {
-            "collection": "chianti-trambusti"
+            "collection": "chianti-trambusti",
+            "link": "shopify://pages/chianti-trambusti"
           }
         }
       },
