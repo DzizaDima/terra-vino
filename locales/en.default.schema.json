@@ -401,6 +401,7 @@
       },
       "spacing": "Spacing",
       "colors": {
+        "header": "Colors",
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       },
@@ -3522,9 +3523,6 @@
           "label": "Bottom description",
           "default": "<p>Raise a glass with us and experience the charm of Italy's boutique wineries, right here in Singapore.</p>"
         },
-        "background_color": {
-          "label": "Background color"
-        }
       },
       "presets": {
         "name": "How to Book"

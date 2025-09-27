@@ -445,9 +445,6 @@
           "label": "Bottom description",
           "default": "<p>Raise a glass with us and experience the charm of Italy's boutique wineries, right here in Singapore.</p>"
         },
-        "background_color": {
-          "label": "Background color"
-        }
       },
       "presets": {
         "name": "How to Book"
