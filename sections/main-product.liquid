@@ -497,7 +497,9 @@
               {%- when 'technical_info' -%}
                 {% render 'product-technical-info', product: product %}
               {%- when 'tasting_notes' -%}
-                {% render 'product-tasting-notes', product: product %}
+                {% render 'product-tasting-notes', product: product, type: 'notes' %}
+              {%- when 'tasting_pairs' -%}
+                  {% render 'product-tasting-notes', product: product, type: 'pairs' %}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
@@ -925,6 +927,12 @@
     {
       "type": "tasting_notes",
       "name": "t:sections.main-product.blocks.tasting_notes.name",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "tasting_pairs",
+      "name": "t:sections.main-product.blocks.tasting_pairs.name",
       "limit": 1,
       "settings": []
     },

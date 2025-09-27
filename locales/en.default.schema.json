@@ -2048,6 +2048,9 @@
         "tasting_notes": {
           "name": "Tasting notes"
         },
+        "tasting_pairs": {
+          "name": "Tasting pairs"
+        },
         "sku": {
           "name": "SKU",
           "settings": {

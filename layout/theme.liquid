@@ -483,6 +483,41 @@
          <img src="{{ 'contact-us-right.png' | asset_url }}" alt="Contact Us Right" class="about-icons__right">
         </div>
       {% endif %}
+
+      {% if template == 'page.events' %}
+        <div class="events-bg-wrapper">
+          <div class="events-bg events-bg--left">
+            <img
+              src="{{ 'contact-bg-left.png' | asset_url }}"
+              alt="Events Background Left"
+              class="events-bg-left"
+              loading="lazy"
+              fetchpriority="low"
+              width="100%"
+              height="auto">
+          </div>
+          <div class="events-bg events-bg--right">
+            <img
+              src="{{ 'contact-bg-right.png' | asset_url }}"
+              alt="Events Background Right"
+              class="events-bg-right"
+              loading="lazy"
+              fetchpriority="low"
+              width="100%"
+              height="auto">
+          </div>
+          <div class="events-bg events-bg--mobile">
+            <img
+              src="{{ 'contact-bg-mobile.png' | asset_url }}"
+              alt="Events Background Mobile"
+              class="events-bg-mobile"
+              loading="lazy"
+              fetchpriority="low"
+              width="100%"
+              height="auto">
+          </div>
+        </div>
+      {% endif %}
     </main>
 
     {% sections 'footer-group' %}

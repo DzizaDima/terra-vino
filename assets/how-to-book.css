@@ -10,14 +10,20 @@
 }
 
 .how-to-book .title {
-  margin: 0 0 3rem;
+  margin: 0;
   text-align: center;
-  font-style: italic;
   color: rgb(var(--color-foreground));
+  font-family: var(--font-heading-family);
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 400;
 }
 
 .how-to-book .title-wrapper-with-link {
   text-align: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 3.2rem;
 }
 
 .how-to-book .title em {
@@ -27,9 +33,6 @@
 
 .how-to-book__content-wrapper {
   position: relative;
-  border: 2px solid rgb(var(--color-foreground));
-  border-radius: 8px;
-  padding: 4rem 2rem;
   margin: 0 auto;
   max-width: 900px;
 }
@@ -42,9 +45,10 @@
 .how-to-book__columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 8rem;
   align-items: start;
-  margin-bottom: 3rem;
+  padding: 40px 30px;
+  border: 6px solid #6A492D;
 }
 
 .how-to-book__column {
@@ -55,74 +59,62 @@
   position: relative;
 }
 
-.how-to-book__column--public::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -2rem;
-  width: 2px;
-  height: 100%;
-  background-color: rgb(var(--color-foreground));
-}
-
 .how-to-book__card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
 }
 
 .how-to-book__card-title {
   font-family: var(--font-heading-family);
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.1;
   margin: 0;
   color: rgb(var(--color-foreground));
 }
 
 .how-to-book__card-description {
-  font-size: 1.6rem;
+  font-size: 2rem;
   line-height: 1.4;
   margin: 0;
   color: rgb(var(--color-foreground));
-  max-width: 280px;
+  margin: 8px 0 0;
+}
+
+.how-to-book__card-description p{
+  margin: 0;
 }
 
 .how-to-book__card-image {
-  margin-top: 1rem;
+  margin-top: 1.6rem;
 }
 
 .how-to-book__icon {
-  width: 60px;
+  width: 35px;
   height: auto;
   object-fit: contain;
 }
 
 .how-to-book__button {
-  background-color: rgb(var(--color-foreground));
-  color: rgb(var(--color-background));
-  border: 2px solid rgb(var(--color-foreground));
-  border-radius: 25px;
-  padding: 1rem 2.5rem;
-  font-size: 1.4rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-  margin-top: 1rem;
-}
-
-.how-to-book__button:hover {
-  background-color: transparent;
-  color: rgb(var(--color-foreground));
-  transform: translateY(-2px);
+  margin-top: 1.6rem;
+  font-weight: 300;
+  font-size: 20px;
+  font-family: var(--font-body-family);
 }
 
 .how-to-book__bottom-text {
   text-align: center;
-  border-top: 2px solid rgb(var(--color-foreground));
-  padding-top: 3rem;
+  padding-top: 3.2rem;
+}
+
+.how-to-book__bottom-text p{
+  margin: 0 auto;
+  max-width: 660px;
+  text-align: center;
+  color: #4E524F;
+  font-size: 20px;
+  line-height: 1.4;
 }
 
 .how-to-book__description {
@@ -136,34 +128,17 @@
 }
 
 /* Mobile Styles */
-@media screen and (max-width: 749px) {
-  .how-to-book .title {
-    margin-bottom: 2rem;
-    font-size: 3.2rem;
-  }
-  
-  .how-to-book__content-wrapper {
-    padding: 2.5rem 1.5rem;
-    border-radius: 6px;
-  }
-  
+@media screen and (max-width: 749px) {  
   .how-to-book__columns {
     grid-template-columns: 1fr;
-    gap: 3rem;
-    margin-bottom: 2.5rem;
-  }
-  
-  .how-to-book__column--public::after {
-    display: none;
-  }
-  
-  .how-to-book__column--public {
-    padding-bottom: 2rem;
-    border-bottom: 2px solid rgb(var(--color-foreground));
+    gap: 4.8rem;
+    padding: 32px 16px;
   }
   
   .how-to-book__card-title {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
+    line-height: 1.1;
+    font-weight: 400;
   }
   
   .how-to-book__card-description {
@@ -176,27 +151,25 @@
   }
   
   .how-to-book__bottom-text {
-    padding-top: 2.5rem;
+    padding-top: 3.2rem;
+    font-size: 16px;
   }
-  
-  .how-to-book__button {
-    padding: 0.8rem 2rem;
-    font-size: 1.3rem;
+}
+
+@media screen and (min-width: 750px) {
+  .how-to-book .title-wrapper-with-link {
+    margin-bottom: 56px;
+  }
+
+  .how-to-book .title {
+    font-size: 64px;
   }
 }
 
 /* Tablet Styles */
 @media screen and (min-width: 750px) and (max-width: 989px) {
   .how-to-book__content-wrapper {
-    padding: 3.5rem 2rem;
-  }
-  
-  .how-to-book__columns {
-    gap: 3rem;
-  }
-  
-  .how-to-book__card-title {
-    font-size: 2.8rem;
+    padding: 0;
   }
   
   .how-to-book__card-description {
@@ -205,28 +178,5 @@
   
   .how-to-book__description {
     font-size: 1.7rem;
-  }
-}
-
-/* Large Desktop */
-@media screen and (min-width: 1200px) {
-  .how-to-book__content-wrapper {
-    padding: 5rem 3rem;
-  }
-  
-  .how-to-book__columns {
-    gap: 5rem;
-  }
-  
-  .how-to-book__card-title {
-    font-size: 3.5rem;
-  }
-  
-  .how-to-book__card-description {
-    font-size: 1.8rem;
-  }
-  
-  .how-to-book__description {
-    font-size: 2rem;
   }
 }

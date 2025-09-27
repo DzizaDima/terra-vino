@@ -126,6 +126,7 @@
       "description": "Description",
       "technical_info": "Technical information",
       "tasting_notes": "Tasting notes",
+      "tasting_pairs": "Tasting pairs",
       "wine_type": "Varietal",
       "year": "Vintage",
       "bottle_size": "Volume",

@@ -1667,6 +1667,14 @@ media-gallery .thumbnail-slider{
     gap: 20px;
   }
 
+  .tasting-notes__item-image img{
+    max-width: 60px;
+  }
+
+  .tasting-notes__item-name{
+    font-size: 16px;
+  }
+
   .product__title>*{
     font-size: 36px;
   }

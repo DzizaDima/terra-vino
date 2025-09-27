@@ -1,13 +1,31 @@
-{% if product.metafields.custom.tastes != blank %}
+{% liquid
+  assign type = type | default: 'notes'
+  assign source = ''
+
+  if type == 'pairs'
+    assign source = product.metafields.custom.tasting_pairings
+  else 
+    assign source = product.metafields.custom.tastes
+  endif
+%}
+
+
+{% if source != blank %}
   <div class="tasting-notes">
-    <h2 class="tasting-notes__title product-block__title">{{ 'products.product.tasting_notes' | t }}</h2>
+    <h2 class="tasting-notes__title product-block__title">
+      {% if type == 'pairs' %}
+        {{ 'products.product.tasting_pairs' | t }}
+        {% else %}
+          {{ 'products.product.tasting_notes' | t }}
+        {% endif %}
+    </h2>
     <div class="tasting-notes__content">
-    {% for taste in product.metafields.custom.tastes.value %}
+    {% for item in source.value %}
       <div class="tasting-notes__item">
         <div class="tasting-notes__item-image">
-          {{ taste.image | image_url: width: 300 | image_tag: loading: 'lazy', fetchpriority: 'low' }}
+          {{ item.image | image_url: width: 300 | image_tag: loading: 'lazy', fetchpriority: 'low' }}
         </div>
-        <span class="tasting-notes__item-name">{{ taste.name }}</span>
+        <span class="tasting-notes__item-name">{{ item.name }}</span>
       </div>
     {% endfor %}
     </div>

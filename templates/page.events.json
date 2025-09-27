@@ -11,13 +11,226 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_z9c9aY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_87RecR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Discover Terra Vino <em>Experiences</em>",
+            "heading_size": "hxxl",
+            "heading_image": "shopify://shop_images/Group.png",
+            "heading_image_width": 185,
+            "heading_image_width_mobile": 120
+          }
+        }
+      },
+      "block_order": [
+        "heading_87RecR"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_bottom": 64
+      }
+    },
+    "image_waH7UF": {
+      "type": "image",
+      "name": "Image",
+      "settings": {
+        "image": "shopify://shop_images/Product_Image_2f9fa038-a78d-4069-99c6-a0e50693cea0.png",
+        "image_mobile": "shopify://shop_images/Product_Image_1_aaf3831a-660c-4ae6-9be9-476a27ca05d0.png",
+        "image_width": "full",
+        "image_width_custom": 1000,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_zjQena": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8EG4fm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Public Tastings & <em>Launch Events</em>",
+            "heading_size": "hxl",
+            "heading_image_width": 70,
+            "heading_image_width_mobile": 50
+          }
+        },
+        "text_kxEzid": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Join us for curated wine experiences that bring Italy’s boutique vineyards to Singapore. Each session features a rotating selection of small-production Italian wines, guided tasting notes, and stories from the winemakers themselves. Whether you’re a curious beginner or a seasoned collector, our tastings are designed to be relaxed, informative, and memorable</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8EG4fm",
+        "text_kxEzid"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "image_tMgKkj": {
+      "type": "image",
+      "name": "Image",
+      "settings": {
+        "image": "shopify://shop_images/Frame_2087327190.png",
+        "image_width": "custom",
+        "image_width_custom": 660,
+        "padding_top": 56,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_WRAGpD": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_DzUbgP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Host a <em>Private</em>  Wine Event",
+            "heading_size": "hxl",
+            "heading_image_width": 70,
+            "heading_image_width_mobile": 50
+          }
+        },
+        "text_ECRkHd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Looking for something tailored? Terra Vino also creates private wine experiences for individuals, companies, and special celebrations. From birthday parties and weddings to corporate client evenings or team events, we handle every detail:</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DzUbgP",
+        "text_ECRkHd"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_TTbeVA": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_bdVj3g": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/image_409224266.png",
+            "title": "Wine Curation",
+            "text": "<p> Exclusive boutique Italian<br/>wines matched to your theme or menu.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_MTDREM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/image_409224266_1.png",
+            "title": "Food Pairing",
+            "text": "<p>Customised canapés or<br/>multi-course menus prepared with trusted partners.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_cadQcP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/image_409224266_2.png",
+            "title": "Event Planning",
+            "text": "<p>Venue coordination, set-up,<br/>and full service so you can simply enjoy.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_bdVj3g",
+        "column_MTDREM",
+        "column_cadQcP"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "scheme-3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "how_to_book_FThKer": {
+      "type": "how-to-book",
+      "name": "t:sections.how_to_book.presets.name",
+      "settings": {
+        "title": "How <em>to Book</em>",
+        "heading_size": "h1",
+        "public_title": "Public Events",
+        "public_description": "<p>Browse and book upcoming tastings directly on this page.</p>",
+        "public_image": "shopify://shop_images/27484024_4_1_1a6bd7e4-641b-4b52-a644-5d0da0faf07e.png",
+        "private_title": "Private Enquiries",
+        "private_description": "<p>Want to discuss dates, budgets, and menu ideas?</p>",
+        "button_label": "Book Now",
+        "button_link": "",
+        "bottom_description": "<p>Raise a glass with us and experience the charm of Italy's boutique wineries, right here in Singapore.</p>",
+        "color_scheme": "scheme-3",
+        "background_color": "#F5EFE7",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "image_KDhyzT": {
+      "type": "image",
+      "name": "Image",
+      "settings": {
+        "image": "shopify://shop_images/Frame_2087327208.png",
+        "image_width": "custom",
+        "image_width_custom": 690,
+        "padding_top": 64,
+        "padding_bottom": 120
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_z9c9aY",
+    "image_waH7UF",
+    "rich_text_zjQena",
+    "image_tMgKkj",
+    "rich_text_WRAGpD",
+    "multicolumn_TTbeVA",
+    "how_to_book_FThKer",
+    "image_KDhyzT"
   ]
 }

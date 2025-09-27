@@ -12,6 +12,12 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  {% if template contains 'events' %}
+    .content-container--full-width .rich-text__blocks{
+      max-width: 100%;
+    }
+  {% endif %}
 {%- endstyle -%}
 
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
