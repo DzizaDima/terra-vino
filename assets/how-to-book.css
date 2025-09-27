@@ -1,0 +1,228 @@
+/* How to Book Section Styles */
+
+.how-to-book {
+  position: relative;
+  overflow: hidden;
+}
+
+.how-to-book .page-width {
+  max-width: 1200px;
+}
+
+.how-to-book .title {
+  margin: 0 0 3rem;
+  text-align: center;
+  font-style: italic;
+  color: rgb(var(--color-foreground));
+}
+
+.how-to-book .title em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.how-to-book__content-wrapper {
+  position: relative;
+  border: 2px solid rgb(var(--color-foreground));
+  border-radius: 8px;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.how-to-book__inner {
+  position: relative;
+  z-index: 2;
+}
+
+.how-to-book__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+.how-to-book__column {
+  text-align: center;
+}
+
+.how-to-book__column--public {
+  position: relative;
+}
+
+.how-to-book__column--public::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -2rem;
+  width: 2px;
+  height: 100%;
+  background-color: rgb(var(--color-foreground));
+}
+
+.how-to-book__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.how-to-book__card-title {
+  font-family: var(--font-heading-family);
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+  color: rgb(var(--color-foreground));
+}
+
+.how-to-book__card-description {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  margin: 0;
+  color: rgb(var(--color-foreground));
+  max-width: 280px;
+}
+
+.how-to-book__card-image {
+  margin-top: 1rem;
+}
+
+.how-to-book__icon {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+}
+
+.how-to-book__button {
+  background-color: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
+  border: 2px solid rgb(var(--color-foreground));
+  border-radius: 25px;
+  padding: 1rem 2.5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.how-to-book__button:hover {
+  background-color: transparent;
+  color: rgb(var(--color-foreground));
+  transform: translateY(-2px);
+}
+
+.how-to-book__bottom-text {
+  text-align: center;
+  border-top: 2px solid rgb(var(--color-foreground));
+  padding-top: 3rem;
+}
+
+.how-to-book__description {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  margin: 0;
+  color: rgb(var(--color-foreground));
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 749px) {
+  .how-to-book .title {
+    margin-bottom: 2rem;
+    font-size: 3.2rem;
+  }
+  
+  .how-to-book__content-wrapper {
+    padding: 2.5rem 1.5rem;
+    border-radius: 6px;
+  }
+  
+  .how-to-book__columns {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .how-to-book__column--public::after {
+    display: none;
+  }
+  
+  .how-to-book__column--public {
+    padding-bottom: 2rem;
+    border-bottom: 2px solid rgb(var(--color-foreground));
+  }
+  
+  .how-to-book__card-title {
+    font-size: 2.4rem;
+  }
+  
+  .how-to-book__card-description {
+    font-size: 1.4rem;
+    max-width: 100%;
+  }
+  
+  .how-to-book__description {
+    font-size: 1.6rem;
+  }
+  
+  .how-to-book__bottom-text {
+    padding-top: 2.5rem;
+  }
+  
+  .how-to-book__button {
+    padding: 0.8rem 2rem;
+    font-size: 1.3rem;
+  }
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .how-to-book__content-wrapper {
+    padding: 3.5rem 2rem;
+  }
+  
+  .how-to-book__columns {
+    gap: 3rem;
+  }
+  
+  .how-to-book__card-title {
+    font-size: 2.8rem;
+  }
+  
+  .how-to-book__card-description {
+    font-size: 1.5rem;
+  }
+  
+  .how-to-book__description {
+    font-size: 1.7rem;
+  }
+}
+
+/* Large Desktop */
+@media screen and (min-width: 1200px) {
+  .how-to-book__content-wrapper {
+    padding: 5rem 3rem;
+  }
+  
+  .how-to-book__columns {
+    gap: 5rem;
+  }
+  
+  .how-to-book__card-title {
+    font-size: 3.5rem;
+  }
+  
+  .how-to-book__card-description {
+    font-size: 1.8rem;
+  }
+  
+  .how-to-book__description {
+    font-size: 2rem;
+  }
+}

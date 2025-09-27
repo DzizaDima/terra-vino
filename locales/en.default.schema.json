@@ -3475,6 +3475,60 @@
       "presets": {
         "name": "Collapsible content"
       }
+    },
+    "how_to_book": {
+      "name": "How to Book",
+      "settings": {
+        "title": {
+          "label": "Section title",
+          "default": "How <em>to Book</em>"
+        },
+        "public_events": {
+          "header": "Public Events"
+        },
+        "public_title": {
+          "label": "Public events title",
+          "default": "Public Events"
+        },
+        "public_description": {
+          "label": "Public events description",
+          "default": "<p>Browse and book upcoming tastings directly on this page.</p>"
+        },
+        "public_image": {
+          "label": "Public events icon"
+        },
+        "private_enquiries": {
+          "header": "Private Enquiries"
+        },
+        "private_title": {
+          "label": "Private enquiries title",
+          "default": "Private Enquiries"
+        },
+        "private_description": {
+          "label": "Private enquiries description",
+          "default": "<p>Want to discuss dates, budgets, and menu ideas?</p>"
+        },
+        "button_label": {
+          "label": "Button text",
+          "default": "Book Now"
+        },
+        "button_link": {
+          "label": "Button link"
+        },
+        "content": {
+          "header": "Content"
+        },
+        "bottom_description": {
+          "label": "Bottom description",
+          "default": "<p>Raise a glass with us and experience the charm of Italy's boutique wineries, right here in Singapore.</p>"
+        },
+        "background_color": {
+          "label": "Background color"
+        }
+      },
+      "presets": {
+        "name": "How to Book"
+      }
     }
   }
 }
