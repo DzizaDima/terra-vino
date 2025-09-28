@@ -144,8 +144,11 @@
         </div>
       </div>
       <div class="card__content">
-          {% if card_product.metafields.custom.wine_year != blank or card_product.metafields.custom.winnery != blank %}
+          {% if card_product.metafields.custom.wine_year != blank or card_product.metafields.custom.winnery != blank or card_product.metafields.custom.region != blank %}
             <div class="card__tags">
+              {% if card_product.metafields.custom.region != blank %}
+                <span class="card__tag">{{ card_product.metafields.custom.region.value.title }}</span>
+              {% endif %}
               {% if card_product.metafields.custom.wine_year != blank %}
                 <span class="card__tag">{{ card_product.metafields.custom.wine_year }}</span>
               {% endif %}
