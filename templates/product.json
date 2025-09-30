@@ -59,18 +59,6 @@
         "technical_info_rGBLLc": {
           "type": "technical_info",
           "settings": {}
-        },
-        "experiences_app_book_now_button_CcCcXq": {
-          "type": "shopify://apps/experiences-app/blocks/book-now-button/0f7bacd4-dd8b-4f37-98a0-d0ca3a8c3995",
-          "settings": {
-            "use_simple_styles_mode": true,
-            "primary_color": "#000000",
-            "on_primary_color": "#ffffff",
-            "border_radius": 0,
-            "book_button_text": "See More Timeslots",
-            "number_of_previews": 2,
-            "custom_styles": ""
-          }
         }
       },
       "block_order": [
@@ -82,8 +70,7 @@
         "description",
         "tasting_notes_HD3rHf",
         "tasting_pairs_VHcQMG",
-        "technical_info_rGBLLc",
-        "experiences_app_book_now_button_CcCcXq"
+        "technical_info_rGBLLc"
       ],
       "settings": {
         "enable_sticky_info": true,
