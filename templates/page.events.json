@@ -227,9 +227,9 @@
           "type": "shopify://apps/experiences-app/blocks/aggregate-view/0f7bacd4-dd8b-4f37-98a0-d0ca3a8c3995",
           "settings": {
             "mainHeader": "Book an experience",
-            "showEventsHideToggle": false,
+            "showEventsHideToggle": true,
             "defaultView": "dayGrid",
-            "contentWrap": false,
+            "contentWrap": true,
             "hideFutureDates": false,
             "languageCode": "en-US",
             "displayType": "default",
