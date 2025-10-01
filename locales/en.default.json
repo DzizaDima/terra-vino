@@ -283,6 +283,20 @@
         "send": "Send",
         "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
         "error_heading": "Please adjust the following:"
+      },
+      "book_event": {
+        "title": "Plan Your Event",
+        "subtitle": "Please share your contact details and event preferences, and our team will be in touch to help you plan a memorable private experience.",
+        "name": "Charles Hamilton",
+        "email": "Enter your email",
+        "preferred_date": "Preferred date",
+        "preferred_time": "Preferred time",
+        "details": "Add details, preferences, or questions here...",
+        "plan_event": "Plan Your Event",
+        "select_date": "Select Date",
+        "select_time": "Select Time",
+        "post_success": "Thank you for your event inquiry. We'll get back to you as soon as possible to plan your memorable experience.",
+        "error_heading": "Please adjust the following:"
       }
     },
     "404": {

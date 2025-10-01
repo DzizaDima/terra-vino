@@ -1,0 +1,409 @@
+{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
+{{ 'section-book-event.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: 230px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient relative">
+  <div class="contact-bg contact-bg--left">
+    <img
+      src="{{ 'contact-bg-left.png' | asset_url }}"
+      alt="Contact Background Left"
+      class="contact-bg-left"
+      loading="lazy"
+      fetchpriority="low"
+      width="100%"
+      height="auto">
+  </div>
+  <div class="contact-bg contact-bg--right">
+    <img
+      src="{{ 'contact-bg-right.png' | asset_url }}"
+      alt="Contact Background Right"
+      class="contact-bg-right"
+      loading="lazy"
+      fetchpriority="low"
+      width="100%"
+      height="auto">
+  </div>
+  <div class="contact-bg contact-bg--mobile">
+    <img
+      src="{{ 'contact-bg-mobile.png' | asset_url }}"
+      alt="Contact Background Mobile"
+      class="contact-bg-mobile"
+      loading="lazy"
+      fetchpriority="low"
+      width="100%"
+      height="auto">
+  </div>
+  <div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="book-event__title {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {{ section.settings.heading }}
+      </h2>
+    {%- else -%}
+      <h2 class="book-event__title">{{ 'templates.contact.book_event.title' | t }}</h2>
+    {%- endif -%}
+    {%- if section.settings.subheading != blank -%}
+      <p class="book-event__subtitle {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {{ section.settings.subheading }}
+      </p>
+    {%- else -%}
+      <p class="book-event__subtitle">{{ 'templates.contact.book_event.subtitle' | t }}</p>
+    {%- endif -%}
+    {%- liquid
+      assign contact_form_class = 'isolate'
+      if settings.animations_reveal_on_scroll
+        assign contact_form_class = 'isolate scroll-trigger animate--slide-in'
+      endif
+    -%}
+    {%- form 'contact'
+      , id: 'BookEventForm'
+      , class: contact_form_class -%}
+      {%- if form.posted_successfully? -%}
+        <h2
+          class="form-status form-status-list form__message"
+          tabindex="-1"
+          autofocus>
+          {{- 'icon-success.svg' | inline_asset_content -}}
+          {{ 'templates.contact.book_event.post_success' | t }}
+        </h2>
+      {%- elsif form.errors -%}
+        <div class="form__message">
+          <h2
+            class="form-status caption-large text-body"
+            role="alert"
+            tabindex="-1"
+            autofocus>
+            {{- 'icon-error.svg' | inline_asset_content -}}
+            {{ 'templates.contact.book_event.error_heading' | t }}
+          </h2>
+        </div>
+        <ul class="form-status-list caption-large" role="list">
+          <li>
+            <a href="#BookEventForm-email" class="link">
+              {{ form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email }}
+            </a>
+          </li>
+        </ul>
+      {%- endif -%}
+      
+      <div class="book-event__form-row">
+        <div class="field">
+          <input
+            class="field__input"
+            autocomplete="name"
+            type="text"
+            id="BookEventForm-name"
+            name="contact[name]"
+            value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+            placeholder="{{ 'templates.contact.book_event.name' | t }}"
+            required>
+          <label class="field__label" for="BookEventForm-name">{{ 'templates.contact.book_event.name' | t }}</label>
+        </div>
+        
+        <div class="field field--with-error">
+          <input
+            autocomplete="email"
+            type="email"
+            id="BookEventForm-email"
+            class="field__input"
+            name="contact[email]"
+            spellcheck="false"
+            autocapitalize="off"
+            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+            aria-required="true"
+            {% if form.errors contains 'email' %}
+            aria-invalid="true"
+            aria-describedby="BookEventForm-email-error"
+            {% endif %}
+            placeholder="{{ 'templates.contact.book_event.email' | t }}"
+            required>
+          <label class="field__label" for="BookEventForm-email">
+            {{- 'templates.contact.book_event.email' | t }}
+          </label>
+          {%- if form.errors contains 'email' -%}
+            <small class="contact__field-error" id="BookEventForm-email-error">
+              <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+              <span class="form__message">
+                <span class="svg-wrapper">
+                  {{- 'icon-error.svg' | inline_asset_content -}}
+                </span>
+                {{- form.errors.translated_fields.email | capitalize }}
+                {{ form.errors.messages.email -}}
+              </span>
+            </small>
+          {%- endif -%}
+        </div>
+      </div>
+
+      <div class="book-event__form-row">
+        <div class="field book-event__date-field">
+          <input
+            type="date"
+            id="BookEventForm-date"
+            class="field__input book-event__date-input"
+            name="contact[preferred_date]"
+            required>
+          <label class="field__label" for="BookEventForm-date">{{ 'templates.contact.book_event.preferred_date' | t }}</label>
+          <div class="book-event__calendar-container">
+            <div class="book-event__calendar" id="calendar"></div>
+            <button type="button" class="book-event__select-date-btn" id="selectDateBtn">
+              {{ 'templates.contact.book_event.select_date' | t }}
+            </button>
+          </div>
+        </div>
+        
+        <div class="field book-event__time-field">
+          <input
+            type="time"
+            id="BookEventForm-time"
+            class="field__input book-event__time-input"
+            name="contact[preferred_time]"
+            required>
+          <label class="field__label" for="BookEventForm-time">{{ 'templates.contact.book_event.preferred_time' | t }}</label>
+          <div class="book-event__time-dropdown" id="timeDropdown">
+            <div class="book-event__time-options">
+              <div class="book-event__time-option" data-time="08:00">08:00 AM</div>
+              <div class="book-event__time-option" data-time="08:30">08:30 AM</div>
+              <div class="book-event__time-option" data-time="09:00">09:00 AM</div>
+              <div class="book-event__time-option" data-time="09:30">09:30 AM</div>
+              <div class="book-event__time-option" data-time="10:00">10:00 AM</div>
+              <div class="book-event__time-option" data-time="10:30">10:30 AM</div>
+              <div class="book-event__time-option" data-time="11:00">11:00 AM</div>
+              <div class="book-event__time-option" data-time="11:30">11:30 AM</div>
+              <div class="book-event__time-option" data-time="12:00">12:00 PM</div>
+              <div class="book-event__time-option" data-time="12:30">12:30 PM</div>
+              <div class="book-event__time-option" data-time="13:00">01:00 PM</div>
+              <div class="book-event__time-option" data-time="13:30">01:30 PM</div>
+              <div class="book-event__time-option" data-time="14:00">02:00 PM</div>
+              <div class="book-event__time-option" data-time="14:30">02:30 PM</div>
+              <div class="book-event__time-option" data-time="15:00">03:00 PM</div>
+              <div class="book-event__time-option" data-time="15:30">03:30 PM</div>
+              <div class="book-event__time-option" data-time="16:00">04:00 PM</div>
+              <div class="book-event__time-option" data-time="16:30">04:30 PM</div>
+              <div class="book-event__time-option" data-time="17:00">05:00 PM</div>
+              <div class="book-event__time-option" data-time="17:30">05:30 PM</div>
+              <div class="book-event__time-option" data-time="18:00">06:00 PM</div>
+            </div>
+            <button type="button" class="book-event__select-time-btn" id="selectTimeBtn">
+              {{ 'templates.contact.book_event.select_time' | t }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <textarea
+          rows="4"
+          id="BookEventForm-details"
+          class="text-area field__input book-event__details"
+          name="contact[event_details]"
+          placeholder="{{ 'templates.contact.book_event.details' | t }}"
+          required>
+          {{- form.body -}}
+        </textarea>
+        <label class="form__label field__label" for="BookEventForm-details">
+          {{- 'templates.contact.book_event.details' | t -}}
+        </label>
+      </div>
+      
+      <div class="book-event__button">
+        <button type="submit" class="button book-event__submit-btn">
+          {{ 'templates.contact.book_event.plan_event' | t }}
+        </button>
+      </div>
+    {%- endform -%}
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const calendar = document.getElementById('calendar');
+  const selectDateBtn = document.getElementById('selectDateBtn');
+  const dateInput = document.getElementById('BookEventForm-date');
+  const timeDropdown = document.getElementById('timeDropdown');
+  const selectTimeBtn = document.getElementById('selectTimeBtn');
+  const timeInput = document.getElementById('BookEventForm-time');
+  const timeOptions = document.querySelectorAll('.book-event__time-option');
+
+  // Calendar functionality
+  let currentDate = new Date();
+  let selectedDate = null;
+
+  function generateCalendar(year, month) {
+    const firstDay = new Date(year, month, 1);
+    const lastDay = new Date(year, month + 1, 0);
+    const daysInMonth = lastDay.getDate();
+    const startingDayOfWeek = firstDay.getDay();
+
+    let calendarHTML = `
+      <div class="book-event__calendar-header">
+        <button type="button" class="book-event__nav-btn" id="prevMonth">&lt;</button>
+        <span class="book-event__month-year">${firstDay.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</span>
+        <button type="button" class="book-event__nav-btn" id="nextMonth">&gt;</button>
+      </div>
+      <div class="book-event__calendar-grid">
+        <div class="book-event__weekdays">
+          <div class="book-event__weekday">Mo</div>
+          <div class="book-event__weekday">Tu</div>
+          <div class="book-event__weekday">We</div>
+          <div class="book-event__weekday">Th</div>
+          <div class="book-event__weekday">Fr</div>
+          <div class="book-event__weekday">Sa</div>
+          <div class="book-event__weekday">Su</div>
+        </div>
+        <div class="book-event__days">
+    `;
+
+    // Add empty cells for days before the first day of the month
+    const mondayStart = startingDayOfWeek === 0 ? 6 : startingDayOfWeek - 1;
+    for (let i = 0; i < mondayStart; i++) {
+      calendarHTML += '<div class="book-event__day book-event__day--empty"></div>';
+    }
+
+    // Add days of the month
+    for (let day = 1; day <= daysInMonth; day++) {
+      const date = new Date(year, month, day);
+      const isToday = date.toDateString() === new Date().toDateString();
+      const isPast = date < new Date().setHours(0, 0, 0, 0);
+      const isSelected = selectedDate && date.toDateString() === selectedDate.toDateString();
+      
+      let dayClass = 'book-event__day';
+      if (isToday) dayClass += ' book-event__day--today';
+      if (isPast) dayClass += ' book-event__day--past';
+      if (isSelected) dayClass += ' book-event__day--selected';
+      
+      calendarHTML += `<div class="${dayClass}" data-date="${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}">${day}</div>`;
+    }
+
+    calendarHTML += '</div></div>';
+    calendar.innerHTML = calendarHTML;
+
+    // Add event listeners for navigation
+    document.getElementById('prevMonth').addEventListener('click', () => {
+      currentDate.setMonth(currentDate.getMonth() - 1);
+      generateCalendar(currentDate.getFullYear(), currentDate.getMonth());
+    });
+
+    document.getElementById('nextMonth').addEventListener('click', () => {
+      currentDate.setMonth(currentDate.getMonth() + 1);
+      generateCalendar(currentDate.getFullYear(), currentDate.getMonth());
+    });
+
+    // Add event listeners for day selection
+    document.querySelectorAll('.book-event__day:not(.book-event__day--past):not(.book-event__day--empty)').forEach(day => {
+      day.addEventListener('click', () => {
+        document.querySelectorAll('.book-event__day--selected').forEach(d => d.classList.remove('book-event__day--selected'));
+        day.classList.add('book-event__day--selected');
+        selectedDate = new Date(day.dataset.date);
+        dateInput.value = day.dataset.date;
+      });
+    });
+  }
+
+  // Initialize calendar
+  generateCalendar(currentDate.getFullYear(), currentDate.getMonth());
+
+  // Toggle calendar visibility
+  selectDateBtn.addEventListener('click', () => {
+    calendar.style.display = calendar.style.display === 'block' ? 'none' : 'block';
+    timeDropdown.style.display = 'none';
+  });
+
+  // Time selection functionality
+  selectTimeBtn.addEventListener('click', () => {
+    timeDropdown.style.display = timeDropdown.style.display === 'block' ? 'none' : 'block';
+    calendar.style.display = 'none';
+  });
+
+  timeOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      timeOptions.forEach(opt => opt.classList.remove('book-event__time-option--selected'));
+      option.classList.add('book-event__time-option--selected');
+      timeInput.value = option.dataset.time;
+      selectTimeBtn.textContent = option.textContent;
+      timeDropdown.style.display = 'none';
+    });
+  });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.book-event__date-field')) {
+      calendar.style.display = 'none';
+    }
+    if (!e.target.closest('.book-event__time-field')) {
+      timeDropdown.style.display = 'none';
+    }
+  });
+});
+</script>
+
+{% schema %}
+  {
+    "name": "Book Event Form",
+    "tag": "section",
+    "class": "section",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "settings": [
+      {
+        "type": "inline_richtext",
+        "id": "heading",
+        "default": "Plan Your <em>Event</em>",
+        "label": "Heading"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "subheading",
+        "default": "Please share your contact details and event preferences, and our team will be in touch to help you plan a memorable private experience.",
+        "label": "Subheading"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "scheme-1"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      }, {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 200,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 200,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }
+    ],
+    "presets": [
+      {
+        "name": "Book Event Form"
+      }
+    ]
+  }
+{% endschema %}
