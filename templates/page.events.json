@@ -205,7 +205,6 @@
         "button_link": "",
         "bottom_description": "<p>Raise a glass with us and experience the charm of Italy's boutique wineries, right here in Singapore.</p>",
         "color_scheme": "scheme-3",
-        "background_color": "#F5EFE7",
         "padding_top": 60,
         "padding_bottom": 60
       }
@@ -220,6 +219,39 @@
         "padding_top": 64,
         "padding_bottom": 120
       }
+    },
+    "1759301264e25096b9": {
+      "type": "apps",
+      "blocks": {
+        "experiences_app_aggregate_view_fkVE3K": {
+          "type": "shopify://apps/experiences-app/blocks/aggregate-view/0f7bacd4-dd8b-4f37-98a0-d0ca3a8c3995",
+          "settings": {
+            "mainHeader": "Book an experience",
+            "showEventsHideToggle": false,
+            "defaultView": "dayGrid",
+            "contentWrap": false,
+            "hideFutureDates": false,
+            "languageCode": "en-US",
+            "displayType": "default",
+            "tagColor": "",
+            "filterTags": "",
+            "backgroundColor": "#ffffff",
+            "primaryColor": "#007ace",
+            "secondaryColor": "#424242",
+            "textColor": "#424242",
+            "disabledColor": "#999b9e",
+            "buttonShape": "square",
+            "containerPaddingTop": 12,
+            "containerPaddingBottom": 12
+          }
+        }
+      },
+      "block_order": [
+        "experiences_app_aggregate_view_fkVE3K"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -231,6 +263,7 @@
     "rich_text_WRAGpD",
     "multicolumn_TTbeVA",
     "how_to_book_FThKer",
-    "image_KDhyzT"
+    "image_KDhyzT",
+    "1759301264e25096b9"
   ]
 }
