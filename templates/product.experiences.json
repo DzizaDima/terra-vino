@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "product-experiences",
+      "settings": {}
     },
     "rich_text_z9c9aY": {
       "type": "rich-text",
