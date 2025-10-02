@@ -127,6 +127,15 @@
   margin-right: auto;
 }
 
+.how-to-book__block{
+  margin-top: 16px;
+}
+
+.expapp-booking-form-activator{
+  font-family: var(--font-body-family);
+  font-weight: 300;
+}
+
 /* Mobile Styles */
 @media screen and (max-width: 749px) {  
   .how-to-book__columns {

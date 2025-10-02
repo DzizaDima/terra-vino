@@ -151,54 +151,56 @@
       <div class="book-event__form-row">
         <div class="field book-event__date-field">
           <input
-            type="date"
+            type="text"
             id="BookEventForm-date"
-            class="field__input book-event__date-input"
             name="contact[preferred_date]"
             required>
-          <label class="field__label" for="BookEventForm-date">{{ 'templates.contact.book_event.preferred_date' | t }}</label>
           <div class="book-event__calendar-container">
             <div class="book-event__calendar" id="calendar"></div>
             <button type="button" class="book-event__select-date-btn" id="selectDateBtn">
-              {{ 'templates.contact.book_event.select_date' | t }}
+              <span class="book-event__placeholder-text">{{ 'templates.contact.book_event.preferred_date' | t }}</span>
+              <span class="book-event__selected-text" style="display: none;"></span>
+              {{ 'icon-caret.svg' | inline_asset_content }}
             </button>
           </div>
         </div>
         
         <div class="field book-event__time-field">
           <input
-            type="time"
+            type="text"
             id="BookEventForm-time"
-            class="field__input book-event__time-input"
             name="contact[preferred_time]"
             required>
-          <label class="field__label" for="BookEventForm-time">{{ 'templates.contact.book_event.preferred_time' | t }}</label>
-          <div class="book-event__time-dropdown" id="timeDropdown">
-            <div class="book-event__time-options">
-              <div class="book-event__time-option" data-time="08:00">08:00 AM</div>
-              <div class="book-event__time-option" data-time="08:30">08:30 AM</div>
-              <div class="book-event__time-option" data-time="09:00">09:00 AM</div>
-              <div class="book-event__time-option" data-time="09:30">09:30 AM</div>
-              <div class="book-event__time-option" data-time="10:00">10:00 AM</div>
-              <div class="book-event__time-option" data-time="10:30">10:30 AM</div>
-              <div class="book-event__time-option" data-time="11:00">11:00 AM</div>
-              <div class="book-event__time-option" data-time="11:30">11:30 AM</div>
-              <div class="book-event__time-option" data-time="12:00">12:00 PM</div>
-              <div class="book-event__time-option" data-time="12:30">12:30 PM</div>
-              <div class="book-event__time-option" data-time="13:00">01:00 PM</div>
-              <div class="book-event__time-option" data-time="13:30">01:30 PM</div>
-              <div class="book-event__time-option" data-time="14:00">02:00 PM</div>
-              <div class="book-event__time-option" data-time="14:30">02:30 PM</div>
-              <div class="book-event__time-option" data-time="15:00">03:00 PM</div>
-              <div class="book-event__time-option" data-time="15:30">03:30 PM</div>
-              <div class="book-event__time-option" data-time="16:00">04:00 PM</div>
-              <div class="book-event__time-option" data-time="16:30">04:30 PM</div>
-              <div class="book-event__time-option" data-time="17:00">05:00 PM</div>
-              <div class="book-event__time-option" data-time="17:30">05:30 PM</div>
-              <div class="book-event__time-option" data-time="18:00">06:00 PM</div>
+          <div class="book-event__time-container">
+            <div class="book-event__time-dropdown" id="timeDropdown">
+              <div class="book-event__time-options">
+                <div class="book-event__time-option" data-time="08:00">08:00 AM</div>
+                <div class="book-event__time-option" data-time="08:30">08:30 AM</div>
+                <div class="book-event__time-option" data-time="09:00">09:00 AM</div>
+                <div class="book-event__time-option" data-time="09:30">09:30 AM</div>
+                <div class="book-event__time-option" data-time="10:00">10:00 AM</div>
+                <div class="book-event__time-option" data-time="10:30">10:30 AM</div>
+                <div class="book-event__time-option" data-time="11:00">11:00 AM</div>
+                <div class="book-event__time-option" data-time="11:30">11:30 AM</div>
+                <div class="book-event__time-option" data-time="12:00">12:00 PM</div>
+                <div class="book-event__time-option" data-time="12:30">12:30 PM</div>
+                <div class="book-event__time-option" data-time="13:00">01:00 PM</div>
+                <div class="book-event__time-option" data-time="13:30">01:30 PM</div>
+                <div class="book-event__time-option" data-time="14:00">02:00 PM</div>
+                <div class="book-event__time-option" data-time="14:30">02:30 PM</div>
+                <div class="book-event__time-option" data-time="15:00">03:00 PM</div>
+                <div class="book-event__time-option" data-time="15:30">03:30 PM</div>
+                <div class="book-event__time-option" data-time="16:00">04:00 PM</div>
+                <div class="book-event__time-option" data-time="16:30">04:30 PM</div>
+                <div class="book-event__time-option" data-time="17:00">05:00 PM</div>
+                <div class="book-event__time-option" data-time="17:30">05:30 PM</div>
+                <div class="book-event__time-option" data-time="18:00">06:00 PM</div>
+              </div>
             </div>
             <button type="button" class="book-event__select-time-btn" id="selectTimeBtn">
-              {{ 'templates.contact.book_event.select_time' | t }}
+              <span class="book-event__placeholder-text">{{ 'templates.contact.book_event.preferred_time' | t }}</span>
+              <span class="book-event__selected-text" style="display: none;"></span>
+              {{ 'icon-caret.svg' | inline_asset_content }}
             </button>
           </div>
         </div>
@@ -238,6 +240,17 @@ document.addEventListener('DOMContentLoaded', function() {
   const timeInput = document.getElementById('BookEventForm-time');
   const timeOptions = document.querySelectorAll('.book-event__time-option');
 
+  // Debug: Check if elements are found
+  console.log('Book Event Form initialized:', {
+    calendar: !!calendar,
+    selectDateBtn: !!selectDateBtn,
+    dateInput: !!dateInput,
+    timeDropdown: !!timeDropdown,
+    selectTimeBtn: !!selectTimeBtn,
+    timeInput: !!timeInput,
+    timeOptionsCount: timeOptions.length
+  });
+
   // Calendar functionality
   let currentDate = new Date();
   let selectedDate = null;
@@ -250,9 +263,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let calendarHTML = `
       <div class="book-event__calendar-header">
-        <button type="button" class="book-event__nav-btn" id="prevMonth">&lt;</button>
+        <button type="button" class="book-event__nav-btn" id="prevMonth">{{ 'icon-caret.svg' | inline_asset_content }}</button>
         <span class="book-event__month-year">${firstDay.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</span>
-        <button type="button" class="book-event__nav-btn" id="nextMonth">&gt;</button>
+        <button type="button" class="book-event__nav-btn" id="nextMonth">{{ 'icon-caret.svg' | inline_asset_content }}</button>
       </div>
       <div class="book-event__calendar-grid">
         <div class="book-event__weekdays">
@@ -292,12 +305,14 @@ document.addEventListener('DOMContentLoaded', function() {
     calendar.innerHTML = calendarHTML;
 
     // Add event listeners for navigation
-    document.getElementById('prevMonth').addEventListener('click', () => {
+    document.getElementById('prevMonth').addEventListener('click', (e) => {
+      e.stopPropagation();
       currentDate.setMonth(currentDate.getMonth() - 1);
       generateCalendar(currentDate.getFullYear(), currentDate.getMonth());
     });
 
-    document.getElementById('nextMonth').addEventListener('click', () => {
+    document.getElementById('nextMonth').addEventListener('click', (e) => {
+      e.stopPropagation();
       currentDate.setMonth(currentDate.getMonth() + 1);
       generateCalendar(currentDate.getFullYear(), currentDate.getMonth());
     });
@@ -309,6 +324,20 @@ document.addEventListener('DOMContentLoaded', function() {
         day.classList.add('book-event__day--selected');
         selectedDate = new Date(day.dataset.date);
         dateInput.value = day.dataset.date;
+        
+        // Update button text with selected date
+        const date = new Date(day.dataset.date);
+        const options = { month: 'long', day: 'numeric', year: 'numeric' };
+        const placeholderSpan = selectDateBtn.querySelector('.book-event__placeholder-text');
+        const selectedSpan = selectDateBtn.querySelector('.book-event__selected-text');
+        
+        placeholderSpan.style.display = 'none';
+        selectedSpan.style.display = 'inline';
+        selectedSpan.textContent = date.toLocaleDateString('en-US', options);
+        selectDateBtn.classList.add('selected');
+        
+        // Hide calendar
+        calendar.style.display = 'none';
       });
     });
   }
@@ -317,25 +346,48 @@ document.addEventListener('DOMContentLoaded', function() {
   generateCalendar(currentDate.getFullYear(), currentDate.getMonth());
 
   // Toggle calendar visibility
-  selectDateBtn.addEventListener('click', () => {
+  selectDateBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     calendar.style.display = calendar.style.display === 'block' ? 'none' : 'block';
     timeDropdown.style.display = 'none';
   });
 
   // Time selection functionality
-  selectTimeBtn.addEventListener('click', () => {
+  selectTimeBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     timeDropdown.style.display = timeDropdown.style.display === 'block' ? 'none' : 'block';
     calendar.style.display = 'none';
   });
 
   timeOptions.forEach(option => {
     option.addEventListener('click', () => {
+      // Remove previous selection
       timeOptions.forEach(opt => opt.classList.remove('book-event__time-option--selected'));
       option.classList.add('book-event__time-option--selected');
+      
+      // Update hidden input and button text
       timeInput.value = option.dataset.time;
-      selectTimeBtn.textContent = option.textContent;
+      
+      const placeholderSpan = selectTimeBtn.querySelector('.book-event__placeholder-text');
+      const selectedSpan = selectTimeBtn.querySelector('.book-event__selected-text');
+      
+      placeholderSpan.style.display = 'none';
+      selectedSpan.style.display = 'inline';
+      selectedSpan.textContent = option.textContent;
+      selectTimeBtn.classList.add('selected');
+      
+      // Hide dropdown
       timeDropdown.style.display = 'none';
     });
+  });
+
+  // Prevent calendar and dropdown from closing when clicking inside them
+  calendar.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  timeDropdown.addEventListener('click', (e) => {
+    e.stopPropagation();
   });
 
   // Close dropdowns when clicking outside
@@ -347,6 +399,7 @@ document.addEventListener('DOMContentLoaded', function() {
       timeDropdown.style.display = 'none';
     }
   });
+
 });
 </script>
 

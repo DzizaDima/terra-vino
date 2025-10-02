@@ -59,17 +59,15 @@
               <h3 class="how-to-book__card-title">{{ section.settings.public_title | default: 'Public Events' }}</h3>
               <div class="how-to-book__card-description">{{ section.settings.public_description }}</div>
               
-              {%- if section.settings.public_image != blank -%}
-                <div class="how-to-book__card-image">
-                  {{
-                    section.settings.public_image
-                    | image_url: width: 100
-                    | image_tag: 
-                      class: 'how-to-book__icon',
-                      loading: 'lazy'
-                  }}
-                </div>
-              {%- endif -%}
+              <div class="how-to-book__block">
+                {% if section.blocks.size > 0 %}
+                  {% for block in section.blocks %}
+                    {% if block.type == '@app' %}
+                      {% render block %}
+                    {% endif %}
+                  {% endfor %}
+                {% endif %}
+              </div>
             </div>
           </div>
 
@@ -157,11 +155,6 @@
       "label": "t:sections.how_to_book.settings.public_description.label"
     },
     {
-      "type": "image_picker",
-      "id": "public_image",
-      "label": "t:sections.how_to_book.settings.public_image.label"
-    },
-    {
       "type": "header",
       "content": "t:sections.how_to_book.settings.private_enquiries.header"
     },
@@ -231,6 +224,11 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
     }
   ],
   "presets": [

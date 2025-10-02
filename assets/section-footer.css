@@ -1,6 +1,7 @@
 .footer {
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
   position: relative;
+  z-index: -1;
 }
 
 .footer:not(.color-scheme-1) {
@@ -571,7 +572,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: -1;
   display: flex!important;
   height: 6px;
 }
