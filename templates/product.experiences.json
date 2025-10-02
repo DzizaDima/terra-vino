@@ -192,7 +192,7 @@
             "backgroundColor": "#ffffff",
             "primaryColor": "#192622",
             "secondaryColor": "#424242",
-            "textColor": "#fefbf2",
+            "textColor": "#121212",
             "buttonShape": "square",
             "book_button_class": "button button--full-width button-primary",
             "product": "{{product}}"
