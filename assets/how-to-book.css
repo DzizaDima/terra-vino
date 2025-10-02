@@ -189,3 +189,11 @@
     font-size: 1.7rem;
   }
 }
+
+.timeslot-selection__calendar{
+  width:auto!important;
+}
+
+.calendar__matrix{
+  margin:0!important;
+}
