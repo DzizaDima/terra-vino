@@ -3150,7 +3150,8 @@
             },
             "announcement": {
               "label": "Announcement",
-              "default": "Announcement"
+              "default": "Announcement",
+              "info": "Short text that appears above the heading"
             },
             "heading": {
               "label": "Heading",
