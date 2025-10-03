@@ -15,13 +15,13 @@
         "slide_cBUbTb": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Hero_Image_4.png",
+            "image": "shopify://shop_images/DJI_20250913191530_0383_D.jpg",
             "image_overlay_opacity": 0,
-            "announcement": "free delivery on orders above $250",
-            "caption": "Award-winning wineries",
-            "heading": "Online <em>Wine Delivery</em> Singapore",
+            "announcement": "",
+            "caption": "",
+            "heading": "<em>Boutique Italian Wines, Curated for Singapore</em>",
             "heading_size": "hxxl",
-            "subheading": "Top Rated South African Wines",
+            "subheading": "Hand-selected from family wineries across Italy. Discover wines you won’t find anywhere else.",
             "button_label": "Shop Now",
             "link": "/collections/all",
             "button_style_secondary": false,
@@ -35,15 +35,15 @@
         "slide_zKLpYw": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Hero_Image_5.png",
+            "image": "shopify://shop_images/DJI_20250913230023_0599_D_18_44_30_20.jpg",
             "image_overlay_opacity": 0,
-            "announcement": "LAST ORDERS BY 12PM THURSDAY FOR DELIVERY BEFORE THE WEEKEND.",
-            "caption": "What Time is it...",
-            "heading": "It’s  Rosé  <em>O’clock</em>",
+            "announcement": "",
+            "caption": "",
+            "heading": "<em>Wine Tasting Experiences</em>",
             "heading_size": "hxxl",
-            "subheading": "Your Summer In a Glass",
-            "button_label": "Shop Now",
-            "link": "/collections/all",
+            "subheading": " Join our public tastings or host a private event—perfect for birthdays, weddings, or corporate gatherings.",
+            "button_label": "Explore Events",
+            "link": "shopify://products/test",
             "button_style_secondary": false,
             "show_text_box": true,
             "box_align": "middle-center",
@@ -55,15 +55,34 @@
         "slide_V6wLhQ": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Hero_Image_6.png",
+            "image": "shopify://shop_images/raccolta_manuale_vigneto_prefillossera_6.jpg",
             "image_overlay_opacity": 0,
-            "announcement": "free delivery on orders above $250",
-            "caption": "New Winery Alert!",
-            "heading": "Orpheus & The Raven",
+            "announcement": "",
+            "caption": "",
+            "heading": "<em>More Than Just a Bottle of Wine</em>",
             "heading_size": "hxxl",
-            "subheading": "",
-            "button_label": "Shop Now",
-            "link": "/collections/all",
+            "subheading": " Every glass tells a story—from the vineyard to your table. Be part of Singapore’s boutique wine community.",
+            "button_label": "Learn More",
+            "link": "shopify://pages/regions",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-2"
+          }
+        },
+        "slide_UafbdY": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "announcement": "",
+            "caption": "",
+            "heading": " <em>Introducing Our Starter Pack</em>",
+            "heading_size": "hxxl",
+            "subheading": "A limited-time selection of 3 boutique Italian wines, specially curated to showcase the Terra Vino experience. Perfect for first-time customers or as a gift.",
+            "button_label": "Order Now",
+            "link": "",
             "button_style_secondary": false,
             "show_text_box": true,
             "box_align": "middle-center",
@@ -76,7 +95,8 @@
       "block_order": [
         "slide_cBUbTb",
         "slide_zKLpYw",
-        "slide_V6wLhQ"
+        "slide_V6wLhQ",
+        "slide_UafbdY"
       ],
       "name": "t:sections.slideshow.presets.name",
       "settings": {
