@@ -415,7 +415,7 @@
 }
 
 @media screen and (max-width: 749px) {
-.footer-block__image-wrapper{
+.footer-block-image {
   margin: 0 auto;
 }
 
