@@ -15,7 +15,7 @@
         "slide_cBUbTb": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/DJI_20250913191530_0383_D.jpg",
+            "image": "shopify://shop_images/Hero_Image_bfd647a8-d8ec-43eb-8f47-f1582c27b5dc.png",
             "image_overlay_opacity": 0,
             "announcement": "",
             "caption": "",
@@ -35,7 +35,7 @@
         "slide_zKLpYw": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/DJI_20250913230023_0599_D_18_44_30_20.jpg",
+            "image": "shopify://shop_images/Hero_Image_2_0bc18bb8-9724-40e7-b422-083cc04f5c89.png",
             "image_overlay_opacity": 0,
             "announcement": "",
             "caption": "",
@@ -55,7 +55,7 @@
         "slide_V6wLhQ": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/raccolta_manuale_vigneto_prefillossera_6.jpg",
+            "image": "shopify://shop_images/Hero_Image_3_c22b765b-26b8-4c53-b918-7df4aa748768.png",
             "image_overlay_opacity": 0,
             "announcement": "",
             "caption": "",
@@ -75,6 +75,7 @@
         "slide_UafbdY": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/Hero_Image_4_098a4225-5090-44e7-98c6-ae7584a10017.png",
             "image_overlay_opacity": 0,
             "announcement": "",
             "caption": "",
