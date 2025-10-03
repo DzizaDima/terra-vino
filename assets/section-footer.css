@@ -415,6 +415,10 @@
 }
 
 @media screen and (max-width: 749px) {
+.footer-block--image{
+  justify-content: center;
+}
+
   .footer-block-image,
   .footer-block-image.left,
   .footer-block-image.center,
