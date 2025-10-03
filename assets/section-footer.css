@@ -399,6 +399,7 @@
 
 .footer-block-image {
   display: flex;
+  max-width: fit-content;
 }
 
 .footer-block-image.left {
