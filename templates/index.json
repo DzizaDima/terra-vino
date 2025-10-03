@@ -82,7 +82,7 @@
             "heading_size": "hxxl",
             "subheading": "A limited-time selection of 3 boutique Italian wines, specially curated to showcase the Terra Vino experience. Perfect for first-time customers or as a gift.",
             "button_label": "Order Now",
-            "link": "shopify://products/event-starter-pack",
+            "link": "shopify://collections/starter-pack",
             "button_style_secondary": false,
             "show_text_box": true,
             "box_align": "middle-center",
