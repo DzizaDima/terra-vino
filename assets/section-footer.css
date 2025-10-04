@@ -325,6 +325,12 @@
   object-fit: contain;
 }
 
+@media screen and (max-width: 750px) {
+  .footer__copyright__logo{
+    display: none;
+  }
+}
+
 @media screen and (min-width: 750px) {
   .footer__content-bottom-wrapper:not(.footer__content-bottom-wrapper--center) .footer__copyright {
     text-align: right;
