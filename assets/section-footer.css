@@ -63,7 +63,7 @@
 
 .footer__content-bottom-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
 }
 
