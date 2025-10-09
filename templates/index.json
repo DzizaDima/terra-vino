@@ -128,7 +128,7 @@
         "text_84GBBC": {
           "type": "text",
           "settings": {
-            "text": "<p>At Terra Vino, we pride ourselves on being the South African Wine Specialists with the largest selection of top quality SA wines in Singapore. Curated to showcase the best of what the region has to offer, we love introducing you to artisan winemakers and bringing you great value finds.</p>"
+            "text": "<p>At Terra Vino, we pride ourselves on being Singapore’s boutique Italian wine specialists, with a hand-selected collection from small, family-run wineries across Italy. Our range is carefully curated to showcase the diversity and craftsmanship of Italy’s wine regions, from Tuscany to Piedmont, bringing you exceptional wines at honest prices.</p>"
           }
         }
       },
@@ -267,7 +267,7 @@
         "text_RFUNUz": {
           "type": "text",
           "settings": {
-            "text": "Didn't find your favourite SA Wine? Learn more about our concierge service. Get in touch and our friendly team will source it for you.",
+            "text": "Didn’t find your favourite Italian wine? Use our concierge sourcing service. Whether it’s a specific label or a rare vintage, our team will work with our network of wineries to bring it in just for you.",
             "text_style": "body"
           }
         },
@@ -309,7 +309,7 @@
         "caption_kzVqGX": {
           "type": "caption",
           "settings": {
-            "caption": "WE'RE PASSIONATE ABOUT SA WINES!",
+            "caption": "We’re Passionate About Italian Wines",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium"
           }
@@ -324,7 +324,7 @@
         "text_EgdJAM": {
           "type": "text",
           "settings": {
-            "text": "<p>South Africa's time has come in the world of wine! We are proud to be a specialist Singapore wine importer doing the hard work of tasting hundreds of South African wines, so that we can bring the best selection of what the region has to offer to savvy wine buyers in Singapore. Representing boutique South African winemakers, we offer wines of all styles, varietals and price points, so that you will find the perfect bottle for every occasion.</p>",
+            "text": "<p>Italy’s wines are as diverse as its regions, and we’re here to share that with Singapore. As a specialist Italian wine importer, Terra Vino represents boutique winemakers who focus on quality, heritage and authenticity. We import directly, so you get genuine artisanal wines that tell the story of their land and people.</p>",
             "text_style": "body"
           }
         },
@@ -373,7 +373,7 @@
         "text_B4pVwG": {
           "type": "text",
           "settings": {
-            "text": "<p>Our Terra Vino Sommeliers have carefully curated an award-winning collection of affordable, excellent value South African wines. Explore this fascinating wine region and discover world-class artisan winemakers who bring the finest wines to Singapore. Over 300 labels can be delivered straight to your door the next day. We look forward to introducing you to the new world of fine South African wines.</p>",
+            "text": "<p>Our Terra Vino team has curated a unique collection of boutique Italian wines that offer outstanding value without compromise. Explore Italy’s famed wine regions through small-production labels you won’t find on supermarket shelves. All wines are stored in optimal conditions and delivered with care.</p>",
             "text_style": "body"
           }
         }
@@ -405,14 +405,14 @@
         "heading_b3LPPF": {
           "type": "heading",
           "settings": {
-            "heading": "<em>Top Online</em> Wine Delivery Service",
+            "heading": "Shop Online – <em>Free Delivery</em>  Above $200",
             "heading_size": "hxl"
           }
         },
         "text_ALRNxN": {
           "type": "text",
           "settings": {
-            "text": "<p>Free delivery for orders over $250. Our wines are carefully handled and stored in optimal storage conditions.</p>",
+            "text": "<p>Enjoy a seamless shopping experience. Orders over S$200 come with free islandwide delivery, and every bottle is stored in temperature-controlled facilities to ensure perfect condition when it reaches you.</p>",
             "text_style": "body"
           }
         }

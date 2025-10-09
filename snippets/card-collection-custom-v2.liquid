@@ -1,0 +1,21 @@
+<div class="collection-custom-card">
+  <div class="collection-custom-card__image">
+    {% if card_collection.featured_image %}
+      {{ card_collection.featured_image | image_url: width: 600 | image_tag: class: 'collection-custom-card__image-img', loading: 'lazy', fetchpriority: 'low' }}
+      <img
+        src="{{ 'image-background.png' | asset_url }}"
+        alt=""
+        class="collection-custom-card__image-background"
+        loading="lazy"
+        fetchpriority="low"
+        width="600"
+        height="400">
+    {% else %}
+      {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+    {% endif %}
+  </div>
+  <div class="collection-custom-card__title">
+    {{ card_collection.title | replace: 'Wine', '<em>Wine</em>' | replace: 'Bottles', '<em>Bottles</em>' }}
+  </div>
+  <a href="{% if custom_link != blank %}{{ custom_link }}{% else %}{{ card_collection.url }}{% endif %}" class="collection-custom-card__link"></a>
+</div>
