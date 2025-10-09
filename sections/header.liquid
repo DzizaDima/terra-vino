@@ -23,8 +23,15 @@
   }
 
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
-    .scrolled-past-header .header__heading-logo-wrapper {
-      width: 75%;
+    .scrolled-past-header .header__heading {
+      display: none;
+    }
+
+      @media screen and (min-width: 990px) {
+        .scrolled-past-header .header--top-center{
+        grid-template-areas: "left-icons navigation icons";
+        grid-template-rows: 1fr;
+      }
     }
   {%- endif -%}
 
