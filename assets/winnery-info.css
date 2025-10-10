@@ -1,5 +1,6 @@
 .page-width--winnery {
   max-width: 1206px;
+  position: relative;
 }
 
 .winnery-info {

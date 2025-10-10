@@ -52,12 +52,42 @@
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 52
       }
+    },
+    "featured_collection_UHGrqF": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "{{ page.metafields.custom.winery_collection.value }}",
+        "products_to_show": 4,
+        "title": "{{ page.title }} Wines",
+        "heading_size": "hxl",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-3",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "image_TkUibf",
     "image_zKFByd",
-    "winnery_info_9yEAKF"
+    "winnery_info_9yEAKF",
+    "featured_collection_UHGrqF"
   ]
 }
