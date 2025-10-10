@@ -42,7 +42,7 @@
     {{ content_for_header }}
 
     {%- liquid
-      assign body_font_bold = settings.type_body_font 
+      assign body_font_bold = settings.type_body_font
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
     %}
@@ -354,13 +354,13 @@
         --font-awesome-serif-medium-regular: 'Awesome Serif Medium Regular', serif;
         --font-awesome-serif-semibold-regular: 'Awesome Serif SemiBold Regular', serif;
         --font-awesome-serif-bold-regular: 'Awesome Serif Bold Regular', serif;
-        
+
         --font-awesome-serif-light-tall: 'Awesome Serif Light Tall', serif;
         --font-awesome-serif-tall: 'Awesome Serif Tall', serif;
         --font-awesome-serif-medium-tall: 'Awesome Serif Medium Tall', serif;
         --font-awesome-serif-semibold-tall: 'Awesome Serif SemiBold Tall', serif;
         --font-awesome-serif-bold-tall: 'Awesome Serif Bold Tall', serif;
-        
+
         --font-awesome-serif-light-extratall: 'Awesome Serif Light ExtraTall', serif;
         --font-awesome-serif-extratall: 'Awesome Serif ExtraTall', serif;
         --font-awesome-serif-medium-extratall: 'Awesome Serif Medium ExtraTall', serif;
@@ -421,7 +421,10 @@
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    >
 
     {%- if settings.cart_type == 'drawer' -%}
       {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
@@ -477,10 +480,10 @@
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
 
-      {% if template == 'page.about' or template == 'page.winnery' %}
+      {% if template == 'page.about' %}
         <div class="about-icons">
-         <img src="{{ 'contact-us-left.png' | asset_url }}" alt="Contact Us Left" class="about-icons__left">
-         <img src="{{ 'contact-us-right.png' | asset_url }}" alt="Contact Us Right" class="about-icons__right">
+          <img src="{{ 'contact-us-left.png' | asset_url }}" alt="Contact Us Left" class="about-icons__left">
+          <img src="{{ 'contact-us-right.png' | asset_url }}" alt="Contact Us Right" class="about-icons__right">
         </div>
       {% endif %}
 
@@ -494,7 +497,8 @@
               loading="lazy"
               fetchpriority="low"
               width="100%"
-              height="auto">
+              height="auto"
+            >
           </div>
           <div class="events-bg events-bg--right">
             <img
@@ -504,7 +508,8 @@
               loading="lazy"
               fetchpriority="low"
               width="100%"
-              height="auto">
+              height="auto"
+            >
           </div>
           <div class="events-bg events-bg--mobile">
             <img
@@ -514,7 +519,8 @@
               loading="lazy"
               fetchpriority="low"
               width="100%"
-              height="auto">
+              height="auto"
+            >
           </div>
         </div>
       {% endif %}

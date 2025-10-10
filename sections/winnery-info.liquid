@@ -72,20 +72,24 @@
     <div class="winnery-description">
       {% if description_image != blank %}
         <div class="winnery-description__image">
-          {{ description_image | image_url: width: 600 | image_tag: class: 'description-image', loading: 'lazy', fetchpriority: 'low' }}
+          {{
+            description_image
+            | image_url: width: 600
+            | image_tag: class: 'description-image', loading: 'lazy', fetchpriority: 'low'
+          }}
         </div>
       {% endif %}
-  
+
       {% if title != blank %}
         <p class="winnery-description__title">{{ title }}</p>
       {% endif %}
-  
+
       {% if description != blank %}
         <div class="winnery-description__description">{{ description }}</div>
       {% endif %}
     </div>
   {% endif %}
-  
+
   {% if info != blank %}
     <div class="winnery-info">
       <div class="winnery-info__content" style="background-image: url('{{ 'paper-bg.png' | asset_url }}');">
@@ -93,130 +97,147 @@
       </div>
     </div>
   {% endif %}
+
+  <div class="about-icons">
+    <img src="{{ 'contact-us-left.png' | asset_url }}" alt="Contact Us Left" class="about-icons__left">
+    <img src="{{ 'contact-us-right.png' | asset_url }}" alt="Contact Us Right" class="about-icons__right">
+  </div>
 </div>
 
 {% schema %}
-  {
-    "name": "Winnery Info",
-    "settings": [
-      {
-        "type": "select",
-        "id": "data_source",
-        "label": "Data Source",
-        "options": [
-          {
-            "value": "unique",
-            "label": "Unique"
-          }, {
-            "value": "default",
-            "label": "Default"
-          }
-        ],
-        "default": "unique"
-      },
-      {
-        "type": "image_picker",
-        "id": "logo",
-        "label": "Logo",
-        "visible_if": "{{ section.settings.data_source == 'default' }}"
-      },
-      {
-        "type": "image_picker",
-        "id": "image",
-        "label": "Image",
-        "visible_if": "{{ section.settings.data_source == 'default' }}"
-      },
-      {
-        "type": "image_picker",
-        "id": "image_mobile",
-        "label": "Image (Mobile)",
-        "visible_if": "{{ section.settings.data_source == 'default' }}"
-      }, {
-        "type": "image_picker",
-        "id": "description_image",
-        "label": "Description Image",
-        "visible_if": "{{ section.settings.data_source == 'default' }}"
-      }, {
-        "type": "range",
-        "id": "description_image_width",
-        "min": 20,
-        "max": 450,
-        "step": 5,
-        "unit": "px",
-        "label": "Description Image Width",
-        "default": 70
-      }, {
-        "type": "range",
-        "id": "description_image_width_mobile",
-        "min": 20,
-        "max": 450,
-        "step": 5,
-        "unit": "px",
-        "label": "Description Image Width (Mobile)",
-        "default": 50
-      }, {
-        "type": "text",
-        "id": "title",
-        "label": "Title",
-        "visible_if": "{{ section.settings.data_source == 'default' }}"
-      }, {
-        "type": "richtext",
-        "id": "description",
-        "label": "Description",
-        "visible_if": "{{ section.settings.data_source == 'default' }}"
-      }, {
-        "type": "richtext",
-        "id": "info",
-        "label": "Info",
-        "visible_if": "{{ section.settings.data_source == 'default' }}"
-      }, {
-        "type": "header",
-        "content": "t:sections.all.padding.section_padding_heading"
-      }, {
-        "type": "range",
-        "id": "padding_top",
-        "min": 0,
-        "max": 200,
-        "step": 4,
-        "unit": "px",
-        "label": "t:sections.all.padding.padding_top",
-        "default": 40
-      }, {
-        "type": "range",
-        "id": "padding_bottom",
-        "min": 0,
-        "max": 200,
-        "step": 4,
-        "unit": "px",
-        "label": "t:sections.all.padding.padding_bottom",
-        "default": 52
-      }, {
-        "type": "range",
-        "id": "padding_top_mobile",
-        "min": 0,
-        "max": 200,
-        "step": 4,
-        "unit": "px",
-        "label": "t:sections.all.padding.padding_top_mobile",
-        "default": 40
-      }, {
-        "type": "range",
-        "id": "padding_bottom_mobile",
-        "min": 0,
-        "max": 200,
-        "step": 4,
-        "unit": "px",
-        "label": "t:sections.all.padding.padding_bottom_mobile",
-        "default": 52
-      }
-    ],
-    "presets": [
-      {
-        "name": "Winnery Info"
-      }
-    ],
-    "enabled_on": {
-      "templates": ["page"]
+{
+  "name": "Winnery Info",
+  "settings": [
+    {
+      "type": "select",
+      "id": "data_source",
+      "label": "Data Source",
+      "options": [
+        {
+          "value": "unique",
+          "label": "Unique"
+        },
+        {
+          "value": "default",
+          "label": "Default"
+        }
+      ],
+      "default": "unique"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo",
+      "visible_if": "{{ section.settings.data_source == 'default' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "visible_if": "{{ section.settings.data_source == 'default' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Image (Mobile)",
+      "visible_if": "{{ section.settings.data_source == 'default' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "description_image",
+      "label": "Description Image",
+      "visible_if": "{{ section.settings.data_source == 'default' }}"
+    },
+    {
+      "type": "range",
+      "id": "description_image_width",
+      "min": 20,
+      "max": 450,
+      "step": 5,
+      "unit": "px",
+      "label": "Description Image Width",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "description_image_width_mobile",
+      "min": 20,
+      "max": 450,
+      "step": 5,
+      "unit": "px",
+      "label": "Description Image Width (Mobile)",
+      "default": 50
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "visible_if": "{{ section.settings.data_source == 'default' }}"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "visible_if": "{{ section.settings.data_source == 'default' }}"
+    },
+    {
+      "type": "richtext",
+      "id": "info",
+      "label": "Info",
+      "visible_if": "{{ section.settings.data_source == 'default' }}"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top_mobile",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom_mobile",
+      "default": 52
     }
+  ],
+  "presets": [
+    {
+      "name": "Winnery Info"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["page"]
   }
+}
 {% endschema %}
