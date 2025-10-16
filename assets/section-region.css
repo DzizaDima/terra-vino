@@ -163,6 +163,10 @@
     }
 }
 
+.italia-mob{
+    display: none;
+}
+
 @media (max-width: 767px) {
     .region-page__image{
         margin-bottom: 0;
@@ -196,7 +200,11 @@
         font-size: 16px;
     }
 
-    .region-page__image-hover-overlay{
+    .italia-mob{
+        display: block;
+    }
+
+    .italia-desktop{
         display: none;
     }
 }
