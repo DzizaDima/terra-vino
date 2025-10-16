@@ -157,6 +157,7 @@
 .region-overlay{
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
+    cursor: pointer;
     &:hover{
         opacity: 1;
     }

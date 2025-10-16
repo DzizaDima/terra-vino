@@ -17,7 +17,7 @@
 {% if section.blocks.size > 0 %}
   <div class="regions page-width page-width--narrow">
     {% for block in section.blocks %}
-      <div class="region">
+      <div class="region" id="{{ block.settings.title | handleize }}">
         {% if block.settings.title != blank %}
           <h3 class="region__title">{{ block.settings.title }}</h3>
         {% endif %}
@@ -69,6 +69,27 @@
       </div>
     {% endfor %}
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const regions = document.querySelectorAll('.region');
+      const region_btns = document.querySelectorAll('.region-overlay');
+
+      region_btns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const region_id = btn.id;
+
+          regions.forEach((region) => {
+            if (region.id.includes(region_id)) {
+              console.log('ez');
+              const top = region.getBoundingClientRect().top + window.pageYOffset - 200;
+              window.scrollTo({ top, behavior: 'smooth' });
+            }
+          });
+        });
+      });
+    });
+  </script>
 {% endif %}
 
 {% schema %}
