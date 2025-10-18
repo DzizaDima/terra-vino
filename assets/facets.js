@@ -30,6 +30,7 @@ class FacetFiltersForm extends HTMLElement {
   }
 
   static renderPage(searchParams, event, updateURLHash = true) {
+    console.log('renderPage:searchParams', searchParams);
     FacetFiltersForm.searchParamsPrev = searchParams;
     const sections = FacetFiltersForm.getSections();
     const countContainer = document.getElementById('ProductCount');

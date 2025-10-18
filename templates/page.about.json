@@ -236,6 +236,7 @@
     },
     "image_QW4BwN": {
       "type": "image",
+      "disabled": true,
       "name": "Image",
       "settings": {
         "image": "shopify://shop_images/417545976_f969dc00-2972-4103-9670-88803a004f01_1.png",

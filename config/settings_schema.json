@@ -1457,5 +1457,56 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "WhatsApp Button",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "whatsapp_enabled",
+        "label": "Enable WhatsApp button",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "whatsapp_number",
+        "label": "WhatsApp number",
+        "info": "Enter your WhatsApp number with country code (e.g., +1234567890)",
+        "default": "+1234567890"
+      },
+      {
+        "type": "text",
+        "id": "whatsapp_message",
+        "label": "Default message",
+        "info": "Pre-filled message that will appear when customers click the button",
+        "default": "Hello! I'm interested in your products."
+      },
+      {
+        "type": "select",
+        "id": "whatsapp_position",
+        "label": "Button position",
+        "options": [
+          {
+            "value": "bottom-right",
+            "label": "Bottom right"
+          },
+          {
+            "value": "bottom-left",
+            "label": "Bottom left"
+          }
+        ],
+        "default": "bottom-right"
+      },
+      {
+        "type": "range",
+        "id": "whatsapp_size",
+        "min": 50,
+        "max": 80,
+        "step": 5,
+        "default": 60,
+        "unit": "px",
+        "label": "Button size"
+      }
+    ]
   }
 ]

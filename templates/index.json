@@ -158,7 +158,7 @@
         "featured_collection_MD6Ye8": {
           "type": "featured_collection",
           "settings": {
-            "collection": "redwine"
+            "collection": "red-wine"
           }
         },
         "featured_collection_brKprB": {
@@ -289,6 +289,7 @@
         "text_RFUNUz",
         "button"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/d35b86326e367c1bd793629d5da1c64bd3c5d100.png",
         "image_overlay_opacity": 0,
@@ -345,7 +346,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Hero_Image_1.png",
+        "image": "shopify://shop_images/Hero_Image_a140f7a3-b46f-4764-a1ab-8fbf7513199d.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -366,7 +367,7 @@
         "heading_9WFVd7": {
           "type": "heading",
           "settings": {
-            "heading": "Exceptional <em>Wines</em>, Affordable <em>Prices</em>",
+            "heading": "Exceptional <em>Wines</em>, Honest <em>Prices</em>",
             "heading_size": "hxl"
           }
         },
@@ -384,7 +385,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Hero_Image_2.png",
+        "image": "shopify://shop_images/Hero_Image_1_5fce51ec-1ad6-4413-9c87-0f9ac576269e.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -484,6 +485,7 @@
         "review_NkeTNg",
         "review_Fh7yPH"
       ],
+      "disabled": true,
       "name": "Reviews Slider",
       "settings": {
         "heading_image": "shopify://shop_images/Review_Image_f0199277-3ebf-4466-989f-04f12031b921.png",

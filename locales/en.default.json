@@ -43,6 +43,9 @@
     },
     "continue_shopping": "Continue shopping",
     "continue_shopping_mobile": "Shopping",
+    "whatsapp": {
+      "contact_us": "Contact us on WhatsApp"
+    },
     "pagination": {
       "label": "Pagination",
       "page": "Page {{ number }}",
@@ -126,7 +129,7 @@
       "description": "Description",
       "technical_info": "Technical information",
       "tasting_notes": "Tasting notes",
-      "tasting_pairs": "Tasting pairs",
+      "tasting_pairs": "Pairing Suggestions",
       "wine_type": "Varietal",
       "year": "Vintage",
       "bottle_size": "Volume",

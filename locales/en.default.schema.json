@@ -3526,10 +3526,40 @@
         "bottom_description": {
           "label": "Bottom description",
           "default": "<p>Raise a glass with us and experience the charm of Italy's boutique wineries, right here in Singapore.</p>"
-        },
+        }
       },
       "presets": {
         "name": "How to Book"
+      }
+    },
+    "whatsapp": {
+      "name": "WhatsApp Button",
+      "settings": {
+        "enabled": {
+          "label": "Enable WhatsApp button"
+        },
+        "number": {
+          "label": "WhatsApp number",
+          "info": "Enter your WhatsApp number with country code (e.g., +1234567890)"
+        },
+        "message": {
+          "label": "Default message",
+          "info": "Pre-filled message that will appear when customers click the button"
+        },
+        "position": {
+          "label": "Button position",
+          "options": {
+            "bottom-right": {
+              "label": "Bottom right"
+            },
+            "bottom-left": {
+              "label": "Bottom left"
+            }
+          }
+        },
+        "size": {
+          "label": "Button size"
+        }
       }
     }
   }

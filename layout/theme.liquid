@@ -585,5 +585,15 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    {%- render 'whatsapp-button' -%}
+
+    <style>
+      pickup-availability-drawer {
+        background-image: url({{'layout-background.png'|asset_url}}) !important;
+        background-color: #fff !important;
+        background-position: center !important;
+      }
+    </style>
   </body>
 </html>
