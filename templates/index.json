@@ -54,6 +54,7 @@
         },
         "slide_V6wLhQ": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Hero_Image_3_c22b765b-26b8-4c53-b918-7df4aa748768.png",
             "image_overlay_opacity": 0,
@@ -77,7 +78,7 @@
           "settings": {
             "image": "shopify://shop_images/Hero_Image_4_098a4225-5090-44e7-98c6-ae7584a10017.png",
             "image_overlay_opacity": 0,
-            "announcement": "LAST ORDERS BY 12PM FRIDAY FOR DELIVERY ON SATURDAY",
+            "announcement": "free delivery on orders above $200",
             "caption": "",
             "heading": " <em>Introducing Our Starter Pack</em>",
             "heading_size": "hxxl",
