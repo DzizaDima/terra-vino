@@ -163,6 +163,7 @@
         },
         "featured_collection_brKprB": {
           "type": "featured_collection",
+          "disabled": true,
           "settings": {
             "collection": "rosewine"
           }
@@ -175,12 +176,14 @@
         },
         "featured_collection_PrqWH7": {
           "type": "featured_collection",
+          "disabled": true,
           "settings": {
             "collection": "collector-swine"
           }
         },
         "featured_collection_t7DHM4": {
           "type": "featured_collection",
+          "disabled": true,
           "settings": {
             "collection": "last-fewbottles"
           }
