@@ -228,6 +228,43 @@
         "padding_bottom": 0
       }
     },
+    "newsletter_FchgmJ": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_b6ibDP": {
+          "type": "heading",
+          "settings": {
+            "heading_image": "shopify://shop_images/Mailing_List_Icon_d551028f-870d-4e57-a746-fb939bde3213.png",
+            "heading_image_width": 108,
+            "heading_image_width_mobile": 72,
+            "heading": "Be <em>The First</em>  To Know!",
+            "heading_size": "hxl"
+          }
+        },
+        "paragraph_xf7Fij": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Subscribe to our Mailing List and be the first to know about our special offers and events.</p>"
+          }
+        },
+        "email_form_ABtwc9": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_b6ibDP",
+        "paragraph_xf7Fij",
+        "email_form_ABtwc9"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 160,
+        "padding_bottom": 160
+      }
+    },
     "image_with_text_zWQ3Xx": {
       "type": "image-with-text",
       "blocks": {
@@ -285,41 +322,43 @@
         "padding_bottom": 60
       }
     },
-    "newsletter_FchgmJ": {
-      "type": "newsletter",
+    "image_with_text_QWY4xc": {
+      "type": "image-with-text",
       "blocks": {
-        "heading_b6ibDP": {
+        "heading_9WFVd7": {
           "type": "heading",
           "settings": {
-            "heading_image": "shopify://shop_images/Mailing_List_Icon_d551028f-870d-4e57-a746-fb939bde3213.png",
-            "heading_image_width": 108,
-            "heading_image_width_mobile": 72,
-            "heading": "Be <em>The First</em>  To Know!",
+            "heading": "Exceptional <em>Wines</em>, Honest <em>Prices</em>",
             "heading_size": "hxl"
           }
         },
-        "paragraph_xf7Fij": {
-          "type": "paragraph",
+        "text_B4pVwG": {
+          "type": "text",
           "settings": {
-            "text": "<p>Subscribe to our Mailing List and be the first to know about our special offers and events.</p>"
+            "text": "<p>Our Terra Vino team has curated a unique collection of boutique Italian wines that offer outstanding value without compromise. Explore Italy’s famed wine regions through small-production labels you won’t find on supermarket shelves. All wines are stored in optimal conditions and delivered with care.</p>",
+            "text_style": "body"
           }
-        },
-        "email_form_ABtwc9": {
-          "type": "email_form",
-          "settings": {}
         }
       },
       "block_order": [
-        "heading_b6ibDP",
-        "paragraph_xf7Fij",
-        "email_form_ABtwc9"
+        "heading_9WFVd7",
+        "text_B4pVwG"
       ],
-      "name": "t:sections.newsletter.presets.name",
+      "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/Hero_Image_1_5fce51ec-1ad6-4413-9c87-0f9ac576269e.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-3",
         "color_scheme": "scheme-3",
-        "full_width": true,
-        "padding_top": 160,
-        "padding_bottom": 160
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "image_banner": {
@@ -377,45 +416,6 @@
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
         "show_text_below": true
-      }
-    },
-    "image_with_text_QWY4xc": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_9WFVd7": {
-          "type": "heading",
-          "settings": {
-            "heading": "Exceptional <em>Wines</em>, Honest <em>Prices</em>",
-            "heading_size": "hxl"
-          }
-        },
-        "text_B4pVwG": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Our Terra Vino team has curated a unique collection of boutique Italian wines that offer outstanding value without compromise. Explore Italy’s famed wine regions through small-production labels you won’t find on supermarket shelves. All wines are stored in optimal conditions and delivered with care.</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_9WFVd7",
-        "text_B4pVwG"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Hero_Image_1_5fce51ec-1ad6-4413-9c87-0f9ac576269e.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-3",
-        "color_scheme": "scheme-3",
-        "padding_top": 60,
-        "padding_bottom": 60
       }
     },
     "image_with_text_TqDM6Y": {
@@ -522,8 +522,8 @@
     "rich_text_CR9eqN",
     "collection_list_LQdYV8",
     "newsletter_FchgmJ",
-    "image_with_text_QWY4xc",
     "image_with_text_zWQ3Xx",
+    "image_with_text_QWY4xc",
     "image_banner",
     "image_with_text_TqDM6Y",
     "reviews_slider_qHqUx7"
