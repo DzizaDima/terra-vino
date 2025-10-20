@@ -175,6 +175,12 @@
             "collection": "sparklingwine"
           }
         },
+        "featured_collection_pLWc4W": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "sparklingwine"
+          }
+        },
         "featured_collection_PrqWH7": {
           "type": "featured_collection",
           "disabled": true,
@@ -195,6 +201,7 @@
         "featured_collection_MD6Ye8",
         "featured_collection_brKprB",
         "featured_collection_thUHma",
+        "featured_collection_pLWc4W",
         "featured_collection_PrqWH7",
         "featured_collection_t7DHM4"
       ],
