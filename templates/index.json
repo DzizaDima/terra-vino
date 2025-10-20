@@ -34,6 +34,7 @@
         },
         "slide_zKLpYw": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Hero_Image_2_0bc18bb8-9724-40e7-b422-083cc04f5c89.png",
             "image_overlay_opacity": 0,
@@ -56,7 +57,7 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Hero_Image_3_c22b765b-26b8-4c53-b918-7df4aa748768.png",
+            "image": "shopify://shop_images/scorcio_vigneto_1.jpg",
             "image_overlay_opacity": 0,
             "announcement": "free delivery on orders above $200",
             "caption": "",
