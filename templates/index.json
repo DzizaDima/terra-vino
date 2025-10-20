@@ -175,10 +175,10 @@
             "collection": "sparklingwine"
           }
         },
-        "featured_collection_pLWc4W": {
+        "featured_collection_rRmQWn": {
           "type": "featured_collection",
           "settings": {
-            "collection": "sparklingwine"
+            "collection": ""
           }
         },
         "featured_collection_PrqWH7": {
@@ -186,6 +186,12 @@
           "disabled": true,
           "settings": {
             "collection": "collector-swine"
+          }
+        },
+        "featured_collection_yzMVyT": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bin-ends"
           }
         },
         "featured_collection_t7DHM4": {
@@ -201,8 +207,9 @@
         "featured_collection_MD6Ye8",
         "featured_collection_brKprB",
         "featured_collection_thUHma",
-        "featured_collection_pLWc4W",
+        "featured_collection_rRmQWn",
         "featured_collection_PrqWH7",
+        "featured_collection_yzMVyT",
         "featured_collection_t7DHM4"
       ],
       "name": "t:sections.collection-list.presets.name",
