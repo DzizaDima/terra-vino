@@ -39,7 +39,7 @@
     },
     "winnery_info_9yEAKF": {
       "type": "winnery-info",
-      "name": "Winnery Info",
+      "name": "Winery Info",
       "settings": {
         "data_source": "unique",
         "description_image_width": 70,
