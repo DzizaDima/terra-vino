@@ -228,6 +228,63 @@
         "padding_bottom": 0
       }
     },
+    "image_with_text_zWQ3Xx": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_kzVqGX": {
+          "type": "caption",
+          "settings": {
+            "caption": "We’re Passionate About Italian Wines",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_MdNNdU": {
+          "type": "heading",
+          "settings": {
+            "heading": "About <em>Us</em>",
+            "heading_size": "hxl"
+          }
+        },
+        "text_EgdJAM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Italy’s wines are as diverse as its regions, and we’re here to share that with Singapore. As a specialist Italian wine importer, Terra Vino represents boutique winemakers who focus on quality, heritage and authenticity. We import directly, so you get genuine artisanal wines that tell the story of their land and people.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_JfNJ4U": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "shopify://pages/about",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_kzVqGX",
+        "heading_MdNNdU",
+        "text_EgdJAM",
+        "button_JfNJ4U"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Hero_Image_a140f7a3-b46f-4764-a1ab-8fbf7513199d.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-3",
+        "color_scheme": "scheme-3",
+        "padding_top": 120,
+        "padding_bottom": 60
+      }
+    },
     "newsletter_FchgmJ": {
       "type": "newsletter",
       "blocks": {
@@ -320,63 +377,6 @@
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
         "show_text_below": true
-      }
-    },
-    "image_with_text_zWQ3Xx": {
-      "type": "image-with-text",
-      "blocks": {
-        "caption_kzVqGX": {
-          "type": "caption",
-          "settings": {
-            "caption": "We’re Passionate About Italian Wines",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        },
-        "heading_MdNNdU": {
-          "type": "heading",
-          "settings": {
-            "heading": "About <em>Us</em>",
-            "heading_size": "hxl"
-          }
-        },
-        "text_EgdJAM": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Italy’s wines are as diverse as its regions, and we’re here to share that with Singapore. As a specialist Italian wine importer, Terra Vino represents boutique winemakers who focus on quality, heritage and authenticity. We import directly, so you get genuine artisanal wines that tell the story of their land and people.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_JfNJ4U": {
-          "type": "button",
-          "settings": {
-            "button_label": "Learn More",
-            "button_link": "shopify://pages/about",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "caption_kzVqGX",
-        "heading_MdNNdU",
-        "text_EgdJAM",
-        "button_JfNJ4U"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Hero_Image_a140f7a3-b46f-4764-a1ab-8fbf7513199d.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-3",
-        "color_scheme": "scheme-3",
-        "padding_top": 120,
-        "padding_bottom": 60
       }
     },
     "image_with_text_QWY4xc": {
@@ -522,9 +522,9 @@
     "rich_text_CR9eqN",
     "collection_list_LQdYV8",
     "newsletter_FchgmJ",
-    "image_banner",
-    "image_with_text_zWQ3Xx",
     "image_with_text_QWY4xc",
+    "image_with_text_zWQ3Xx",
+    "image_banner",
     "image_with_text_TqDM6Y",
     "reviews_slider_qHqUx7"
   ]
