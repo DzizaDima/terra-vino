@@ -55,7 +55,6 @@
         },
         "slide_V6wLhQ": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/scorcio_vigneto_1.jpg",
             "image_overlay_opacity": 0,
@@ -63,7 +62,7 @@
             "caption": "",
             "heading": "<em>More Than Just a Bottle of Wine</em>",
             "heading_size": "hxxl",
-            "subheading": " Every glass tells a story—from the vineyard to your table. Be part of Singapore’s boutique wine community.",
+            "subheading": "Every glass tells a story of land, people, and emotions. We want to bring these stories to you — from the vineyard to your table. Be part of Singapore’s boutique wine community!",
             "button_label": "Learn More",
             "link": "shopify://pages/about",
             "button_style_secondary": false,
