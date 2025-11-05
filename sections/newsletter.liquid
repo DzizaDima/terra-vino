@@ -1,6 +1,8 @@
 {{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
 {{ 'newsletter-section.css' | asset_url | stylesheet_tag }}
 
+<script src="{{ 'newsletter-popup.js' | asset_url }}" defer></script>
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
@@ -118,17 +120,24 @@
                 {%- endif -%}
               </div>
               {%- if form.posted_successfully? -%}
-                <h3
-                  class="newsletter-form__message newsletter-form__message--success form__message"
-                  id="Newsletter-success--{{ section.id }}"
-                  tabindex="-1"
-                  autofocus
-                >
-                  <span class="svg-wrapper">
-                    {{- 'icon-success.svg' | inline_asset_content -}}
-                  </span>
-                  {{- 'newsletter.success' | t }}
-                </h3>
+                <newsletter-success-popup class="newsletter-success-popup">
+                  <div class="newsletter-success-popup__overlay"></div>
+                  <div class="newsletter-success-popup__inner">
+                    <div class="newsletter-success-popup__bg">
+                      <img src="{{ 'Popup-background.png' | asset_url }}" alt="Popup Background" width="100%" height="100%" loading="lazy" fetchpriority="low">  
+                    </div>
+                    <button class="newsletter-success-popup__close" type="button" aria-label="{{ 'accessibility.close' | t }}">
+                      <span class="svg-wrapper">
+                        {{- 'icon-close.svg' | inline_asset_content -}}
+                      </span>
+                    </button>
+                    <div class="newsletter-success-popup__icon">
+                      <img src="{{ 'grape.png' | asset_url }}" alt="Grape Icon" width="47" height="64" loading="lazy" fetchpriority="low">
+                    </div>
+                    <h3 class="newsletter-success-popup__heading">{{ section.settings.success_popup_heading }}</h3>
+                    <div class="newsletter-success-popup__text">{{ section.settings.success_popup_text }}</div>
+                  </div>
+                </newsletter-success-popup>
               {%- endif -%}
             {% endform %}
           </div>
@@ -161,6 +170,22 @@
       "id": "full_width",
       "default": true,
       "label": "t:sections.newsletter.settings.full_width.label"
+    },
+    {
+      "type": "header",
+      "content": "Success Popup"
+    },
+    {
+      "type": "text",
+      "id": "success_popup_heading",
+      "default": "You’re In!",
+      "label": "Success Popup Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "success_popup_text",
+      "default": "<p>Thanks for joining our wine community. Get ready to receive exclusive offers, tasting notes, and event invites—straight to your inbox. Cheers! 🥂</p>",
+      "label": "Success Popup Text"
     },
     {
       "type": "header",

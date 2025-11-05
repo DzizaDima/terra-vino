@@ -509,9 +509,9 @@
                     {{- 'products.facets.sort_by_label' | t | replace: ':', '' -}}
                   </span>
                   <div class="custom-sort-buttons__wrapper">
-                    <span class="custom-sort-buttons__button" data-value="created-descending">
+                    {% comment %} <span class="custom-sort-buttons__button" data-value="created-descending">
                       {{- 'products.facets.new_in' | t -}}
-                    </span>
+                    </span> {% endcomment %}
                     <span class="custom-sort-buttons__button" data-value="price-ascending">
                       {{- 'products.facets.price_asc' | t -}}
                     </span>
@@ -669,7 +669,7 @@
                                     {{- 'products.facets.clear' | t -}}
                                   </a>
                                 </facet-remove>
-                                <button
+                                {% comment %} <button
                                   type="button"
                                   class="button button--primary"
                                   onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
@@ -677,7 +677,7 @@
                                   {{ 'products.facets.apply' | t }}
 
                                   (<span id="ProductCount">{{ results.products_count }}</span>)
-                                </button>
+                                </button> {% endcomment %}
                               </div>
                             </div>
                           </details>
@@ -722,7 +722,7 @@
                                     {{- 'products.facets.clear' | t -}}
                                   </a>
                                 </facet-remove>
-                                <button
+                                {% comment %} <button
                                   type="button"
                                   class="button button--primary"
                                   onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
@@ -730,7 +730,7 @@
                                   {{ 'products.facets.apply' | t }}
 
                                   (<span id="ProductCount">{{ results.products_count }}</span>)
-                                </button>
+                                </button> {% endcomment %}
                               </div>
                             </div>
                           </details>
@@ -780,7 +780,7 @@
                         {{- 'products.facets.clear_all' | t -}}
                       </a>
                     </facet-remove>
-                    <button
+                    {% comment %} <button
                       type="button"
                       class="button button--primary"
                       onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
@@ -788,7 +788,7 @@
                       {{ 'products.facets.apply' | t }}
 
                       (<span id="ProductCount">{{ results.products_count }}</span>)
-                    </button>
+                    </button> {% endcomment %}
                   </div>
                 </div>
 

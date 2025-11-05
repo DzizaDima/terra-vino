@@ -1084,7 +1084,7 @@ input.mobile-facets__checkbox {
 }
 
 .mobile-facets__footer > * {
-  width: 50%;
+  width: 100%;
 }
 
 .mobile-facets__sort {
