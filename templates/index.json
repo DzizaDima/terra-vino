@@ -14,23 +14,22 @@
       "blocks": {
         "slide_t47gie": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Deviate_tasting_-_Home.png",
             "image_overlay_opacity": 0,
             "announcement": "November 22nd - Exclusive Tasting @ Deviate Wine Bar!",
-            "caption": "caption",
-            "heading": "little test",
+            "caption": "",
+            "heading": "Exclusive Wine Tasting!!",
             "heading_size": "h1",
-            "subheading": "TEST",
-            "button_label": "Button label",
-            "link": "",
+            "subheading": "5 Regions - 5 Reds - All Italian",
+            "button_label": "Get your tickets!",
+            "link": "https://www.deviate.com.sg/products/terravino-wine-tasting-3-30pm/60431/",
             "button_style_secondary": false,
             "show_text_box": true,
             "box_align": "middle-center",
             "text_alignment": "center",
             "text_alignment_mobile": "center",
-            "color_scheme": "scheme-1"
+            "color_scheme": "scheme-2"
           }
         },
         "slide_cBUbTb": {
