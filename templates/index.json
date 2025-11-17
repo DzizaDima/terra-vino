@@ -12,6 +12,26 @@
     "slideshow_c9MyHQ": {
       "type": "slideshow",
       "blocks": {
+        "slide_t47gie": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image_overlay_opacity": 0,
+            "announcement": "November 22nd - Exclusive Tasting @ Deviate Wine Bar!",
+            "caption": "Caption",
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-1"
+          }
+        },
         "slide_cBUbTb": {
           "type": "slide",
           "settings": {
@@ -95,6 +115,7 @@
         }
       },
       "block_order": [
+        "slide_t47gie",
         "slide_cBUbTb",
         "slide_zKLpYw",
         "slide_V6wLhQ",
@@ -261,6 +282,8 @@
       "settings": {
         "color_scheme": "scheme-3",
         "full_width": true,
+        "success_popup_heading": "You’re In!",
+        "success_popup_text": "<p>Thanks for joining our wine community. Get ready to receive exclusive offers, tasting notes, and event invites—straight to your inbox. Cheers! 🥂</p>",
         "padding_top": 160,
         "padding_bottom": 160
       }
