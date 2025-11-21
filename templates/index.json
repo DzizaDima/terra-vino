@@ -12,8 +12,31 @@
     "slideshow_c9MyHQ": {
       "type": "slideshow",
       "blocks": {
+        "slide_Jzwcw9": {
+          "type": "slide",
+          "name": "Christmas Promo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_g4sy2sg4sy2sg4sy.jpg",
+            "image_overlay_opacity": 0,
+            "announcement": "15% off until December 27th!",
+            "caption": "",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "SHOP NOW!",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-2"
+          }
+        },
         "slide_t47gie": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Deviate_tasting_-_Home.png",
             "image_overlay_opacity": 0,
@@ -34,6 +57,7 @@
         },
         "slide_cBUbTb": {
           "type": "slide",
+          "name": "Boutique Italian Wines",
           "settings": {
             "image": "shopify://shop_images/Hero_Image_bfd647a8-d8ec-43eb-8f47-f1582c27b5dc.png",
             "image_overlay_opacity": 0,
@@ -52,29 +76,9 @@
             "color_scheme": "scheme-2"
           }
         },
-        "slide_zKLpYw": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Hero_Image_2_0bc18bb8-9724-40e7-b422-083cc04f5c89.png",
-            "image_overlay_opacity": 0,
-            "announcement": "LAST ORDERS BY 12PM FRIDAY FOR DELIVERY ON SATURDAY",
-            "caption": "",
-            "heading": "<em>Wine Tasting Experiences</em>",
-            "heading_size": "hxxl",
-            "subheading": " Join our public tastings or host a private event—perfect for birthdays, weddings, or corporate gatherings.",
-            "button_label": "Explore Events",
-            "link": "shopify://products/test",
-            "button_style_secondary": false,
-            "show_text_box": true,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": "scheme-2"
-          }
-        },
         "slide_V6wLhQ": {
           "type": "slide",
+          "name": "More Than Just a Bottle of Wine",
           "settings": {
             "image": "shopify://shop_images/VENDEMMIA_CDM-41_resize_3f8d9e74-ce02-4469-9117-c77f3cc8ddfc.jpg",
             "image_overlay_opacity": 0,
@@ -95,6 +99,7 @@
         },
         "slide_UafbdY": {
           "type": "slide",
+          "name": "Starter Pack",
           "settings": {
             "image": "shopify://shop_images/Hero_Image_4_098a4225-5090-44e7-98c6-ae7584a10017.png",
             "image_overlay_opacity": 0,
@@ -115,9 +120,9 @@
         }
       },
       "block_order": [
+        "slide_Jzwcw9",
         "slide_t47gie",
         "slide_cBUbTb",
-        "slide_zKLpYw",
         "slide_V6wLhQ",
         "slide_UafbdY"
       ],
