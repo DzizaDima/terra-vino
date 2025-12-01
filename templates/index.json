@@ -15,7 +15,6 @@
         "slide_Jzwcw9": {
           "type": "slide",
           "name": "Christmas Promo",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Gemini_Generated_Image_g4sy2sg4sy2sg4sy.jpg",
             "image_overlay_opacity": 0,
@@ -25,7 +24,7 @@
             "heading_size": "h1",
             "subheading": "",
             "button_label": "SHOP NOW!",
-            "link": "",
+            "link": "shopify://collections/christmas-promo",
             "button_style_secondary": false,
             "show_text_box": true,
             "box_align": "middle-center",
