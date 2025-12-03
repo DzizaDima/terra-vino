@@ -295,8 +295,8 @@
         "full_width": true,
         "success_popup_heading": "You’re In!",
         "success_popup_text": "<p>Thanks for joining our wine community. Get ready to receive exclusive offers, tasting notes, and event invites—straight to your inbox. Cheers! 🥂</p>",
-        "padding_top": 160,
-        "padding_bottom": 160
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "image_with_text_zWQ3Xx": {
@@ -352,7 +352,7 @@
         "mobile_content_alignment": "left",
         "section_color_scheme": "scheme-3",
         "color_scheme": "scheme-3",
-        "padding_top": 120,
+        "padding_top": 60,
         "padding_bottom": 60
       }
     },
