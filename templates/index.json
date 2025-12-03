@@ -60,7 +60,7 @@
           "settings": {
             "image": "shopify://shop_images/Hero_Image_bfd647a8-d8ec-43eb-8f47-f1582c27b5dc.png",
             "image_overlay_opacity": 0,
-            "announcement": "use TVFIRSTORDER for 10% off on first order + Free Delivery on Orders above $200",
+            "announcement": "use TVFIRSTORDER for 10% off on first order",
             "caption": "",
             "heading": "<em>Boutique Italian Wines, Curated for Singapore</em>",
             "heading_size": "hxxl",
@@ -81,7 +81,7 @@
           "settings": {
             "image": "shopify://shop_images/VENDEMMIA_CDM-41_resize_3f8d9e74-ce02-4469-9117-c77f3cc8ddfc.jpg",
             "image_overlay_opacity": 0,
-            "announcement": "use TVFIRSTORDER for 10% off on first order + Free Delivery on Orders above $200",
+            "announcement": "Free Delivery on Orders above $200",
             "caption": "",
             "heading": "<em>More Than Just a Bottle of Wine</em>",
             "heading_size": "hxxl",
@@ -128,7 +128,7 @@
       "name": "t:sections.slideshow.presets.name",
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "large",
+        "slide_height": "small",
         "slider_visual": "dots",
         "auto_rotate": true,
         "change_slides_speed": 5,
