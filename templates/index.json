@@ -16,7 +16,7 @@
           "type": "slide",
           "name": "Christmas Promo",
           "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_g4sy2sg4sy2sg4sy_c3d07de2-a9da-4aec-9241-c43d696d0c43.jpg",
+            "image": "shopify://shop_images/ChatGPT_Image_Dec_3_2025_11_47_47_PM_0f63438c-3dec-4a26-9a8b-a9090db49c7b.png",
             "image_overlay_opacity": 0,
             "announcement": "15% off until December 27th!",
             "caption": "",
@@ -128,7 +128,7 @@
       "name": "t:sections.slideshow.presets.name",
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "medium",
+        "slide_height": "large",
         "slider_visual": "dots",
         "auto_rotate": true,
         "change_slides_speed": 5,
