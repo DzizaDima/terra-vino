@@ -33,22 +33,22 @@
             "color_scheme": "scheme-2"
           }
         },
-        "slide_t47gie": {
+        "slide_NpePrJ": {
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Deviate_tasting_-_Home.png",
+            "image": "shopify://shop_images/Discover_Italy_Bundles_2752x1536_GEM.png",
             "image_overlay_opacity": 0,
-            "announcement": "November 22nd - Exclusive Tasting @ Deviate Wine Bar!",
-            "caption": "5 Regions - 5 Reds - All Italian",
-            "heading": "Exclusive Wine Tasting!!",
-            "heading_size": "h1",
-            "subheading": "Two slots available: 3.30 PM / 5:00 PM",
-            "button_label": "Get your tickets!",
-            "link": "https://www.deviate.com.sg/products/terravino-wine-tasting-3-30pm/60431/",
+            "announcement": "Free Delivery on Orders above $200",
+            "caption": "Created for YOU!",
+            "heading": "<strong>The Discover Italy Bundles</strong>",
+            "heading_size": "h0",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Discover Now!",
+            "link": "shopify://collections/discovery-italy-bundles",
             "button_style_secondary": false,
             "show_text_box": true,
-            "box_align": "middle-center",
+            "box_align": "bottom-center",
             "text_alignment": "center",
             "text_alignment_mobile": "center",
             "color_scheme": "scheme-2"
@@ -95,35 +95,13 @@
             "text_alignment_mobile": "center",
             "color_scheme": "scheme-2"
           }
-        },
-        "slide_UafbdY": {
-          "type": "slide",
-          "name": "Starter Pack",
-          "settings": {
-            "image": "shopify://shop_images/Hero_Image_4_098a4225-5090-44e7-98c6-ae7584a10017.png",
-            "image_overlay_opacity": 0,
-            "announcement": "free delivery on orders above $200",
-            "caption": "",
-            "heading": " <em>Introducing Our Starter Pack</em>",
-            "heading_size": "h0",
-            "subheading": "A limited-time selection of 3 boutique Italian wines, specially curated to showcase the Terra Vino experience. Perfect for first-time customers or as a gift.",
-            "button_label": "Order Now",
-            "link": "shopify://products/event-starter-pack",
-            "button_style_secondary": false,
-            "show_text_box": true,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": "scheme-2"
-          }
         }
       },
       "block_order": [
         "slide_Jzwcw9",
-        "slide_t47gie",
+        "slide_NpePrJ",
         "slide_cBUbTb",
-        "slide_V6wLhQ",
-        "slide_UafbdY"
+        "slide_V6wLhQ"
       ],
       "name": "t:sections.slideshow.presets.name",
       "settings": {
