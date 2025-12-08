@@ -22,7 +22,7 @@
         "collection_9Phcmp": {
           "type": "collection",
           "settings": {
-            "collection": "crifo-1",
+            "collection": "crifo",
             "link": "shopify://pages/crifo"
           }
         },
@@ -36,7 +36,7 @@
         "collection_cK8XQr": {
           "type": "collection",
           "settings": {
-            "collection": "firriato-1",
+            "collection": "firriato",
             "link": "shopify://pages/firriato"
           }
         },
