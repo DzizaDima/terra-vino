@@ -15,7 +15,7 @@
         "collection_CbaDHK": {
           "type": "collection",
           "settings": {
-            "collection": "castagnini-1",
+            "collection": "castagnini",
             "link": "shopify://pages/castagnini"
           }
         },
@@ -29,7 +29,7 @@
         "collection_ATCXHN": {
           "type": "collection",
           "settings": {
-            "collection": "cantine-dei-1",
+            "collection": "cantine-dei",
             "link": "shopify://pages/cantine-dei"
           }
         },
@@ -50,7 +50,7 @@
         "collection_UTK7qg": {
           "type": "collection",
           "settings": {
-            "collection": "poderesette-1",
+            "collection": "poderesette",
             "link": "shopify://pages/poderesette"
           }
         },
@@ -71,7 +71,7 @@
         "collection_4BBnx7": {
           "type": "collection",
           "settings": {
-            "collection": "chianti-trambusti-1",
+            "collection": "chianti-trambusti",
             "link": "shopify://pages/chianti-trambusti"
           }
         }
