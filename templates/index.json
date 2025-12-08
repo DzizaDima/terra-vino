@@ -178,19 +178,19 @@
         "featured_collection_ADLPr8": {
           "type": "featured_collection",
           "settings": {
-            "collection": "christmas-promo"
+            "collection": "whitewine"
           }
         },
         "featured_collection_kfKMk4": {
           "type": "featured_collection",
           "settings": {
-            "collection": "whitewine"
+            "collection": "red-wine"
           }
         },
         "featured_collection_MD6Ye8": {
           "type": "featured_collection",
           "settings": {
-            "collection": "red-wine"
+            "collection": "sparklingwine"
           }
         },
         "featured_collection_brKprB": {
@@ -203,13 +203,13 @@
         "featured_collection_thUHma": {
           "type": "featured_collection",
           "settings": {
-            "collection": "sparklingwine"
+            "collection": "discovery-italy-bundles"
           }
         },
         "featured_collection_rRmQWn": {
           "type": "featured_collection",
           "settings": {
-            "collection": "discovery-italy-bundles"
+            "collection": "christmas-promo"
           }
         },
         "featured_collection_PrqWH7": {
