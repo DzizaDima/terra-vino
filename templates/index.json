@@ -186,6 +186,7 @@
         },
         "featured_collection_rRmQWn": {
           "type": "featured_collection",
+          "disabled": true,
           "settings": {
             "collection": "christmas-promo"
           }
