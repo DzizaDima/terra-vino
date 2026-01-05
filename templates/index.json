@@ -15,6 +15,7 @@
         "slide_Jzwcw9": {
           "type": "slide",
           "name": "Christmas Promo",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Gemini_Generated_Image_g4sy2sg4sy2sg4sy_c3d07de2-a9da-4aec-9241-c43d696d0c43.jpg",
             "image_overlay_opacity": 0,
