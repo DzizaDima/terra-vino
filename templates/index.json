@@ -15,6 +15,7 @@
         "slide_KxeriM": {
           "type": "slide",
           "name": "CNY Promo",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/CNY26_promo_banner-noLogo.png",
             "image_overlay_opacity": 0,
