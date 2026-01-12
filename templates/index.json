@@ -12,28 +12,6 @@
     "slideshow_c9MyHQ": {
       "type": "slideshow",
       "blocks": {
-        "slide_KxeriM": {
-          "type": "slide",
-          "name": "CNY Promo",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/CNY26_promo_banner-noLogo.png",
-            "image_overlay_opacity": 0,
-            "announcement": "Enjoy 15% off, or 20% off on orders above S$200",
-            "caption": "",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "Shop Now!",
-            "link": "shopify://collections/cny",
-            "button_style_secondary": false,
-            "show_text_box": false,
-            "box_align": "bottom-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": "scheme-2"
-          }
-        },
         "slide_NpePrJ": {
           "type": "slide",
           "settings": {
@@ -95,13 +73,34 @@
             "text_alignment_mobile": "center",
             "color_scheme": "scheme-2"
           }
+        },
+        "slide_KxeriM": {
+          "type": "slide",
+          "name": "CNY Promo",
+          "settings": {
+            "image": "shopify://shop_images/CNY26_promo_banner-noLogo.png",
+            "image_overlay_opacity": 0,
+            "announcement": "COMING ON February 2nd!",
+            "caption": "",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "bottom-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-2"
+          }
         }
       },
       "block_order": [
-        "slide_KxeriM",
         "slide_NpePrJ",
         "slide_cBUbTb",
-        "slide_V6wLhQ"
+        "slide_V6wLhQ",
+        "slide_KxeriM"
       ],
       "name": "t:sections.slideshow.presets.name",
       "settings": {
