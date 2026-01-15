@@ -14,22 +14,23 @@
       "blocks": {
         "slide_Kn3Wg7": {
           "type": "slide",
+          "name": "CLEARANCE SALE",
           "settings": {
             "image": "shopify://shop_images/Clearance_Sale_Banner.png",
             "image_overlay_opacity": 0,
-            "announcement": "CLEARANCE SALE: 30% OFF ON SELECTED LABELS",
-            "caption": "Caption",
-            "heading": "Image slide",
+            "announcement": "30% OFF ON SELECTED LABELS",
+            "caption": "",
+            "heading": "",
             "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
+            "subheading": "",
+            "button_label": "Shop Now",
+            "link": "shopify://collections/clearance-sale",
             "button_style_secondary": false,
             "show_text_box": true,
-            "box_align": "middle-center",
+            "box_align": "bottom-center",
             "text_alignment": "center",
             "text_alignment_mobile": "center",
-            "color_scheme": "scheme-1"
+            "color_scheme": "scheme-2"
           }
         },
         "slide_NpePrJ": {
