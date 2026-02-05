@@ -12,6 +12,27 @@
     "slideshow_c9MyHQ": {
       "type": "slideshow",
       "blocks": {
+        "slide_KxeriM": {
+          "type": "slide",
+          "name": "CNY Promo",
+          "settings": {
+            "image": "shopify://shop_images/CNY26_promo_banner-noLogo.png",
+            "image_overlay_opacity": 0,
+            "announcement": "Get your wine fix for the Year of the Horse!",
+            "caption": "",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "SHOP NOW!",
+            "link": "shopify://collections/cny",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "bottom-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-2"
+          }
+        },
         "slide_Kn3Wg7": {
           "type": "slide",
           "name": "CLEARANCE SALE",
@@ -94,35 +115,14 @@
             "text_alignment_mobile": "center",
             "color_scheme": "scheme-2"
           }
-        },
-        "slide_KxeriM": {
-          "type": "slide",
-          "name": "CNY Promo",
-          "settings": {
-            "image": "shopify://shop_images/CNY26_promo_banner-noLogo.png",
-            "image_overlay_opacity": 0,
-            "announcement": "Get your wine fix for the Year of the Horse!",
-            "caption": "",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "SHOP NOW!",
-            "link": "shopify://collections/cny",
-            "button_style_secondary": false,
-            "show_text_box": false,
-            "box_align": "bottom-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": "scheme-2"
-          }
         }
       },
       "block_order": [
+        "slide_KxeriM",
         "slide_Kn3Wg7",
         "slide_NpePrJ",
         "slide_cBUbTb",
-        "slide_V6wLhQ",
-        "slide_KxeriM"
+        "slide_V6wLhQ"
       ],
       "name": "t:sections.slideshow.presets.name",
       "settings": {
