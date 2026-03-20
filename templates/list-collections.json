@@ -12,13 +12,6 @@
     "main": {
       "type": "main-list-collections",
       "blocks": {
-        "collection_4c7Nx7": {
-          "type": "collection",
-          "settings": {
-            "collection": "quinto",
-            "link": ""
-          }
-        },
         "collection_BKzXjg": {
           "type": "collection",
           "settings": {
@@ -38,6 +31,13 @@
           "settings": {
             "collection": "poderesette",
             "link": "shopify://pages/poderesette"
+          }
+        },
+        "collection_4c7Nx7": {
+          "type": "collection",
+          "settings": {
+            "collection": "quinto",
+            "link": ""
           }
         },
         "collection_HC4cfQ": {
@@ -91,10 +91,10 @@
         }
       },
       "block_order": [
-        "collection_4c7Nx7",
         "collection_BKzXjg",
         "collection_ATCXHN",
         "collection_UTK7qg",
+        "collection_4c7Nx7",
         "collection_HC4cfQ",
         "collection_LxhBJt",
         "collection_jnwP3g",
