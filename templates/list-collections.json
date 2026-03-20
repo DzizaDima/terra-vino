@@ -12,6 +12,13 @@
     "main": {
       "type": "main-list-collections",
       "blocks": {
+        "collection_4c7Nx7": {
+          "type": "collection",
+          "settings": {
+            "collection": "quinto",
+            "link": ""
+          }
+        },
         "collection_BKzXjg": {
           "type": "collection",
           "settings": {
@@ -84,6 +91,7 @@
         }
       },
       "block_order": [
+        "collection_4c7Nx7",
         "collection_BKzXjg",
         "collection_ATCXHN",
         "collection_UTK7qg",
