@@ -12,6 +12,16 @@
     "main": {
       "type": "region",
       "blocks": {
+        "region_aiQzpe": {
+          "type": "region",
+          "source": "{{ metaobjects.region[\"region-k24zfiwg\"] }}",
+          "settings": {
+            "title": "{{ metaobjects.region[\"region-k24zfiwg\"].title.value }}",
+            "image": "{{ metaobjects.region[\"region-k24zfiwg\"].image.value }}",
+            "wineries": "{{ metaobjects.region[\"region-k24zfiwg\"].winneries.value }}",
+            "description": "{{ metaobjects.region[\"region-k24zfiwg\"].text | metafield_tag }}"
+          }
+        },
         "region_jUr48t": {
           "type": "region",
           "source": "{{ metaobjects.region[\"piedmont-piemonte\"] }}",
@@ -22,14 +32,11 @@
             "description": "{{ metaobjects.region[\"piedmont-piemonte\"].text | metafield_tag }}"
           }
         },
-        "region_aiQzpe": {
+        "region_CWifEd": {
           "type": "region",
-          "source": "{{ metaobjects.region[\"region-k24zfiwg\"] }}",
+          "source": "{{ metaobjects[\"shopify--region\"].liguria }}",
           "settings": {
-            "title": "{{ metaobjects.region[\"region-k24zfiwg\"].title.value }}",
-            "image": "{{ metaobjects.region[\"region-k24zfiwg\"].image.value }}",
-            "wineries": "{{ metaobjects.region[\"region-k24zfiwg\"].winneries.value }}",
-            "description": "{{ metaobjects.region[\"region-k24zfiwg\"].text | metafield_tag }}"
+            "title": "{{ metaobjects[\"shopify--region\"].liguria.label.value }}"
           }
         },
         "region_4MjeXd": {
@@ -64,8 +71,9 @@
         }
       },
       "block_order": [
-        "region_jUr48t",
         "region_aiQzpe",
+        "region_jUr48t",
+        "region_CWifEd",
         "region_4MjeXd",
         "region_6HU9zG",
         "region_rbR7kd"
