@@ -12,6 +12,13 @@
     "main": {
       "type": "region",
       "blocks": {
+        "region_mQX79y": {
+          "type": "region",
+          "source": "{{ metaobjects[\"shopify--region\"].liguria }}",
+          "settings": {
+            "title": "{{ metaobjects[\"shopify--region\"].liguria.label.value }}"
+          }
+        },
         "region_aiQzpe": {
           "type": "region",
           "source": "{{ metaobjects.region[\"region-k24zfiwg\"] }}",
@@ -75,6 +82,7 @@
         }
       },
       "block_order": [
+        "region_mQX79y",
         "region_aiQzpe",
         "region_jUr48t",
         "region_VEXRJE",
