@@ -35,7 +35,7 @@
         "region_VEXRJE": {
           "type": "region",
           "settings": {
-            "title": "Liguria",
+            "title": "{{ metaobjects[\"shopify--region\"].liguria.label.value }}",
             "wineries": [],
             "description": ""
           }
