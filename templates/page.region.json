@@ -32,8 +32,9 @@
             "description": "{{ metaobjects.region[\"piedmont-piemonte\"].text | metafield_tag }}"
           }
         },
-        "region_Hy6TPw": {
+        "region_4EDjfi": {
           "type": "region",
+          "source": "{{ metaobjects.region.liguria }}",
           "settings": {
             "title": "{{ metaobjects.region.liguria.title.value }}",
             "image": "{{ metaobjects.region.liguria.image.value }}",
@@ -75,7 +76,7 @@
       "block_order": [
         "region_aiQzpe",
         "region_jUr48t",
-        "region_Hy6TPw",
+        "region_4EDjfi",
         "region_4MjeXd",
         "region_6HU9zG",
         "region_rbR7kd"
