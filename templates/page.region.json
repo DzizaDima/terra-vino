@@ -12,14 +12,14 @@
     "main": {
       "type": "region",
       "blocks": {
-        "region_4MjeXd": {
+        "region_jUr48t": {
           "type": "region",
-          "source": "{{ metaobjects.region[\"region-x7nn5qsw\"] }}",
+          "source": "{{ metaobjects.region[\"piedmont-piemonte\"] }}",
           "settings": {
-            "title": "{{ metaobjects.region[\"region-x7nn5qsw\"].title.value }}",
-            "image": "{{ metaobjects.region[\"region-x7nn5qsw\"].image.value }}",
-            "wineries": "{{ metaobjects.region[\"region-x7nn5qsw\"].winneries.value }}",
-            "description": "{{ metaobjects.region[\"region-x7nn5qsw\"].text | metafield_tag }}"
+            "title": "{{ metaobjects.region[\"piedmont-piemonte\"].title.value }}",
+            "image": "{{ metaobjects.region[\"piedmont-piemonte\"].image.value }}",
+            "wineries": "{{ metaobjects.region[\"piedmont-piemonte\"].winneries.value }}",
+            "description": "{{ metaobjects.region[\"piedmont-piemonte\"].text | metafield_tag }}"
           }
         },
         "region_aiQzpe": {
@@ -32,14 +32,23 @@
             "description": "{{ metaobjects.region[\"region-k24zfiwg\"].text | metafield_tag }}"
           }
         },
-        "region_rbR7kd": {
+        "region_teqzfP": {
           "type": "region",
-          "source": "{{ metaobjects.region[\"region-j9wfzgvu\"] }}",
           "settings": {
-            "title": "{{ metaobjects.region[\"region-j9wfzgvu\"].title.value }}",
-            "image": "{{ metaobjects.region[\"region-j9wfzgvu\"].image.value }}",
-            "wineries": "{{ metaobjects.region[\"region-j9wfzgvu\"].winneries.value }}",
-            "description": "{{ metaobjects.region[\"region-j9wfzgvu\"].text | metafield_tag }}"
+            "title": "Liguria",
+            "image": "{{ metaobjects.region.liguria.image.value }}",
+            "wineries": "{{ metaobjects.region.liguria.winneries.value }}",
+            "description": "{{ metaobjects.region.liguria.text | metafield_tag }}"
+          }
+        },
+        "region_4MjeXd": {
+          "type": "region",
+          "source": "{{ metaobjects.region[\"region-x7nn5qsw\"] }}",
+          "settings": {
+            "title": "{{ metaobjects.region[\"region-x7nn5qsw\"].title.value }}",
+            "image": "{{ metaobjects.region[\"region-x7nn5qsw\"].image.value }}",
+            "wineries": "{{ metaobjects.region[\"region-x7nn5qsw\"].winneries.value }}",
+            "description": "{{ metaobjects.region[\"region-x7nn5qsw\"].text | metafield_tag }}"
           }
         },
         "region_6HU9zG": {
@@ -52,33 +61,24 @@
             "description": "{{ metaobjects.region[\"region-oz0u37qf\"].text | metafield_tag }}"
           }
         },
-        "region_jUr48t": {
+        "region_rbR7kd": {
           "type": "region",
-          "source": "{{ metaobjects.region[\"piedmont-piemonte\"] }}",
+          "source": "{{ metaobjects.region[\"region-j9wfzgvu\"] }}",
           "settings": {
-            "title": "{{ metaobjects.region[\"piedmont-piemonte\"].title.value }}",
-            "image": "{{ metaobjects.region[\"piedmont-piemonte\"].image.value }}",
-            "wineries": "{{ metaobjects.region[\"piedmont-piemonte\"].winneries.value }}",
-            "description": "{{ metaobjects.region[\"piedmont-piemonte\"].text | metafield_tag }}"
-          }
-        },
-        "region_teqzfP": {
-          "type": "region",
-          "settings": {
-            "title": "Liguria",
-            "image": "{{ metaobjects.region.liguria.image.value }}",
-            "wineries": "{{ metaobjects.region.liguria.winneries.value }}",
-            "description": "{{ metaobjects.region.liguria.text | metafield_tag }}"
+            "title": "{{ metaobjects.region[\"region-j9wfzgvu\"].title.value }}",
+            "image": "{{ metaobjects.region[\"region-j9wfzgvu\"].image.value }}",
+            "wineries": "{{ metaobjects.region[\"region-j9wfzgvu\"].winneries.value }}",
+            "description": "{{ metaobjects.region[\"region-j9wfzgvu\"].text | metafield_tag }}"
           }
         }
       },
       "block_order": [
-        "region_4MjeXd",
-        "region_aiQzpe",
-        "region_rbR7kd",
-        "region_6HU9zG",
         "region_jUr48t",
-        "region_teqzfP"
+        "region_aiQzpe",
+        "region_teqzfP",
+        "region_4MjeXd",
+        "region_6HU9zG",
+        "region_rbR7kd"
       ],
       "settings": {
         "image": "shopify://shop_images/Frame_2087327076.png",
