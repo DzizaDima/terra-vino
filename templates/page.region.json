@@ -36,7 +36,10 @@
           "type": "region",
           "settings": {
             "title": "{{ metaobjects[\"shopify--region\"].liguria.label.value }}",
-            "wineries": [],
+            "image": "shopify://shop_images/Region_Liguria.png",
+            "wineries": [
+              "baia-del-sole"
+            ],
             "description": ""
           }
         },
