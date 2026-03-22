@@ -32,6 +32,17 @@
             "description": "{{ metaobjects.region[\"piedmont-piemonte\"].text | metafield_tag }}"
           }
         },
+        "region_Hy6TPw": {
+          "type": "region",
+          "settings": {
+            "title": "{{ metaobjects[\"shopify--region\"].liguria.label.value }}",
+            "image": "shopify://shop_images/Region_Liguria.png",
+            "wineries": [
+              "baia-del-sole"
+            ],
+            "description": "<p>Liguria is the sheer willpower of Italian winemaking, a narrow crescent where vines cling to gravity-defying terraces carved into vertical sea cliffs.</p><p>Known for \"heroic viticulture,\" this rugged coastline requires growers to maintain ancient dry-stone walls (the \"muretti a secco\") and harvest entirely by hand, often using miniature monorails to navigate slopes far too steep for machinery. The terroir is a dramatic intersection of the Alps and the Mediterranean, where soils of shattered limestone, blue clay, and crumbly slate impart a profound minerality to the wine.</p><p>This geology, combined with the constant salt-laden sea spray and the aromatic influence of the macchia (wild thyme and rosemary) defines the saline, wind-swept character of whites like Vermentino and the savory Pigato. In the east, the rare, honeyed Sciacchetrà remains a legendary nectar of the Cinque Terre, while in the west, the elegant Rossese di Dolceacqua offers a peppery, silky red that thrives in the high-altitude, sun-drenched marl.</p><p>Today, the region remains a tapestry of small-scale artisans who act as stewards of this fragile ecosystem, producing wines that serve as a liquid testament to the friction between the mountain and the sea.</p>"
+          }
+        },
         "region_4MjeXd": {
           "type": "region",
           "source": "{{ metaobjects.region[\"region-x7nn5qsw\"] }}",
@@ -66,6 +77,7 @@
       "block_order": [
         "region_aiQzpe",
         "region_jUr48t",
+        "region_Hy6TPw",
         "region_4MjeXd",
         "region_6HU9zG",
         "region_rbR7kd"
