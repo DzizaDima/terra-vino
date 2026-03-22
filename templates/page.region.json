@@ -68,7 +68,7 @@
             "title": "Liguria",
             "image": "{{ metaobjects.region.liguria.image.value }}",
             "wineries": "{{ metaobjects.region.liguria.winneries.value }}",
-            "description": ""
+            "description": "{{ metaobjects.region.liguria.text | metafield_tag }}"
           }
         }
       },
