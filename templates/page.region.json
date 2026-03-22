@@ -32,14 +32,6 @@
             "description": "{{ metaobjects.region[\"piedmont-piemonte\"].text | metafield_tag }}"
           }
         },
-        "region_WGPfYh": {
-          "type": "region",
-          "settings": {
-            "title": "{{ metaobjects[\"shopify--region\"].liguria.label.value }}",
-            "wineries": [],
-            "description": ""
-          }
-        },
         "region_4MjeXd": {
           "type": "region",
           "source": "{{ metaobjects.region[\"region-x7nn5qsw\"] }}",
@@ -74,7 +66,6 @@
       "block_order": [
         "region_aiQzpe",
         "region_jUr48t",
-        "region_WGPfYh",
         "region_4MjeXd",
         "region_6HU9zG",
         "region_rbR7kd"
