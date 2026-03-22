@@ -34,11 +34,9 @@
         },
         "region_teqzfP": {
           "type": "region",
+          "source": "{{ metaobjects[\"shopify--region\"].liguria }}",
           "settings": {
-            "title": "{{ metaobjects[\"shopify--region\"].liguria.label.value }}",
-            "image": "{{ metaobjects.region.liguria.image.value }}",
-            "wineries": "{{ metaobjects.region.liguria.winneries.value }}",
-            "description": "{{ metaobjects.region.liguria.text | metafield_tag }}"
+            "title": "{{ metaobjects[\"shopify--region\"].liguria.label.value }}"
           }
         },
         "region_4MjeXd": {
