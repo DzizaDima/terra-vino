@@ -35,7 +35,7 @@
         "region_teqzfP": {
           "type": "region",
           "settings": {
-            "title": "Liguria",
+            "title": "{{ metaobjects[\"shopify--region\"].liguria.label.value }}",
             "image": "{{ metaobjects.region.liguria.image.value }}",
             "wineries": "{{ metaobjects.region.liguria.winneries.value }}",
             "description": "{{ metaobjects.region.liguria.text | metafield_tag }}"
