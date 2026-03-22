@@ -40,6 +40,13 @@
             "link": "shopify://pages/tenuta-il-quinto"
           }
         },
+        "collection_Yfni7C": {
+          "type": "collection",
+          "settings": {
+            "collection": "baia-del-sole",
+            "link": ""
+          }
+        },
         "collection_HC4cfQ": {
           "type": "collection",
           "settings": {
@@ -95,6 +102,7 @@
         "collection_ATCXHN",
         "collection_UTK7qg",
         "collection_4c7Nx7",
+        "collection_Yfni7C",
         "collection_HC4cfQ",
         "collection_LxhBJt",
         "collection_jnwP3g",
