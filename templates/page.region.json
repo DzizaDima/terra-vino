@@ -12,14 +12,6 @@
     "main": {
       "type": "region",
       "blocks": {
-        "region_mQX79y": {
-          "type": "region",
-          "disabled": true,
-          "source": "{{ metaobjects[\"shopify--region\"].liguria }}",
-          "settings": {
-            "title": "{{ metaobjects[\"shopify--region\"].liguria.label.value }}"
-          }
-        },
         "region_aiQzpe": {
           "type": "region",
           "source": "{{ metaobjects.region[\"region-k24zfiwg\"] }}",
@@ -38,17 +30,6 @@
             "image": "{{ metaobjects.region[\"piedmont-piemonte\"].image.value }}",
             "wineries": "{{ metaobjects.region[\"piedmont-piemonte\"].winneries.value }}",
             "description": "{{ metaobjects.region[\"piedmont-piemonte\"].text | metafield_tag }}"
-          }
-        },
-        "region_VEXRJE": {
-          "type": "region",
-          "settings": {
-            "title": "{{ metaobjects[\"shopify--region\"].liguria.label.value }}",
-            "image": "shopify://shop_images/Region_Liguria.png",
-            "wineries": [
-              "baia-del-sole"
-            ],
-            "description": ""
           }
         },
         "region_4MjeXd": {
@@ -83,10 +64,8 @@
         }
       },
       "block_order": [
-        "region_mQX79y",
         "region_aiQzpe",
         "region_jUr48t",
-        "region_VEXRJE",
         "region_4MjeXd",
         "region_6HU9zG",
         "region_rbR7kd"
