@@ -61,6 +61,15 @@
             "wineries": "{{ metaobjects.region[\"piedmont-piemonte\"].winneries.value }}",
             "description": "{{ metaobjects.region[\"piedmont-piemonte\"].text | metafield_tag }}"
           }
+        },
+        "region_teqzfP": {
+          "type": "region",
+          "settings": {
+            "title": "Liguria",
+            "image": "{{ metaobjects.region.liguria.image.value }}",
+            "wineries": "{{ metaobjects.region.liguria.winneries.value }}",
+            "description": ""
+          }
         }
       },
       "block_order": [
@@ -68,7 +77,8 @@
         "region_aiQzpe",
         "region_rbR7kd",
         "region_6HU9zG",
-        "region_jUr48t"
+        "region_jUr48t",
+        "region_teqzfP"
       ],
       "settings": {
         "image": "shopify://shop_images/Frame_2087327076.png",
