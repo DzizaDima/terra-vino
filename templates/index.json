@@ -12,44 +12,22 @@
     "slideshow_c9MyHQ": {
       "type": "slideshow",
       "blocks": {
-        "slide_KxeriM": {
+        "slide_cBUbTb": {
           "type": "slide",
-          "name": "CNY Promo",
-          "disabled": true,
+          "name": "Boutique Italian Wines",
           "settings": {
-            "image": "shopify://shop_images/CNY26_promo_banner-noLogo.png",
+            "image": "shopify://shop_images/Hero_Image_bfd647a8-d8ec-43eb-8f47-f1582c27b5dc.png",
             "image_overlay_opacity": 0,
-            "announcement": "Get your wine fix for the Year of the Horse until Feb 15th!",
+            "announcement": "use TVFIRSTORDER for 10% off on first order",
             "caption": "",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "SHOP NOW!",
-            "link": "shopify://collections/cny",
+            "heading": "<em>Boutique Italian Wines, Curated for Singapore</em>",
+            "heading_size": "h0",
+            "subheading": "Hand-selected from family wineries across Italy. Discover wines you won’t find anywhere else.",
+            "button_label": "Shop Now",
+            "link": "/collections/all",
             "button_style_secondary": false,
             "show_text_box": false,
-            "box_align": "bottom-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": "scheme-2"
-          }
-        },
-        "slide_Kn3Wg7": {
-          "type": "slide",
-          "name": "CLEARANCE SALE",
-          "settings": {
-            "image": "shopify://shop_images/Clearance_Sale_Banner.png",
-            "image_overlay_opacity": 0,
-            "announcement": "30% OFF ON SELECTED LABELS",
-            "caption": "",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "Shop Now",
-            "link": "shopify://collections/clearance-sale",
-            "button_style_secondary": false,
-            "show_text_box": true,
-            "box_align": "bottom-center",
+            "box_align": "middle-center",
             "text_alignment": "center",
             "text_alignment_mobile": "center",
             "color_scheme": "scheme-2"
@@ -75,22 +53,22 @@
             "color_scheme": "scheme-2"
           }
         },
-        "slide_cBUbTb": {
+        "slide_Kn3Wg7": {
           "type": "slide",
-          "name": "Boutique Italian Wines",
+          "name": "CLEARANCE SALE",
           "settings": {
-            "image": "shopify://shop_images/Hero_Image_bfd647a8-d8ec-43eb-8f47-f1582c27b5dc.png",
+            "image": "shopify://shop_images/Clearance_Sale_Banner.png",
             "image_overlay_opacity": 0,
-            "announcement": "use TVFIRSTORDER for 10% off on first order",
+            "announcement": "30% OFF ON SELECTED LABELS",
             "caption": "",
-            "heading": "<em>Boutique Italian Wines, Curated for Singapore</em>",
-            "heading_size": "h0",
-            "subheading": "Hand-selected from family wineries across Italy. Discover wines you won’t find anywhere else.",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
             "button_label": "Shop Now",
-            "link": "/collections/all",
+            "link": "shopify://collections/clearance-sale",
             "button_style_secondary": false,
-            "show_text_box": false,
-            "box_align": "middle-center",
+            "show_text_box": true,
+            "box_align": "bottom-center",
             "text_alignment": "center",
             "text_alignment_mobile": "center",
             "color_scheme": "scheme-2"
@@ -119,10 +97,9 @@
         }
       },
       "block_order": [
-        "slide_KxeriM",
-        "slide_Kn3Wg7",
-        "slide_NpePrJ",
         "slide_cBUbTb",
+        "slide_NpePrJ",
+        "slide_Kn3Wg7",
         "slide_V6wLhQ"
       ],
       "name": "t:sections.slideshow.presets.name",
