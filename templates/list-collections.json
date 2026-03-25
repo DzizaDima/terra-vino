@@ -12,6 +12,13 @@
     "main": {
       "type": "main-list-collections",
       "blocks": {
+        "collection_eGKVpG": {
+          "type": "collection",
+          "settings": {
+            "collection": "tessari",
+            "link": "shopify://pages/cornelia-tessari"
+          }
+        },
         "collection_BKzXjg": {
           "type": "collection",
           "settings": {
@@ -98,6 +105,7 @@
         }
       },
       "block_order": [
+        "collection_eGKVpG",
         "collection_BKzXjg",
         "collection_ATCXHN",
         "collection_UTK7qg",
