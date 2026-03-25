@@ -12,11 +12,11 @@
     "main": {
       "type": "main-list-collections",
       "blocks": {
-        "collection_eGKVpG": {
+        "collection_Yfni7C": {
           "type": "collection",
           "settings": {
-            "collection": "tessari",
-            "link": "shopify://pages/cornelia-tessari"
+            "collection": "baia-del-sole",
+            "link": "shopify://pages/baia-del-sole-cantine-federici"
           }
         },
         "collection_BKzXjg": {
@@ -33,46 +33,11 @@
             "link": "shopify://pages/cantine-dei"
           }
         },
-        "collection_UTK7qg": {
-          "type": "collection",
-          "settings": {
-            "collection": "poderesette",
-            "link": "shopify://pages/poderesette"
-          }
-        },
-        "collection_4c7Nx7": {
-          "type": "collection",
-          "settings": {
-            "collection": "quinto",
-            "link": "shopify://pages/tenuta-il-quinto"
-          }
-        },
-        "collection_Yfni7C": {
-          "type": "collection",
-          "settings": {
-            "collection": "baia-del-sole",
-            "link": "shopify://pages/baia-del-sole-cantine-federici"
-          }
-        },
         "collection_HC4cfQ": {
           "type": "collection",
           "settings": {
             "collection": "cantine-di-monteforte",
             "link": "shopify://pages/cantina-di-monteforte"
-          }
-        },
-        "collection_LxhBJt": {
-          "type": "collection",
-          "settings": {
-            "collection": "sandre",
-            "link": "shopify://pages/sandre"
-          }
-        },
-        "collection_jnwP3g": {
-          "type": "collection",
-          "settings": {
-            "collection": "teo-costa",
-            "link": "shopify://pages/teo-costa"
           }
         },
         "collection_CbaDHK": {
@@ -89,6 +54,13 @@
             "link": "shopify://pages/chianti-trambusti"
           }
         },
+        "collection_eGKVpG": {
+          "type": "collection",
+          "settings": {
+            "collection": "tessari",
+            "link": "shopify://pages/cornelia-tessari"
+          }
+        },
         "collection_9Phcmp": {
           "type": "collection",
           "settings": {
@@ -102,22 +74,50 @@
             "collection": "firriato",
             "link": "shopify://pages/firriato"
           }
+        },
+        "collection_UTK7qg": {
+          "type": "collection",
+          "settings": {
+            "collection": "poderesette",
+            "link": "shopify://pages/poderesette"
+          }
+        },
+        "collection_4c7Nx7": {
+          "type": "collection",
+          "settings": {
+            "collection": "quinto",
+            "link": "shopify://pages/tenuta-il-quinto"
+          }
+        },
+        "collection_LxhBJt": {
+          "type": "collection",
+          "settings": {
+            "collection": "sandre",
+            "link": "shopify://pages/sandre"
+          }
+        },
+        "collection_jnwP3g": {
+          "type": "collection",
+          "settings": {
+            "collection": "teo-costa",
+            "link": "shopify://pages/teo-costa"
+          }
         }
       },
       "block_order": [
-        "collection_eGKVpG",
+        "collection_Yfni7C",
         "collection_BKzXjg",
         "collection_ATCXHN",
-        "collection_UTK7qg",
-        "collection_4c7Nx7",
-        "collection_Yfni7C",
         "collection_HC4cfQ",
-        "collection_LxhBJt",
-        "collection_jnwP3g",
         "collection_CbaDHK",
         "collection_4BBnx7",
+        "collection_eGKVpG",
         "collection_9Phcmp",
-        "collection_cK8XQr"
+        "collection_cK8XQr",
+        "collection_UTK7qg",
+        "collection_4c7Nx7",
+        "collection_LxhBJt",
+        "collection_jnwP3g"
       ],
       "settings": {
         "source": "custom",
