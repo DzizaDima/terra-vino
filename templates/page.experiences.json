@@ -72,7 +72,7 @@
             "title": "Join an Event",
             "text": "<p>Public tastings and masterclasses open to all.</p>",
             "link_label": "Browse Events",
-            "link": ""
+            "link": "#upcoming-events"
           }
         },
         "column_DJyn87": {
@@ -139,6 +139,7 @@
       "blocks": {
         "experiences_app_aggregate_view_KVMnMx": {
           "type": "shopify://apps/experiences-app/blocks/aggregate-view/0f7bacd4-dd8b-4f37-98a0-d0ca3a8c3995",
+          "name": "upcoming-events",
           "settings": {
             "mainHeader": "Browse what's on and secure your spot directly",
             "showEventsHideToggle": false,
