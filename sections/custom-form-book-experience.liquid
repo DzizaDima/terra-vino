@@ -22,21 +22,26 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: rgb(var(--color-background));
-    border: 1px solid rgba(var(--color-foreground), 0.2);
-    border-radius: var(--inputs-radius, 4px);
-    z-index: 10;
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    z-index: 100;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
   }
   .book-event__occasion-option {
     padding: 1rem 1.5rem;
     cursor: pointer;
     font-size: 1.4rem;
     font-family: inherit;
-    color: rgb(var(--color-foreground));
+    color: #333333;
+    background: #ffffff;
   }
   .book-event__occasion-option:hover,
-  .book-event__occasion-option--selected { background: rgba(var(--color-foreground), 0.06); }
+  .book-event__occasion-option--selected {
+    background: #f5f5f5;
+    color: #000000;
+  }
 </style>
 
 <div class="color-{{ section.settings.color_scheme }} gradient relative">
@@ -173,7 +178,7 @@
         </div>
       </div>
 
-      <!-- Row 2: WhatsApp + Occasion -->
+      <!-- Row 2: WhatsApp + Guests -->
       <div class="book-event__form-row">
         <div class="field">
           <input
@@ -187,7 +192,22 @@
           <label class="field__label" for="BookEventForm-whatsapp">WhatsApp Number</label>
         </div>
 
-        <div class="field book-event__occasion-field">
+        <div class="field">
+          <input
+            class="field__input"
+            type="number"
+            id="BookEventForm-guests"
+            name="contact[number_of_guests]"
+            min="6"
+            placeholder="Number of Guests (min. 6)"
+            required>
+          <label class="field__label" for="BookEventForm-guests">Number of Guests (min. 6)</label>
+        </div>
+      </div>
+
+      <!-- Row 3: Occasion (full width) -->
+      <div class="book-event__form-row">
+        <div class="field book-event__occasion-field" style="grid-column: 1 / -1;">
           <input
             type="text"
             class="field__input"
@@ -209,21 +229,6 @@
               <div class="book-event__occasion-option" data-value="Other">Other</div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Row 3: Number of Guests (full width) -->
-      <div class="book-event__form-row">
-        <div class="field" style="grid-column: 1 / -1;">
-          <input
-            class="field__input"
-            type="number"
-            id="BookEventForm-guests"
-            name="contact[number_of_guests]"
-            min="6"
-            placeholder="Number of Guests (min. 6)"
-            required>
-          <label class="field__label" for="BookEventForm-guests">Number of Guests (min. 6)</label>
         </div>
       </div>
 
@@ -301,10 +306,9 @@
 
       <div class="book-event__button">
         <button type="submit" class="button book-event__submit-btn">
-          {{ 'templates.contact.book_event.plan_event' | t }}
+          Let's Plan Your Experience
         </button>
       </div>
-      <p class="book-event__response-note">We'll come back to you within 24 hours with a tailored proposal.</p>
     {%- endform -%}
   </div>
 </div>
