@@ -18,7 +18,7 @@
       }
     },
     "contact_form_book_event_W4tXiL": {
-      "type": "contact-form-book-event",
+      "type": "contact-form-book-event_OLD",
       "name": "Book Event Form",
       "settings": {
         "heading": "Plan Your <em>Event</em>",
