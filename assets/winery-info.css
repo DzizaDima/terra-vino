@@ -1,14 +1,14 @@
-.page-width--winnery {
+.page-width--winery {
   max-width: 1206px;
   position: relative;
 }
 
-.winnery-info {
+.winery-info {
   max-width: 660px;
   margin: 0 auto;
 }
 
-.winnery-info__content {
+.winery-info__content {
   text-align: center;
   position: relative;
   padding: 40px 16px;
@@ -17,12 +17,12 @@
   background-repeat: repeat-x;
 }
 
-.winnery-info__content h1,
-.winnery-info__content h2,
-.winnery-info__content h3,
-.winnery-info__content h4,
-.winnery-info__content h5,
-.winnery-info__content h6 {
+.winery-info__content h1,
+.winery-info__content h2,
+.winery-info__content h3,
+.winery-info__content h4,
+.winery-info__content h5,
+.winery-info__content h6 {
   margin: 0;
   margin-bottom: 12px;
   font-size: 28px;
@@ -30,7 +30,7 @@
   color: #192622;
 }
 
-.winnery-info__content p {
+.winery-info__content p {
   margin: 0;
   color: #4E524F;
   font-size: 16px;
@@ -40,54 +40,54 @@
   margin-bottom: 32px;
 }
 
-.winnery-info__content p:last-child {
+.winery-info__content p:last-child {
   margin-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
-  .winnery-info__content {
+  .winery-info__content {
     background-size: contain;
     padding: 64px 48px;
   }
 }
 
-.winnery__logo {
+.winery__logo {
   display: flex;
   justify-content: center;
   margin-bottom: 24px;
 }
 
 @media screen and (min-width: 768px) {
-  .winnery__logo {
+  .winery__logo {
     margin-bottom: 32px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .winnery__logo img {
+  .winery__logo img {
     max-width: 80px;
     height: auto;
   }
 }
 
-.winnery__image {
+.winery__image {
   display: flex;
   justify-content: center;
   margin-bottom: 56px;
 }
 
-.winnery__image img {
+.winery__image img {
   width: 100%;
   height: auto;
 }
 
 @media screen and (min-width: 768px) {
-  .winnery__image {
+  .winery__image {
     margin-bottom: 72px;
   }
 }
 
-.winnery-description {
+.winery-description {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,11 +97,11 @@
   margin-bottom: 56px;
 }
 
-.winnery-description__image {
+.winery-description__image {
   margin-bottom: 18px;
 }
 
-.winnery-description__title {
+.winery-description__title {
   color: #D98D30;
   font-size: 14px;
   line-height: 1.2;
@@ -111,7 +111,7 @@
   margin-bottom: 6px;
 }
 
-.winnery-description__description {
+.winery-description__description {
   color: #4E524F;
   font-size: 16px;
   line-height: 1.4;
@@ -121,25 +121,25 @@
   margin: 0;
 }
 
-.winnery-description__description p{
+.winery-description__description p{
   margin: 0;
 }
 
 
 @media screen and (min-width: 768px) {
-  .winnery-description {
+  .winery-description {
     margin-bottom: 72px;
   }
 
-  .winnery-description__image {
+  .winery-description__image {
     margin-bottom: 24px;
   }
 
-  .winnery-description__title {
+  .winery-description__title {
     font-size: 18px;
   }
 
-  .winnery-description__description {
+  .winery-description__description {
     font-size: 20px;
   }
 }
