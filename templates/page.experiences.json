@@ -124,7 +124,7 @@
       "block_order": [
         "heading_DxHwHM"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "upcoming-events",
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -139,7 +139,7 @@
       "blocks": {
         "experiences_app_aggregate_view_KVMnMx": {
           "type": "shopify://apps/experiences-app/blocks/aggregate-view/0f7bacd4-dd8b-4f37-98a0-d0ca3a8c3995",
-          "name": "upcoming-events",
+          "name": "Calendar View",
           "settings": {
             "mainHeader": "Browse what's on and secure your spot directly",
             "showEventsHideToggle": false,
