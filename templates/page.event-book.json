@@ -17,20 +17,20 @@
         "padding_bottom": 28
       }
     },
-    "contact_form_book_event_W4tXiL": {
-      "type": "contact-form-book-event",
+    "custom_form_book_experience_cQHjQx": {
+      "type": "custom-form-book-experience",
       "name": "Book Event Form",
       "settings": {
-        "heading": "Plan Your <em>Event</em>",
-        "subheading": "Please share your contact details and event preferences, and our team will be in touch to help you plan a memorable private experience.",
-        "color_scheme": "",
-        "padding_top": 120,
-        "padding_bottom": 120
+        "heading": "Request a TerraVino Experience",
+        "subheading": "Tell us about your occasion and we'll come back to you within 24 hours with a tailored proposal.",
+        "color_scheme": "scheme-3",
+        "padding_top": 36,
+        "padding_bottom": 200
       }
     }
   },
   "order": [
     "main",
-    "contact_form_book_event_W4tXiL"
+    "custom_form_book_experience_cQHjQx"
   ]
 }
