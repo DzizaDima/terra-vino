@@ -233,6 +233,18 @@
     "rich_text_xj38GW": {
       "type": "rich-text",
       "blocks": {
+        "text_FErpTm": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>Looking for something larger? TerraVino also hosts corporate events and wine masterclasses for groups of any size. Mention it in your enquiry and we'll be in touch.</em></p>"
+          }
+        },
+        "text_xpQicT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>   </p>"
+          }
+        },
         "button_9pb3Ck": {
           "type": "button",
           "settings": {
@@ -246,6 +258,8 @@
         }
       },
       "block_order": [
+        "text_FErpTm",
+        "text_xpQicT",
         "button_9pb3Ck"
       ],
       "name": "t:sections.rich-text.presets.name",
@@ -256,57 +270,6 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
-      }
-    },
-    "how_to_book_FThKer": {
-      "type": "how-to-book",
-      "name": "t:sections.how_to_book.presets.name",
-      "settings": {
-        "title": "How <em>to Book</em>",
-        "heading_size": "h1",
-        "public_title": "Public Events",
-        "public_description": "<p>Browse and book upcoming tastings directly on this page.</p>",
-        "private_title": "Private Enquiries",
-        "private_description": "<p>Want to discuss dates, budgets, and menu ideas?</p>",
-        "button_label": "Book Now",
-        "button_link": "",
-        "bottom_description": "<p>Raise a glass with us and experience the charm of Italy's boutique wineries, right here in Singapore.</p>",
-        "color_scheme": "scheme-3",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "1759301264e25096b9": {
-      "type": "apps",
-      "blocks": {
-        "experiences_app_aggregate_view_fkVE3K": {
-          "type": "shopify://apps/experiences-app/blocks/aggregate-view/0f7bacd4-dd8b-4f37-98a0-d0ca3a8c3995",
-          "settings": {
-            "mainHeader": "Book an experience",
-            "showEventsHideToggle": true,
-            "defaultView": "listMonth",
-            "contentWrap": true,
-            "hideFutureDates": false,
-            "languageCode": "en-US",
-            "displayType": "default",
-            "tagColor": "",
-            "filterTags": "",
-            "backgroundColor": "#ffffff",
-            "primaryColor": "#05753c",
-            "secondaryColor": "#a83b02",
-            "textColor": "#424242",
-            "disabledColor": "#999b9e",
-            "buttonShape": "square",
-            "containerPaddingTop": 12,
-            "containerPaddingBottom": 12
-          }
-        }
-      },
-      "block_order": [
-        "experiences_app_aggregate_view_fkVE3K"
-      ],
-      "settings": {
-        "include_margins": true
       }
     },
     "image_KDhyzT": {
@@ -333,8 +296,6 @@
     "rich_text_J8LTeK",
     "image_mGbKgH",
     "rich_text_xj38GW",
-    "how_to_book_FThKer",
-    "1759301264e25096b9",
     "image_KDhyzT"
   ]
 }
