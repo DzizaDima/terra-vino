@@ -14,6 +14,31 @@
     }
   }
 {%- endstyle -%}
+<style>
+  .book-event__occasion-field { position: relative; }
+  .book-event__occasion-field svg { position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); pointer-events: none; }
+  .book-event__occasion-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgb(var(--color-background));
+    border: 1px solid rgba(var(--color-foreground), 0.2);
+    border-radius: var(--inputs-radius, 4px);
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .book-event__occasion-option {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-family: inherit;
+    color: rgb(var(--color-foreground));
+  }
+  .book-event__occasion-option:hover,
+  .book-event__occasion-option--selected { background: rgba(var(--color-foreground), 0.06); }
+</style>
 
 <div class="color-{{ section.settings.color_scheme }} gradient relative">
   <div class="contact-bg contact-bg--left">
@@ -163,21 +188,29 @@
           <label class="field__label" for="BookEventForm-whatsapp">WhatsApp Number</label>
         </div>
 
-        <div class="field">
-          <select
+        <div class="field book-event__occasion-field">
+          <input
+            type="text"
             class="field__input"
-            id="BookEventForm-occasion"
-            name="contact[occasion]"
-            style="font-size: inherit; font-family: inherit;"
+            id="BookEventForm-occasion-display"
+            readonly
+            placeholder="Occasion"
             required>
-            <option value="" disabled selected></option>
-            <option value="Birthday">Birthday</option>
-            <option value="Anniversary">Anniversary</option>
-            <option value="Corporate">Corporate</option>
-            <option value="Friends gathering">Friends gathering</option>
-            <option value="Other">Other</option>
-          </select>
-          <label class="field__label field__label--active" for="BookEventForm-occasion">Occasion</label>
+          <input
+            type="hidden"
+            id="BookEventForm-occasion"
+            name="contact[occasion]">
+          <label class="field__label" for="BookEventForm-occasion-display">Occasion</label>
+          <div class="book-event__occasion-dropdown" id="occasionDropdown">
+            <div class="book-event__occasion-options">
+              <div class="book-event__occasion-option" data-value="Birthday">Birthday</div>
+              <div class="book-event__occasion-option" data-value="Anniversary">Anniversary</div>
+              <div class="book-event__occasion-option" data-value="Corporate">Corporate</div>
+              <div class="book-event__occasion-option" data-value="Friends gathering">Friends gathering</div>
+              <div class="book-event__occasion-option" data-value="Other">Other</div>
+            </div>
+          </div>
+          {{ 'icon-caret.svg' | inline_asset_content }}
         </div>
       </div>
 
@@ -415,6 +448,39 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!e.target.closest('.book-event__date-field')) calendar.style.display = 'none';
     if (!e.target.closest('.book-event__time-field')) timeDropdown.style.display = 'none';
   });
+
+  // Occasion dropdown
+  const occasionDropdown = document.getElementById('occasionDropdown');
+  const occasionDisplay = document.getElementById('BookEventForm-occasion-display');
+  const occasionHidden = document.getElementById('BookEventForm-occasion');
+  const occasionOptions = document.querySelectorAll('.book-event__occasion-option');
+
+  if (occasionDisplay) {
+    occasionDisplay.addEventListener('click', (e) => {
+      e.stopPropagation();
+      occasionDropdown.style.display = occasionDropdown.style.display === 'block' ? 'none' : 'block';
+      calendar.style.display = 'none';
+      timeDropdown.style.display = 'none';
+    });
+
+    occasionOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        occasionOptions.forEach(o => o.classList.remove('book-event__occasion-option--selected'));
+        option.classList.add('book-event__occasion-option--selected');
+        occasionDisplay.value = option.dataset.value;
+        occasionHidden.value = option.dataset.value;
+        occasionDropdown.style.display = 'none';
+      });
+    });
+
+    occasionDropdown.addEventListener('click', (e) => { e.stopPropagation(); });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.book-event__occasion-field')) {
+        occasionDropdown.style.display = 'none';
+      }
+    });
+  }
 
   // Guest count validation
   const guestsInput = document.getElementById('BookEventForm-guests');
