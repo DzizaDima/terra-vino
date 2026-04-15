@@ -62,6 +62,52 @@
         "padding_bottom": 64
       }
     },
+    "multicolumn_mHipwA": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_BwJcUi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Experiences_-_Public_GEM03_transparency.png",
+            "title": "Join an Event",
+            "text": "<p>Public tastings, launches, and masterclasses open to all.</p>",
+            "link_label": "Browse Events",
+            "link": ""
+          }
+        },
+        "column_DJyn87": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Experiences_-_Private_GEM03_transparency.png",
+            "title": "Host Your Own",
+            "text": "<p>A private Italian wine experience, brought to your home.</p>",
+            "link_label": "Enquire",
+            "link": "shopify://pages/private-experiences"
+          }
+        }
+      },
+      "block_order": [
+        "column_BwJcUi",
+        "column_DJyn87"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_KDhyzT": {
       "type": "image",
       "name": "Image",
@@ -78,6 +124,7 @@
     "main",
     "image_EVdxC7",
     "rich_text_z9c9aY",
+    "multicolumn_mHipwA",
     "image_KDhyzT"
   ]
 }
