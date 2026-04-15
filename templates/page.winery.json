@@ -37,8 +37,8 @@
         "padding_bottom": 52
       }
     },
-    "winnery_info_9yEAKF": {
-      "type": "winnery-info",
+    "winery_info_9yEAKF": {
+      "type": "winery-info",
       "name": "Winery Info",
       "settings": {
         "data_source": "unique",
@@ -87,7 +87,7 @@
     "main",
     "image_TkUibf",
     "image_zKFByd",
-    "winnery_info_9yEAKF",
+    "winery_info_9yEAKF",
     "featured_collection_UHGrqF"
   ]
 }
