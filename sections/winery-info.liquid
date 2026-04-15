@@ -1,27 +1,27 @@
-{{ 'winnery-info.css' | asset_url | stylesheet_tag }}
+{{ 'winery-info.css' | asset_url | stylesheet_tag }}
 
 {% style %}
-  .page-width--winnery {
+  .page-width--winery {
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
   }
 
   @media screen and (max-width: 768px) {
-    .page-width--winnery {
+    .page-width--winery {
       padding-top: {{ section.settings.padding_top_mobile }}px;
       padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
     }
   }
 
   #shopify-section-{{ section.id }}
-  .winnery-description__image .description-image {
+  .winery-description__image .description-image {
     max-width: {{ section.settings.description_image_width_mobile }}px;
     width: 100%;
     height: auto;
   }
 
   @media screen and (min-width: 750px) {
-    #shopify-section-{{ section.id }} .winnery-description__image .description-image {
+    #shopify-section-{{ section.id }} .winery-description__image .description-image {
       max-width: {{ section.settings.description_image_width }}px;
     }
   }
@@ -50,15 +50,15 @@
   endif
 %}
 
-<div class="page-width page-width--winnery">
+<div class="page-width page-width--winery">
   {% if logo != blank %}
-    <div class="winnery__logo">
+    <div class="winery__logo">
       {{ logo | image_url: width: logo.width | image_tag: class: 'logo', loading: 'eager', fetchpriority: 'high' }}
     </div>
   {% endif %}
 
   {% if image != blank %}
-    <div class="winnery__image">
+    <div class="winery__image">
       <picture>
         {% if image_mobile != blank %}
           <source srcset="{{ image_mobile | image_url: width: 800 }}" media="(max-width: 767px)">
@@ -69,9 +69,9 @@
   {% endif %}
 
   {% if title != blank or description != blank %}
-    <div class="winnery-description">
+    <div class="winery-description">
       {% if description_image != blank %}
-        <div class="winnery-description__image">
+        <div class="winery-description__image">
           {{
             description_image
             | image_url: width: 600
@@ -81,18 +81,18 @@
       {% endif %}
 
       {% if title != blank %}
-        <p class="winnery-description__title">{{ title }}</p>
+        <p class="winery-description__title">{{ title }}</p>
       {% endif %}
 
       {% if description != blank %}
-        <div class="winnery-description__description">{{ description }}</div>
+        <div class="winery-description__description">{{ description }}</div>
       {% endif %}
     </div>
   {% endif %}
 
   {% if info != blank %}
-    <div class="winnery-info">
-      <div class="winnery-info__content" style="background-image: url('{{ 'paper-bg.png' | asset_url }}');">
+    <div class="winery-info">
+      <div class="winery-info__content" style="background-image: url('{{ 'paper-bg.png' | asset_url }}');">
         {{ info }}
       </div>
     </div>
@@ -106,7 +106,7 @@
 
 {% schema %}
 {
-  "name": "Winnery Info",
+  "name": "winery Info",
   "settings": [
     {
       "type": "select",
@@ -233,7 +233,7 @@
   ],
   "presets": [
     {
-      "name": "Winnery Info"
+      "name": "winery Info"
     }
   ],
   "enabled_on": {
