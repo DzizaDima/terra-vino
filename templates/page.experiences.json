@@ -35,7 +35,7 @@
         "heading_87RecR": {
           "type": "heading",
           "settings": {
-            "heading": "Italy, at <em>your</em> table.",
+            "heading": "Discover TerraVino Experiences",
             "heading_size": "hxl",
             "heading_image_width": 450,
             "heading_image_width_mobile": 120
@@ -44,25 +44,13 @@
         "text_GEMFhi": {
           "type": "text",
           "settings": {
-            "text": "<h2>A private wine experience, brought to your home.</h2>"
-          }
-        },
-        "button_cwfJiU": {
-          "type": "button",
-          "settings": {
-            "button_label": "Book your Experience",
-            "button_link": "shopify://pages/book-experience",
-            "button_style_secondary": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "text": "<h2>Two ways to explore Italian wine: join us at an upcoming event, or bring the experience home.</h2>"
           }
         }
       },
       "block_order": [
         "heading_87RecR",
-        "text_GEMFhi",
-        "button_cwfJiU"
+        "text_GEMFhi"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -74,203 +62,6 @@
         "padding_bottom": 64
       }
     },
-    "rich_text_zjQena": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_7TxqtR": {
-          "type": "heading",
-          "settings": {
-            "heading": "The <em>Experience</em>",
-            "heading_size": "h0",
-            "heading_image_width": 20,
-            "heading_image_width_mobile": 20
-          }
-        },
-        "text_kxEzid": {
-          "type": "text",
-          "name": "This is not a wine class",
-          "settings": {
-            "text": "<p><strong>This is not a wine class.</strong></p><p>A TerraVino private tasting is an evening built around a single idea: that the best way to understand Italian wine is to drink it well, in good company, without leaving home.</p><p>We bring a curated flight of bottles from unique family-run estates across Italy, producers who often don't advertise, don't scale, and don't compromise. Each wine is chosen for the occasion and tailored to the people at the table. A food spread designed to complement the selection arrives with us.</p><p>What unfolds over the next two and a half hours is part tasting, part conversation, part celebration of life. Guests leave knowing more than they arrived with, and with at least one producer they'll remember by name.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_7TxqtR",
-        "text_kxEzid"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "full_width": false,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "image_UmRHte": {
-      "type": "image",
-      "name": "Image",
-      "settings": {
-        "image": "shopify://shop_images/Tasting_experience_mood_GEM04_transparency.png",
-        "image_mobile": "shopify://shop_images/Tasting_experience_mood_GEM04_vertical.png",
-        "image_width": "full",
-        "image_width_custom": 1000,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "rich_text_WRAGpD": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_DzUbgP": {
-          "type": "heading",
-          "settings": {
-            "heading": "How it <em>works</em>",
-            "heading_size": "h0",
-            "heading_image_width": 70,
-            "heading_image_width_mobile": 50
-          }
-        }
-      },
-      "block_order": [
-        "heading_DzUbgP"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "full_width": false,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "image_aepTci": {
-      "type": "image",
-      "name": "Image",
-      "settings": {
-        "image": "shopify://shop_images/Private_Tasting_Booking_Process_GEM02_transparency.png",
-        "image_mobile": "shopify://shop_images/Private_Tasting_Booking_Process_Vertical_transparency.png",
-        "image_width": "full",
-        "image_width_custom": 1000,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "rich_text_Dmmhc9": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_WJrJDU": {
-          "type": "heading",
-          "settings": {
-            "heading": "What to <em>Expect</em>",
-            "heading_size": "h0",
-            "heading_image_width": 70,
-            "heading_image_width_mobile": 50
-          }
-        },
-        "text_bCUG9t": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>The wines</h2><p>A carefully sequenced flight drawn from TerraVino's portfolio of small-production Italian estates; sparkling, whites, reds, or a journey through all, chosen to tell a coherent story as a group. The selection is tailored to your occasion and can be extended for groups who want to go deeper.</p><h2>The food</h2><p>The spread is deliberately cross-cultural. Alongside Italian charcuterie and aged cheeses, expect local favourites (or Japanese seafood, or perhaps Korean pancakes) and other carefully chosen bites that reflect Singapore's table as much as Italy's. Every pairing is chosen to complement the wines: sometimes in harmony, sometimes in deliberate contrast.</p><h2>The host</h2><p>Every TerraVino tasting is led by someone who knows these producers personally: their land, their methods, their choices. The conversation goes as deep as the table wants it to.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_WJrJDU",
-        "text_bCUG9t"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "rich_text_J8LTeK": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_ExDfgD": {
-          "type": "heading",
-          "settings": {
-            "heading": "<em>Practical </em>Details",
-            "heading_size": "h0",
-            "heading_image_width": 450,
-            "heading_image_width_mobile": 50
-          }
-        }
-      },
-      "block_order": [
-        "heading_ExDfgD"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "image_mGbKgH": {
-      "type": "image",
-      "name": "Image",
-      "settings": {
-        "image": "shopify://shop_images/Tasting_Experience_Basic_Details_GEM02_transparency.png",
-        "image_mobile": "shopify://shop_images/Tasting_Experience_Basic_Details_GEM02_vertical_transparency.png",
-        "image_width": "full",
-        "image_width_custom": 1000,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "rich_text_xj38GW": {
-      "type": "rich-text",
-      "blocks": {
-        "text_FErpTm": {
-          "type": "text",
-          "settings": {
-            "text": "<p><em>Looking for something larger? TerraVino also hosts corporate events and wine masterclasses for groups of any size. Mention it in your enquiry and we'll be in touch.</em></p>"
-          }
-        },
-        "text_xpQicT": {
-          "type": "text",
-          "settings": {
-            "text": "<p>   </p>"
-          }
-        },
-        "button_9pb3Ck": {
-          "type": "button",
-          "settings": {
-            "button_label": "Book your Experience",
-            "button_link": "shopify://pages/book-experience",
-            "button_style_secondary": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "text_FErpTm",
-        "text_xpQicT",
-        "button_9pb3Ck"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "image_KDhyzT": {
       "type": "image",
       "name": "Image",
@@ -278,8 +69,8 @@
         "image": "shopify://shop_images/Frame_2087327208.png",
         "image_width": "custom",
         "image_width_custom": 690,
-        "padding_top": 64,
-        "padding_bottom": 120
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
@@ -287,14 +78,6 @@
     "main",
     "image_EVdxC7",
     "rich_text_z9c9aY",
-    "rich_text_zjQena",
-    "image_UmRHte",
-    "rich_text_WRAGpD",
-    "image_aepTci",
-    "rich_text_Dmmhc9",
-    "rich_text_J8LTeK",
-    "image_mGbKgH",
-    "rich_text_xj38GW",
     "image_KDhyzT"
   ]
 }
