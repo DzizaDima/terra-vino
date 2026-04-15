@@ -277,7 +277,9 @@
   </div>
 </div>
 
+{%- assign caret_icon = 'icon-caret.svg' | inline_asset_content -%}
 <script>
+var caretIconHTML = {{ caret_icon | json }};
 document.addEventListener('DOMContentLoaded', function() {
   const calendar = document.getElementById('calendar');
   const selectDateBtn = document.getElementById('selectDateBtn');
@@ -299,9 +301,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let calendarHTML = `
       <div class="book-event__calendar-header">
-        <button type="button" class="book-event__nav-btn" id="prevMonth">{{ 'icon-caret.svg' | inline_asset_content }}</button>
+        <button type="button" class="book-event__nav-btn" id="prevMonth">${caretIconHTML}</button>
         <span class="book-event__month-year">${firstDay.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</span>
-        <button type="button" class="book-event__nav-btn" id="nextMonth">{{ 'icon-caret.svg' | inline_asset_content }}</button>
+        <button type="button" class="book-event__nav-btn" id="nextMonth">${caretIconHTML}</button>
       </div>
       <div class="book-event__calendar-grid">
         <div class="book-event__weekdays">
