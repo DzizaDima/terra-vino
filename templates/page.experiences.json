@@ -70,7 +70,7 @@
           "settings": {
             "image": "shopify://shop_images/Experiences_-_Public_GEM03_transparency.png",
             "title": "Join an Event",
-            "text": "<p>Public tastings, launches, and masterclasses open to all.</p>",
+            "text": "<p>Public tastings and masterclasses open to all.</p>",
             "link_label": "Browse Events",
             "link": ""
           }
