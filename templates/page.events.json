@@ -23,8 +23,8 @@
       "settings": {
         "image": "shopify://shop_images/Event_Page_clink_GEM01_transparency.png",
         "image_mobile": "shopify://shop_images/Event_Page_clink_GEM01_transparency.png",
-        "image_width": "full",
-        "image_width_custom": 1000,
+        "image_width": "custom",
+        "image_width_custom": 650,
         "padding_top": 40,
         "padding_bottom": 0
       }
