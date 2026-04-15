@@ -168,6 +168,7 @@
             class="field__input"
             id="BookEventForm-occasion"
             name="contact[occasion]"
+            style="font-size: inherit; font-family: inherit;"
             required>
             <option value="" disabled selected></option>
             <option value="Birthday">Birthday</option>
@@ -180,9 +181,9 @@
         </div>
       </div>
 
-      <!-- Row 3: Number of Guests + Date -->
+      <!-- Row 3: Number of Guests (full width) -->
       <div class="book-event__form-row">
-        <div class="field">
+        <div class="field" style="grid-column: 1 / -1;">
           <input
             class="field__input"
             type="number"
@@ -193,7 +194,10 @@
             required>
           <label class="field__label" for="BookEventForm-guests">Number of Guests (min. 6)</label>
         </div>
+      </div>
 
+      <!-- Row 4: Preferred Date & Time (combined visual row) -->
+      <div class="book-event__form-row">
         <div class="field book-event__date-field">
           <input
             type="text"
@@ -209,10 +213,7 @@
             </button>
           </div>
         </div>
-      </div>
 
-      <!-- Row 4: Preferred Time -->
-      <div class="book-event__form-row">
         <div class="field book-event__time-field">
           <input
             type="text"
