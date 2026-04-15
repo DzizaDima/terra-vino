@@ -51,7 +51,7 @@
           "type": "button",
           "settings": {
             "button_label": "Book your Experience",
-            "button_link": "shopify://pages/book-event",
+            "button_link": "shopify://pages/book-experience",
             "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -248,7 +248,7 @@
           "type": "button",
           "settings": {
             "button_label": "Book your Experience",
-            "button_link": "shopify://pages/book-event",
+            "button_link": "shopify://pages/book-experience",
             "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",

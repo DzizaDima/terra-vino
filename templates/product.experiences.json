@@ -211,7 +211,7 @@
         "private_title": "Private Enquiries",
         "private_description": "<p>Want to discuss dates, budgets, and menu ideas?</p>",
         "button_label": "Plan Your Event",
-        "button_link": "shopify://pages/book-event",
+        "button_link": "shopify://pages/book-experience",
         "bottom_description": "<p>Raise a glass with us and experience the charm of Italy's boutique wineries, right here in Singapore.</p>",
         "color_scheme": "scheme-3",
         "padding_top": 60,
