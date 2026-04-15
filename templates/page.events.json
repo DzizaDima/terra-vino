@@ -50,7 +50,7 @@
         "button_cwfJiU": {
           "type": "button",
           "settings": {
-            "button_label": "Enquire",
+            "button_label": "Book your Experience",
             "button_link": "shopify://pages/book-event",
             "button_style_secondary": true,
             "button_label_2": "",
@@ -230,6 +230,34 @@
         "padding_bottom": 0
       }
     },
+    "rich_text_xj38GW": {
+      "type": "rich-text",
+      "blocks": {
+        "button_9pb3Ck": {
+          "type": "button",
+          "settings": {
+            "button_label": "Book your Experience",
+            "button_link": "shopify://pages/book-event",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_9pb3Ck"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "how_to_book_FThKer": {
       "type": "how-to-book",
       "name": "t:sections.how_to_book.presets.name",
@@ -304,6 +332,7 @@
     "rich_text_Dmmhc9",
     "rich_text_J8LTeK",
     "image_mGbKgH",
+    "rich_text_xj38GW",
     "how_to_book_FThKer",
     "1759301264e25096b9",
     "image_KDhyzT"
