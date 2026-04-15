@@ -17,22 +17,52 @@
         "padding_bottom": 28
       }
     },
+    "image_EVdxC7": {
+      "type": "image",
+      "name": "Image",
+      "settings": {
+        "image": "shopify://shop_images/DJI_20250913191530_0383_D.jpg",
+        "image_mobile": "shopify://shop_images/DJI_20250913191530_0383_D.jpg",
+        "image_width": "full",
+        "image_width_custom": 1000,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
     "rich_text_z9c9aY": {
       "type": "rich-text",
       "blocks": {
         "heading_87RecR": {
           "type": "heading",
           "settings": {
-            "heading": "Discover Terra Vino <em>Experiences</em>",
-            "heading_size": "hxxl",
-            "heading_image": "shopify://shop_images/Group.png",
-            "heading_image_width": 185,
+            "heading": "Italy, at <em>your</em> table.",
+            "heading_size": "hxl",
+            "heading_image_width": 450,
             "heading_image_width_mobile": 120
+          }
+        },
+        "text_GEMFhi": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>A private wine experience, brought to your home.</h2>"
+          }
+        },
+        "button_cwfJiU": {
+          "type": "button",
+          "settings": {
+            "button_label": "Enquire",
+            "button_link": "shopify://pages/book-event",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "heading_87RecR"
+        "heading_87RecR",
+        "text_GEMFhi",
+        "button_cwfJiU"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -44,39 +74,29 @@
         "padding_bottom": 64
       }
     },
-    "image_waH7UF": {
-      "type": "image",
-      "name": "Image",
-      "settings": {
-        "image": "shopify://shop_images/Product_Image_2f9fa038-a78d-4069-99c6-a0e50693cea0.png",
-        "image_mobile": "shopify://shop_images/Product_Image_1_aaf3831a-660c-4ae6-9be9-476a27ca05d0.png",
-        "image_width": "full",
-        "image_width_custom": 1000,
-        "padding_top": 0,
-        "padding_bottom": 52
-      }
-    },
     "rich_text_zjQena": {
       "type": "rich-text",
       "blocks": {
-        "heading_8EG4fm": {
+        "heading_7TxqtR": {
           "type": "heading",
           "settings": {
-            "heading": "Public Tastings & <em>Launch Events</em>",
-            "heading_size": "hxl",
-            "heading_image_width": 70,
-            "heading_image_width_mobile": 50
+            "heading": "The <em>Experience</em>",
+            "heading_size": "h0",
+            "heading_image": "shopify://shop_images/Event_Page_clink_GEM01_transparency.png",
+            "heading_image_width": 450,
+            "heading_image_width_mobile": 235
           }
         },
         "text_kxEzid": {
           "type": "text",
+          "name": "This is not a wine class",
           "settings": {
-            "text": "<p>Join us for curated wine experiences that bring Italy’s boutique vineyards to Singapore. Each session features a rotating selection of small-production Italian wines, guided tasting notes, and stories from the winemakers themselves. Whether you’re a curious beginner or a seasoned collector, our tastings are designed to be relaxed, informative, and memorable</p>"
+            "text": "<p><strong>This is not a wine class.</strong></p><p>A TerraVino private tasting is an evening built around a single idea: that the best way to understand Italian wine is to drink it well, in good company, without leaving home.</p><p>We bring a curated flight of bottles from unique family-run estates across Italy, producers who often don't advertise, don't scale, and don't compromise. Each wine is chosen for the occasion and tailored to the people at the table. A food spread designed to complement the selection arrives with us.</p><p>What unfolds over the next two and a half hours is part tasting, part conversation, part celebration of life. Guests leave knowing more than they arrived with, and with at least one producer they'll remember by name.</p>"
           }
         }
       },
       "block_order": [
-        "heading_8EG4fm",
+        "heading_7TxqtR",
         "text_kxEzid"
       ],
       "name": "t:sections.rich-text.presets.name",
@@ -89,15 +109,16 @@
         "padding_bottom": 0
       }
     },
-    "image_tMgKkj": {
+    "image_UmRHte": {
       "type": "image",
       "name": "Image",
       "settings": {
-        "image": "shopify://shop_images/Frame_2087327190.png",
-        "image_width": "custom",
-        "image_width_custom": 660,
-        "padding_top": 56,
-        "padding_bottom": 0
+        "image": "shopify://shop_images/Tasting_experience_mood_GEM04_transparency.png",
+        "image_mobile": "shopify://shop_images/Tasting_experience_mood_GEM04_vertical.png",
+        "image_width": "full",
+        "image_width_custom": 1000,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "rich_text_WRAGpD": {
@@ -106,22 +127,15 @@
         "heading_DzUbgP": {
           "type": "heading",
           "settings": {
-            "heading": "Host a <em>Private</em>  Wine Event",
-            "heading_size": "hxl",
+            "heading": "How it <em>works</em>",
+            "heading_size": "h0",
             "heading_image_width": 70,
             "heading_image_width_mobile": 50
-          }
-        },
-        "text_ECRkHd": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Looking for something tailored? Terra Vino also creates private wine experiences for individuals, companies, and special celebrations. From birthday parties and weddings to corporate client evenings or team events, we handle every detail:</p>"
           }
         }
       },
       "block_order": [
-        "heading_DzUbgP",
-        "text_ECRkHd"
+        "heading_DzUbgP"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -133,61 +147,86 @@
         "padding_bottom": 0
       }
     },
-    "multicolumn_TTbeVA": {
-      "type": "multicolumn",
+    "image_aepTci": {
+      "type": "image",
+      "name": "Image",
+      "settings": {
+        "image": "shopify://shop_images/Private_Tasting_Booking_Process_GEM02_transparency.png",
+        "image_mobile": "shopify://shop_images/Private_Tasting_Booking_Process_Vertical_transparency.png",
+        "image_width": "full",
+        "image_width_custom": 1000,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_Dmmhc9": {
+      "type": "rich-text",
       "blocks": {
-        "column_bdVj3g": {
-          "type": "column",
+        "heading_WJrJDU": {
+          "type": "heading",
           "settings": {
-            "image": "shopify://shop_images/image_409224266.png",
-            "title": "Wine Curation",
-            "text": "<p> Exclusive boutique Italian<br/>wines matched to your theme or menu.</p>",
-            "link_label": "",
-            "link": ""
+            "heading": "What to <em>Expect</em>",
+            "heading_size": "h0",
+            "heading_image_width": 70,
+            "heading_image_width_mobile": 50
           }
         },
-        "column_MTDREM": {
-          "type": "column",
+        "text_bCUG9t": {
+          "type": "text",
           "settings": {
-            "image": "shopify://shop_images/image_409224266_1.png",
-            "title": "Food Pairing",
-            "text": "<p>Customised canapés or<br/>multi-course menus prepared with trusted partners.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_cadQcP": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/image_409224266_2.png",
-            "title": "Event Planning",
-            "text": "<p>Venue coordination, set-up,<br/>and full service so you can simply enjoy.</p>",
-            "link_label": "",
-            "link": ""
+            "text": "<h2>The wines</h2><p>A carefully sequenced flight drawn from TerraVino's portfolio of small-production Italian estates; sparkling, whites, reds, or a journey through all, chosen to tell a coherent story as a group. The selection is tailored to your occasion and can be extended for groups who want to go deeper.</p><h2>The food</h2><p>The spread is deliberately cross-cultural. Alongside Italian charcuterie and aged cheeses, expect local favourites (or Japanese seafood, or perhaps Korean pancakes) and other carefully chosen bites that reflect Singapore's table as much as Italy's. Every pairing is chosen to complement the wines: sometimes in harmony, sometimes in deliberate contrast.</p><h2>The host</h2><p>Every TerraVino tasting is led by someone who knows these producers personally: their land, their methods, their choices. The conversation goes as deep as the table wants it to.</p>"
           }
         }
       },
       "block_order": [
-        "column_bdVj3g",
-        "column_MTDREM",
-        "column_cadQcP"
+        "heading_WJrJDU",
+        "text_bCUG9t"
       ],
-      "name": "t:sections.multicolumn.presets.name",
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "primary",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "scheme-3",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_J8LTeK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ExDfgD": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Practical </em>Details",
+            "heading_size": "h0",
+            "heading_image_width": 450,
+            "heading_image_width_mobile": 50
+          }
+        }
+      },
+      "block_order": [
+        "heading_ExDfgD"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_mGbKgH": {
+      "type": "image",
+      "name": "Image",
+      "settings": {
+        "image": "shopify://shop_images/Tasting_Experience_Basic_Details_GEM02_transparency.png",
+        "image_width": "full",
+        "image_width_custom": 1000,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "how_to_book_FThKer": {
@@ -255,12 +294,15 @@
   },
   "order": [
     "main",
+    "image_EVdxC7",
     "rich_text_z9c9aY",
-    "image_waH7UF",
     "rich_text_zjQena",
-    "image_tMgKkj",
+    "image_UmRHte",
     "rich_text_WRAGpD",
-    "multicolumn_TTbeVA",
+    "image_aepTci",
+    "rich_text_Dmmhc9",
+    "rich_text_J8LTeK",
+    "image_mGbKgH",
     "how_to_book_FThKer",
     "1759301264e25096b9",
     "image_KDhyzT"
