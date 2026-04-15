@@ -21,8 +21,8 @@
       "type": "image",
       "name": "Image",
       "settings": {
-        "image": "shopify://shop_images/DJI_20250913191530_0383_D.jpg",
-        "image_mobile": "shopify://shop_images/DJI_20250913191530_0383_D.jpg",
+        "image": "shopify://shop_images/Event_Page_clink_GEM01_transparency.png",
+        "image_mobile": "shopify://shop_images/Event_Page_clink_GEM01_transparency.png",
         "image_width": "full",
         "image_width_custom": 1000,
         "padding_top": 40,
@@ -82,9 +82,8 @@
           "settings": {
             "heading": "The <em>Experience</em>",
             "heading_size": "h0",
-            "heading_image": "shopify://shop_images/Event_Page_clink_GEM01_transparency.png",
-            "heading_image_width": 450,
-            "heading_image_width_mobile": 235
+            "heading_image_width": 20,
+            "heading_image_width_mobile": 20
           }
         },
         "text_kxEzid": {
@@ -105,7 +104,7 @@
         "content_alignment": "center",
         "color_scheme": "scheme-3",
         "full_width": false,
-        "padding_top": 40,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
