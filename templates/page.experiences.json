@@ -24,7 +24,7 @@
         "image": "shopify://shop_images/Event_Page_clink_GEM01_transparency.png",
         "image_mobile": "shopify://shop_images/Event_Page_clink_GEM01_transparency.png",
         "image_width": "custom",
-        "image_width_custom": 650,
+        "image_width_custom": 450,
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -168,6 +168,61 @@
         "include_margins": true
       }
     },
+    "multicolumn_VgUV7a": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_zKQcbx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Janet_thumbnail.png",
+            "title": "",
+            "text": "<h3><em>\"It wasn't just a tasting; it felt like a full sensory experience. Giorgio made everyone feel comfortable, engaged, and completely immersed.\"</em></h3><h5>- Janet on Public Tasting, April 2026</h5>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xft9Kq": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_igtwJw": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_zKQcbx",
+        "column_xft9Kq",
+        "column_igtwJw"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 64,
+        "padding_bottom": 36
+      }
+    },
     "image_KDhyzT": {
       "type": "image",
       "name": "Image",
@@ -187,6 +242,7 @@
     "multicolumn_mHipwA",
     "rich_text_kMXVn3",
     "17762590937d2caafa",
+    "multicolumn_VgUV7a",
     "image_KDhyzT"
   ]
 }
