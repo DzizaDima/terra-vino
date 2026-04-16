@@ -24,7 +24,7 @@
         "image": "shopify://shop_images/Event_Page_clink_GEM01_transparency.png",
         "image_mobile": "shopify://shop_images/Event_Page_clink_GEM01_transparency.png",
         "image_width": "custom",
-        "image_width_custom": 650,
+        "image_width_custom": 450,
         "padding_top": 0,
         "padding_bottom": 0
       }
