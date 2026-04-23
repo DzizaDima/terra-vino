@@ -171,12 +171,12 @@
     "multicolumn_VgUV7a": {
       "type": "multicolumn",
       "blocks": {
-        "column_zKQcbx": {
+        "column_igtwJw": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Janet_thumbnail.png",
+            "image": "shopify://shop_images/Giorgio_e_Leila_avatar.png",
             "title": "",
-            "text": "<h3><em>\"It wasn't just a tasting; it felt like a full sensory experience. Giorgio made everyone feel comfortable, engaged, and completely immersed.\"</em></h3><h5>- Janet V. on Public Tasting, April 2026</h5>",
+            "text": "<h3><em>A truly special wine tasting that felt like stepping into a warm Italian home right here in Singapore. The atmosphere was relaxed and convivial with wines, stories and fantastic food pairings making everything come wonderfully together.</em></h3><h5>Giorgio and Leila, April 2026</h5>",
             "link_label": "",
             "link": ""
           }
@@ -191,20 +191,21 @@
             "link": ""
           }
         },
-        "column_igtwJw": {
+        "column_zKQcbx": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/Janet_thumbnail.png",
             "title": "",
-            "text": "",
+            "text": "<h3><em>\"It wasn't just a tasting; it felt like a full sensory experience. Giorgio made everyone feel comfortable, engaged, and completely immersed.\"</em></h3><h5>- Janet V. on Public Tasting, April 2026</h5>",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column_zKQcbx",
+        "column_igtwJw",
         "column_xft9Kq",
-        "column_igtwJw"
+        "column_zKQcbx"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
