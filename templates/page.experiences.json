@@ -176,7 +176,7 @@
           "settings": {
             "image": "shopify://shop_images/Samantha_F.png",
             "title": "",
-            "text": "<h3>An intimate, beautifully curated tasting with exceptional wines, high quality yet surprisingly affordable. A truly memorable experience!</h3><h5>Samantha F., April 2026</h5>",
+            "text": "<h3><em>An intimate, beautifully curated tasting with exceptional wines, high quality yet surprisingly affordable. A truly memorable experience!</em></h3><h5>Samantha F., April 2026</h5>",
             "link_label": "",
             "link": ""
           }
