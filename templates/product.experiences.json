@@ -21,10 +21,17 @@
             "heading_image_width": 185,
             "heading_image_width_mobile": 120
           }
+        },
+        "text_hUcreJ": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.description }}"
+          }
         }
       },
       "block_order": [
-        "heading_87RecR"
+        "heading_87RecR",
+        "text_hUcreJ"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -39,21 +46,21 @@
     "17773741061c669bba": {
       "type": "apps",
       "blocks": {
-        "experiences_app_book_now_button_ikmUcd": {
+        "experiences_app_book_now_button_brjkQf": {
           "type": "shopify://apps/experiences-app/blocks/book-now-button/0f7bacd4-dd8b-4f37-98a0-d0ca3a8c3995",
           "settings": {
             "use_simple_styles_mode": true,
             "primary_color": "#000000",
             "on_primary_color": "#ffffff",
             "border_radius": 0,
-            "book_button_text": "See More Timeslots",
-            "number_of_previews": 3,
+            "book_button_text": "",
+            "number_of_previews": 2,
             "custom_styles": ""
           }
         }
       },
       "block_order": [
-        "experiences_app_book_now_button_ikmUcd"
+        "experiences_app_book_now_button_brjkQf"
       ],
       "settings": {
         "include_margins": true
