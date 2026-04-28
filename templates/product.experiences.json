@@ -15,9 +15,9 @@
         "heading_87RecR": {
           "type": "heading",
           "settings": {
-            "heading": "TerraVino <em>Experiences</em> Booking",
+            "heading": "{{ product.title }}",
             "heading_size": "hxl",
-            "heading_image": "shopify://shop_images/Group.png",
+            "heading_image": "{{ product.featured_image }}",
             "heading_image_width": 185,
             "heading_image_width_mobile": 120
           }
