@@ -157,7 +157,8 @@
             "disabledColor": "#999b9e",
             "buttonShape": "square",
             "containerPaddingTop": 8,
-            "containerPaddingBottom": 8
+            "containerPaddingBottom": 8,
+            "custom_styles": ""
           }
         }
       },
@@ -171,6 +172,16 @@
     "multicolumn_VgUV7a": {
       "type": "multicolumn",
       "blocks": {
+        "column_wQzwnz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Sander.png",
+            "title": "",
+            "text": "<h3><em>It felt less like a commercial wine tasting and more like stepping into a warm, intimate setting for an evening of great wine, food, and conversation. Giorgio creates a relaxed atmosphere that naturally brings together interesting people, making it easy to genuinely connect while discovering beautiful wines from smaller Italian wineries. A truly memorable experience.</em></h3><h5>Sander vS., May 2026</h5>",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_gzM7Gf": {
           "type": "column",
           "settings": {
@@ -213,6 +224,7 @@
         }
       },
       "block_order": [
+        "column_wQzwnz",
         "column_gzM7Gf",
         "column_igtwJw",
         "column_xft9Kq",
